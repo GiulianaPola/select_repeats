@@ -1,5 +1,5 @@
-LOCUS       FNLN01000049_1             14068 bp    DNA     linear CON 12-MAR-2022
-DEFINITION  Casposons FNLN01000049_1
+LOCUS       FNLN01000049_1             14068 bp    DNA     linear CON 20-MAR-2022
+DEFINITION  Casposon FNLN01000049_1
 FEATURES             Location/Qualifiers
      gene            67..336
                      /locus_tag="ORF_01"

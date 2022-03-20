@@ -1,0 +1,8 @@
+input_file = "input/FNLN01000049_1_all_results.tab.txt"
+def = Casposon
+div = CON
+out_dir="results"
+parameter_set_1 = --task=find-repeats --identity=85 --inverted=True --out=*_inverted_repeats_12_85.gbk --exclude-repeats=True --max-distance=12000 --min-distance=5000 --min-length=12 --name=TIR
+parameter_set_2 = --task=find-repeats --identity=100 --inverted=True --out=*_inverted_repeats_12_100.gbk --exclude-repeats=True --max-distance=12000 --min-distance=5000 --min-length=12 --name=TIR
+parameter_set_3 = --task=find-repeats --identity=90 --inverted=True --out=*_inverted_repeats_10_90.gbk --exclude-repeats=True --max-distance=12000 --min-distance=5000 --min-length=10 --name=TIR
+parameter_set_4 = --task=find-repeats --identity=85 --inverted=False --out=*_direct_repeats_12_85.gbk --exclude-repeats=True --max-distance=12000 --min-distance=5000 --min-length=12 --name=TDR
