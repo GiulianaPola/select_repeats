@@ -11,13 +11,14 @@ select_repeats.py -conf *parameters file*
 
 - -i (text file) - Feature table in EMBL format
 
-- -o (string) - Name of the output file (feature table in GenBank format)
-
 - -div (three-letter string) - GenBank division
 
 - -defi (string) - Sequence definition
 
 - -conf *text file* - Text file with the parameters
+
+**Optional parameters:**
+- -o (string) - Name of the output file (feature table in GenBank format)
 
 ## 12/03/2022 (1.0.0)
 - validation and addition of parameters -i (EMBL feature table),-defi (sequence definition), -div (GenBank division)
