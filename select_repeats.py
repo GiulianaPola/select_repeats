@@ -18,7 +18,7 @@ import re
 param=dict()
 call=os.path.abspath(os.getcwd())
 
-version="1.1.1"
+version="1.1.2"
 
 help = 'Select_repeats v{} - insertion repeats selector\n'.format(version)
 help = help + '(c) 2022. Arthur Gruber & Giuliana Pola\n'
@@ -44,12 +44,16 @@ args = parser.parse_args()
 my_dict = args.__dict__
 
 def getid(input):
-  name=os.path.split(input)[-1]
-  m=re.search(r'(\d)[^\d]*$',name)
-  #print(input,name,m)
-  return name[0:m.start()+1]
-
-def rename(file):
+  try:
+    name=os.path.split(input)[-1]
+    m=re.search(r'(\d)[^\d]*$',name)
+    #print(input,name,m)
+    return name[0:m.start()+1]
+  except:
+    print("{} is not a GenBank file, skipped!".format(name))
+    return False
+    
+def renamefile(file):
   i=2
   filename, file_extension = os.path.splitext(file)
   if not file_extension=='':
@@ -62,6 +66,14 @@ def rename(file):
       out=filename+str(i)+'.'+file_extension
     else:
       out=filename+str(i)
+  return out
+  
+def renamedir(dir):
+  i=2
+  out=dir+str(i)
+  while os.path.isdir(out):
+    i+=1
+    out=dir+str(i)
   return out
 
 def validateconf(conf):
@@ -82,18 +94,35 @@ def validateconf(conf):
          value='='.join(lin.split('=')[1:]).strip().strip('\"')
          if ' e ' in value:
            value=value.split(' e ')
-         if 'input' in arg:
+         if 'input' in arg or 'i_' in arg or arg=='i':
            my_dict['i']=value
          elif 'def' in arg:
            my_dict['defi']=value
-         elif 'out_' in arg or 'o_' in arg:
+         elif 'out' in arg or 'o_' in arg or arg=='o':
            #print(my_dict['o'])
            my_dict['o']=value
            if 'dir' in arg:
-             my_dict['otype']='dir'
-             my_dict['dir']=value
-           else:
-             my_dict['otype']='file'
+             my_dict['dir']=os.path.realpath(value)
+             if not os.path.isdir(my_dict['dir']):
+               try:
+                 os.mkdir(my_dict['dir'])
+               except:
+                 my_dict['dir']=os.path.join(call,my_dict['dir'])
+                 if not os.path.isdir(my_dict['dir']):
+                   os.mkdir(my_dict['dir'])
+                   print("Creating directory {}...".format(my_dict['dir']))
+                 else:
+                   print("Directory {} already exists!".format(my_dict['dir']))
+                   my_dict['dir']=renamedir(my_dict['dir'])
+                   os.mkdir(my_dict['dir'])
+                   print("Creating directory {}...".format(my_dict['dir']))
+               else:
+                 print("Creating directory {}...".format(my_dict['dir']))
+             else:
+               print("Directory {} already exists!".format(my_dict['dir']))
+               my_dict['dir']=renamedir(my_dict['dir'])
+               os.mkdir(my_dict['dir'])
+               print("Creating directory {}...".format(my_dict['dir']))
          elif 'parameter_set' in arg:
            if 'sets' not in my_dict:
              my_dict['sets']=[value] 
@@ -125,25 +154,11 @@ def validateinput(file):
       quit()
 
 def validateargs(my_dict,id):
-  if 'otype' in my_dict.keys() and my_dict['otype']=='dir':
-    if not os.path.isdir(my_dict['o']):
-      try:
-        os.mkdir(my_dict['o'])
-      except:
-        my_dict['o']=os.path.join(call,my_dict['o'])
-        if not os.path.isdir(my_dict['o']):
-          os.mkdir(my_dict['o'])
-          print("Creating directory {}...".format(my_dict['o']))
-      else:
-        print("Creating directory {}...".format(my_dict['o']))
-    dir=my_dict['o']
-  else:
-    dir=''
   if my_dict['o'] is None:
     out=[id+'_UGENE.gbk',id+'_repeats.gbk']
-  elif 'otype' in my_dict.keys() and my_dict['otype']=='dir':
-    out=[os.path.join(dir,id+'_UGENE.gbk'),os.path.join(dir,id+'_repeats.gbk')]
-  elif my_dict['otype']=='file' or not 'otype' in my_dict.keys():
+  elif 'dir' in my_dict.keys():
+    out=[os.path.join(my_dict['dir'],id+'_UGENE.gbk'),os.path.join(my_dict['dir'],id+'_repeats.gbk')]
+  else:
     if len(my_dict['o'])==1:
       out=[id+'_UGENE.gbk',my_dict['o']]
     else:
@@ -157,7 +172,7 @@ def validateargs(my_dict,id):
       o=o.replace('*',id)
     if os.path.isfile(o):
       print("Output file already exist!")
-      out2.append(rename(o))
+      out2.append(renamefile(o))
     else:
       out2.append(o)
   my_dict['o']=out2
@@ -186,8 +201,8 @@ def convertEMBL(file,id):
   try:
     EMBL=open(file,"r")
   except:
-    print("{} (-i) couldn't be opened!".format(os.path.split(file)[-1]))
-    quit()
+    print("{} (-i) couldn't be opened, skipped!".format(os.path.split(file)[-1]))
+    return False
   else:
     print("Opening {} (-i)...".format(os.path.split(file)[-1]))
     text=EMBL.read()
@@ -221,19 +236,20 @@ def convertEMBL(file,id):
              try:
                int(num)
              except:
-               print("{} (-i) has wrong format, missing nucleotide count!".format(os.path.split(file)[-1]))
-               quit()
+               print("{} (-i) has wrong format, missing nucleotide count, skipped!".format(os.path.split(file)[-1]))
+               return False
              else:
                new+=str(i+1).rjust(9," ")+' '+seq+'\n'
                i=int(num)
            else:
-             print("{} (-i) has wrong format, sequence contains other than 'a','c','g','t'!".format(os.path.split(file)[-1]))
-             quit()
+             print("{} (-i) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(os.path.split(file)[-1]))
+             return False
           #print(my_dict['o'])
           try:
             GenBank=open(my_dict['o'][0],'w')
           except:
-            print("GenBank feature table {} couldn't be written!".format(my_dict['o'][0]))
+            print("GenBank feature table {} couldn't be written, skipped!".format(my_dict['o'][0]))
+            return False
           else:                      
             print("Writing GenBank converted file...")
             import datetime
@@ -243,15 +259,16 @@ def convertEMBL(file,id):
             GenBank.write(new)
             GenBank.write("//")
             GenBank.close()
+            return True
         else:
-          print("{} (-i) doesn't contain base count!".format(os.path.split(file)[-1]))
-          quit()
+          print("{} (-i) doesn't contain base count,skipped!".format(os.path.split(file)[-1]))
+          return False
       else:
-        print("{}(-i) has wrong format, missing 'FT' in lines!".format(os.path.split(file)[-1]))
-        quit()
+        print("{}(-i) has wrong format, missing 'FT' in lines, skipped!".format(os.path.split(file)[-1]))
+        return False
     else:
-      print("{}(-i) has wrong format, missing sequence header!".format(os.path.split(file)[-1]))
-      quit()
+      print("{}(-i) has wrong format, missing sequence header, skipped!".format(os.path.split(file)[-1]))
+      return False
 
 if not len(sys.argv)>1:
   print(help)
@@ -273,6 +290,7 @@ else:
     quit()
   else:
     z=1
+    my_dict['i']=os.path.realpath(my_dict['i'])
     if os.path.isdir(my_dict['i']):
       if len(os.listdir(my_dict['i'])) == 0:
         print("{} (-i) is empty!".format(my_dict['i']))
@@ -281,17 +299,22 @@ else:
         my_dict['i'] = [os.path.join(os.path.abspath(my_dict['i']),f) for f in os.listdir(my_dict['i']) if os.path.isfile(os.path.join(my_dict['i'], f))]
         z=len(my_dict['i'])
     a=0
+    #print("my_dict['i']={}".format(my_dict['i']))
     while a<z:
       if z>1:
         input=my_dict['i'][a]
       else:
         input=my_dict['i']
+      #print("input={}".format(input))
       validateinput(input)
       id=getid(input)
-      validateargs(my_dict,id)
-      #print(param)
-      convertEMBL(input,id)
-      #validatesets(my_dict['sets'],id)
+      if not id==False:
+       validateargs(my_dict,id)
+       #print(param)
+       converted=convertEMBL(input,id)
+       if not converted==False:
+         if 'sets' in my_dict.keys():
+           validatesets(my_dict['sets'],id)
       if 'dir' in my_dict.keys():
         my_dict['o']=my_dict['dir']
       else:
