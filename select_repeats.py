@@ -18,7 +18,7 @@ import re
 param=dict()
 call=os.path.abspath(os.getcwd())
 
-version="1.1.2"
+version="1.2.0"
 
 help = 'Select_repeats v{} - insertion repeats selector\n'.format(version)
 help = help + '(c) 2022. Arthur Gruber & Giuliana Pola\n'
@@ -41,7 +41,7 @@ parser.add_argument('-conf')
 parser.add_argument('-version', action='store_true')
 parser.add_argument('-h', '--help', action='store_true')
 args = parser.parse_args()
-my_dict = args.__dict__
+param = args.__dict__
 
 def getid(input):
   try:
@@ -95,41 +95,44 @@ def validateconf(conf):
          if ' e ' in value:
            value=value.split(' e ')
          if 'input' in arg or 'i_' in arg or arg=='i':
-           my_dict['i']=value
+           param['i']=value
          elif 'def' in arg:
-           my_dict['defi']=value
+           param['defi']=value
          elif 'out' in arg or 'o_' in arg or arg=='o':
-           #print(my_dict['o'])
-           my_dict['o']=value
+           #print(param['o'])
+           param['o']=value
            if 'dir' in arg:
-             my_dict['dir']=os.path.realpath(value)
-             if not os.path.isdir(my_dict['dir']):
+             param['dir']=os.path.realpath(value)
+             if not os.path.isdir(param['dir']):
                try:
-                 os.mkdir(my_dict['dir'])
+                 os.mkdir(param['dir'])
                except:
-                 my_dict['dir']=os.path.join(call,my_dict['dir'])
-                 if not os.path.isdir(my_dict['dir']):
-                   os.mkdir(my_dict['dir'])
-                   print("Creating directory {}...".format(my_dict['dir']))
+                 param['dir']=os.path.join(call,param['dir'])
+                 if not os.path.isdir(param['dir']):
+                   os.mkdir(param['dir'])
+                   print("Creating directory {}...".format(param['dir']))
+                   
                  else:
-                   print("Directory {} already exists!".format(my_dict['dir']))
-                   my_dict['dir']=renamedir(my_dict['dir'])
-                   os.mkdir(my_dict['dir'])
-                   print("Creating directory {}...".format(my_dict['dir']))
+                   print("Directory {} already exists!".format(param['dir']))
+                   param['dir']=renamedir(param['dir'])
+                   os.mkdir(param['dir'])
+                   print("Creating directory {}...".format(param['dir']))
                else:
-                 print("Creating directory {}...".format(my_dict['dir']))
+                 print("Creating directory {}...".format(param['dir']))
+                 
              else:
-               print("Directory {} already exists!".format(my_dict['dir']))
-               my_dict['dir']=renamedir(my_dict['dir'])
-               os.mkdir(my_dict['dir'])
-               print("Creating directory {}...".format(my_dict['dir']))
+               print("Directory {} already exists!".format(param['dir']))
+               param['dir']=renamedir(param['dir'])
+               os.mkdir(param['dir'])
+               print("Creating directory {}...".format(param['dir']))
+               
          elif 'parameter_set' in arg:
-           if 'sets' not in my_dict:
-             my_dict['sets']=[value] 
+           if 'sets' not in param:
+             param['sets']=[value] 
            else:
-             my_dict['sets'].append(value)
+             param['sets'].append(value)
          else:
-           my_dict[str(arg)]=value
+           param[str(arg)]=value
 
 def validatediv(div):
   if not isinstance(div, str):
@@ -143,7 +146,7 @@ def validatediv(div):
     print("GenBank division (-div) must be only three letters!")
     quit()
   else:
-    my_dict['div']=div.upper()
+    param['div']=div.upper()
 
 def validateinput(file):
   if os.path.isfile(file):
@@ -153,16 +156,16 @@ def validateinput(file):
       print("{} (-i) couldn't be opened!".format(os.path.split(file)[-1]))
       quit()
 
-def validateargs(my_dict,id):
-  if my_dict['o'] is None:
+def validateargs(param,id):
+  if param['o'] is None:
     out=[id+'_UGENE.gbk',id+'_repeats.gbk']
-  elif 'dir' in my_dict.keys():
-    out=[os.path.join(my_dict['dir'],id+'_UGENE.gbk'),os.path.join(my_dict['dir'],id+'_repeats.gbk')]
+  elif 'dir' in param.keys():
+    out=[os.path.join(param['dir'],id+'_UGENE.gbk'),os.path.join(param['dir'],id+'_repeats.gbk')]
   else:
-    if len(my_dict['o'])==1:
-      out=[id+'_UGENE.gbk',my_dict['o']]
+    if len(param['o'])==1:
+      out=[id+'_UGENE.gbk',param['o']]
     else:
-      out=my_dict['o']
+      out=param['o']
   out2=[]
   for o in out:
     if not isinstance(o, str):
@@ -175,27 +178,31 @@ def validateargs(my_dict,id):
       out2.append(renamefile(o))
     else:
       out2.append(o)
-  my_dict['o']=out2
-  if 'defi' not in my_dict.keys():
+  param['o']=out2
+  if 'defi' not in param.keys():
     print("Missing sequence definition (-defi)!")
     quit()
-  elif not isinstance(my_dict['defi'], str):
+  elif not isinstance(param['defi'], str):
     print("Sequence definition (-defi) is not string!")
     quit()
   else:
-    if '*' in my_dict['defi']:
-      my_dict['defi']=my_dict['defi'].replace('*',id)
+    if '*' in param['defi']:
+      param['defi']=param['defi'].replace('*',id)
     else:
-      my_dict['defi']=my_dict['defi']
+      param['defi']=param['defi']
 
 def validatesets(sets,id):
-  sets=';'.join(sets)
-  if '*' in sets:
-    sets=sets.replace('*', id)
-    sets=sets.split(';')
-    my_dict['sets']=sets
-  else:
-    my_dict['sets']=sets
+  valid=[]
+  for s in sets:
+    if not '--in=' in s:
+      filename = os.path.basename(param['o'][0])
+      s=s+' --in='+filename
+    if not 'ugene' in s:
+      s='ugene '+s
+    if '*' in s:
+      s=s.replace('*', id)
+    valid.append(s)
+  param['ugene']=valid
 
 def convertEMBL(file,id):
   try:
@@ -204,7 +211,7 @@ def convertEMBL(file,id):
     print("{} (-i) couldn't be opened, skipped!".format(os.path.split(file)[-1]))
     return False
   else:
-    print("Opening {} (-i)...".format(os.path.split(file)[-1]))
+    print("\nOpening {} (-i)...".format(os.path.split(file)[-1]))
     text=EMBL.read()
     new=''
     if "SQ   Sequence " in text:
@@ -216,7 +223,7 @@ def convertEMBL(file,id):
         text=text.split('\n')[1:-1]
         row=row.split()
         #print("row: {}".format(row))
-        new+='\nBASE COUNT     '
+        new+='BASE COUNT     '
         if all(item in row for item in ["A;","C;","G;","T;"]):
           new+='{} a   '.format(row[row.index("A;")-1])
           new+='{} c   '.format(row[row.index("C;")-1])
@@ -244,17 +251,17 @@ def convertEMBL(file,id):
            else:
              print("{} (-i) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(os.path.split(file)[-1]))
              return False
-          #print(my_dict['o'])
+          #print(param['o'])
           try:
-            GenBank=open(my_dict['o'][0],'w')
+            GenBank=open(param['o'][0],'w')
           except:
-            print("GenBank feature table {} couldn't be written, skipped!".format(my_dict['o'][0]))
+            print("GenBank feature table {} couldn't be written, skipped!".format(param['o'][0]))
             return False
           else:                      
             print("Writing GenBank converted file...")
             import datetime
-            GenBank.write("LOCUS       {}             {} bp    DNA     linear {} {}\n".format(id,i,my_dict['div'],datetime.datetime.now().strftime("%d-%b-%Y").upper()))
-            GenBank.write("DEFINITION  {} {}\n".format(my_dict['defi'],id))
+            GenBank.write("LOCUS       {}             {} bp    DNA     linear {} {}\n".format(id,i,param['div'],datetime.datetime.now().strftime("%d-%b-%Y").upper()))
+            GenBank.write("DEFINITION  {} {}\n".format(param['defi'],id))
             GenBank.write("FEATURES             Location/Qualifiers\n")
             GenBank.write(new)
             GenBank.write("//")
@@ -272,51 +279,60 @@ def convertEMBL(file,id):
 
 if not len(sys.argv)>1:
   print(help)
-elif my_dict['help'] == True:
+elif param['help'] == True:
   print(help)
-elif my_dict['version'] == True:
+elif param['version'] == True:
   print(version)
 else:
-  #print(my_dict)
-  if not my_dict['conf'] is None:
-    validateconf(my_dict['conf'])
-  if my_dict['div'] is None:
+  #print(param)
+  if not param['conf'] is None:
+    validateconf(param['conf'])
+  if param['div'] is None:
     print("Missing GenBank division (-div)!")
     quit()
   else:
-    validatediv(my_dict['div'].strip())
-  if my_dict['i'] is None:
+    validatediv(param['div'].strip())
+  if param['i'] is None:
     print("Missing input file or dir (-i)!")
     quit()
   else:
     z=1
-    my_dict['i']=os.path.realpath(my_dict['i'])
-    if os.path.isdir(my_dict['i']):
-      if len(os.listdir(my_dict['i'])) == 0:
-        print("{} (-i) is empty!".format(my_dict['i']))
+    param['i']=os.path.realpath(param['i'])
+    if os.path.isdir(param['i']):
+      if len(os.listdir(param['i'])) == 0:
+        print("{} (-i) is empty!".format(param['i']))
         quit()
       else:
-        my_dict['i'] = [os.path.join(os.path.abspath(my_dict['i']),f) for f in os.listdir(my_dict['i']) if os.path.isfile(os.path.join(my_dict['i'], f))]
-        z=len(my_dict['i'])
+        param['i'] = [os.path.join(os.path.abspath(param['i']),f) for f in os.listdir(param['i']) if os.path.isfile(os.path.join(param['i'], f))]
+        z=len(param['i'])
     a=0
-    #print("my_dict['i']={}".format(my_dict['i']))
+    #print("param['i']={}".format(param['i']))
     while a<z:
       if z>1:
-        input=my_dict['i'][a]
+        input=param['i'][a]
       else:
-        input=my_dict['i']
+        input=param['i']
       #print("input={}".format(input))
       validateinput(input)
       id=getid(input)
       if not id==False:
-       validateargs(my_dict,id)
+       validateargs(param,id)
        #print(param)
+       if 'dir' in param.keys():
+         os.chdir(param['dir'])
        converted=convertEMBL(input,id)
        if not converted==False:
-         if 'sets' in my_dict.keys():
-           validatesets(my_dict['sets'],id)
-      if 'dir' in my_dict.keys():
-        my_dict['o']=my_dict['dir']
+         if 'sets' in param.keys():
+           validatesets(param['sets'],id)
+           ugene_time = datetime.now()
+           for s in param['ugene']:
+             #print(s)
+             #print(os.getcwd())
+             os.system(s)
+           print("UGENE {} execution time:{}".format(id,datetime.now() - ugene_time))
+      if 'dir' in param.keys():
+        param['o']=param['dir']
       else:
-        my_dict['o']=None
+        param['o']=None
       a+=1
+print("Execution time: {}".format(datetime.now() - start_time))

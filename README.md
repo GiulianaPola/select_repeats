@@ -35,3 +35,6 @@ select_repeats.py -conf *parameters file*
 ## 23/03/2022 (1.1.2)
 - creation of a folder with a new name (folder2) when the output folder exists
 - when error in input file, move to next input file and display error message, instead of exiting program
+
+## 28/03/2022 (1.2.0)
+-  addition of the UGENE find-repeats routine for each parameter set in the configuration file and for each input sequence
