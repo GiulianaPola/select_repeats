@@ -38,3 +38,7 @@ select_repeats.py -conf *parameters file*
 
 ## 28/03/2022 (1.2.0)
 -  addition of the UGENE find-repeats routine for each parameter set in the configuration file and for each input sequence
+
+## 04/04/2022 (1.3.1)
+- adding the routine that extracts the information from the repeats' annotation blocks, concatenates them into a single file, eliminates identical entries and saves them into one file, one for the direct and one for the inverted ones
+- creation of the temporary folder in the UGENE output folder and removal from it at the end of the run

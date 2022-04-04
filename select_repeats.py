@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import traceback
 import warnings
+
 def warn_with_traceback(message, category, filname, reno, fil=None, re=None):
 
     log = fil if hasattr(fil,'write') else sys.stderr
@@ -18,7 +19,7 @@ import re
 param=dict()
 call=os.path.abspath(os.getcwd())
 
-version="1.2.0"
+version="1.3.1"
 
 help = 'Select_repeats v{} - insertion repeats selector\n'.format(version)
 help = help + '(c) 2022. Arthur Gruber & Giuliana Pola\n'
@@ -193,15 +194,23 @@ def validateargs(param,id):
 
 def validatesets(sets,id):
   valid=[]
+  param['finds']=[]
   for s in sets:
     if not '--in=' in s:
       filename = os.path.basename(param['o'][0])
-      s=s+' --in='+filename
+      s+=' --in='+filename
     if not 'ugene' in s:
       s='ugene '+s
+    if not '--tmp-dir=' in s:
+      s+=' --tmp-dir=tmp'
+    else:
+      param['tmp']=(s.split('--tmp-dir=')[1]).split()[0]
     if '*' in s:
       s=s.replace('*', id)
     valid.append(s)
+    out=s.split('--out=')[1]
+    out=out.split()[0]
+    param['finds'].append(out)
   param['ugene']=valid
 
 def convertEMBL(file,id):
@@ -277,6 +286,46 @@ def convertEMBL(file,id):
       print("{}(-i) has wrong format, missing sequence header, skipped!".format(os.path.split(file)[-1]))
       return False
 
+def select_reps(finds,id):
+  #print(finds)
+  direct=dict()
+  inverted=dict()
+  for find in finds:
+      file=open(find,"r")
+      text=file.read()
+      import re
+      start=[m.start()+2 for m in re.finditer("\n\s{2,}repeat_region   join", text)]
+      start.append(len(text))
+      regions=[text[start[i]:start[i+1]] for i in range(len(start)-1)]
+      for region in regions:
+        key=region[region.find("(")+1:region.find(")")]
+        end=region.find("\n",region.find("/ugene_name="))+3
+        repeat=region[0:end]
+        #print(repeat)
+        if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
+          if key not in inverted.keys():
+            inverted[key]=repeat
+        else:
+          if key not in direct.keys():
+            direct[key]=repeat
+  print("Writing {} selected repeats table...".format(id))
+  with open("{}_inverted_repeats_12_100_selected.gbk".format(id),'w') as ifile:
+    ifile.write(''.join(inverted.values()))
+  with open("{}_direct_repeats_12_100_selected.gbk".format(id),'w') as dfile:
+    dfile.write(''.join(direct.values()))
+
+def removedir(folder):
+  import os, shutil
+  for filename in os.listdir(folder):
+      file_path = os.path.join(folder, filename)
+      try:
+          if os.path.isfile(file_path) or os.path.islink(file_path):
+              os.unlink(file_path)
+          elif os.path.isdir(file_path):
+              shutil.rmtree(file_path)
+      except Exception as e:
+          print('Failed to delete %s. Reason: %s' % (file_path, e))
+
 if not len(sys.argv)>1:
   print(help)
 elif param['help'] == True:
@@ -330,6 +379,13 @@ else:
              #print(os.getcwd())
              os.system(s)
            print("UGENE {} execution time:{}".format(id,datetime.now() - ugene_time))
+           if os.path.isdir('tmp'):
+             removedir('tmp')
+             os.rmdir('tmp')
+           elif 'tmp' in param.keys() and os.path.isdir(param['tmp']):
+             removedir(param['tmp'])
+             os.rmdir(param['tmp'])
+           select_reps(param['finds'],id)
       if 'dir' in param.keys():
         param['o']=param['dir']
       else:
