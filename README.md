@@ -42,3 +42,8 @@ select_repeats.py -conf *parameters file*
 ## 04/04/2022 (1.3.1)
 - adding the routine that extracts the information from the repeats' annotation blocks, concatenates them into a single file, eliminates identical entries and saves them into one file, one for the direct and one for the inverted ones
 - creation of the temporary folder in the UGENE output folder and removal from it at the end of the run
+
+## 11/04/2022 (1.3.2)
+- changing the name of the output file with the selected repeats
+- changing the formatting of the output file with the selected repeats
+- converting the parameters in the output file with the selected repeats to be able to open it on Artemis

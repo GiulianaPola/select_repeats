@@ -19,7 +19,9 @@ import re
 param=dict()
 call=os.path.abspath(os.getcwd())
 
-version="1.3.1"
+version="1.3.2"
+
+print('Select_repeats v{} - insertion repeats selector\n'.format(version))
 
 help = 'Select_repeats v{} - insertion repeats selector\n'.format(version)
 help = help + '(c) 2022. Arthur Gruber & Giuliana Pola\n'
@@ -294,7 +296,7 @@ def select_reps(finds,id):
       file=open(find,"r")
       text=file.read()
       import re
-      start=[m.start()+2 for m in re.finditer("\n\s{2,}repeat_region   join", text)]
+      start=[m.start() for m in re.finditer("repeat_region   join", text)]
       start.append(len(text))
       regions=[text[start[i]:start[i+1]] for i in range(len(start)-1)]
       for region in regions:
@@ -309,10 +311,66 @@ def select_reps(finds,id):
           if key not in direct.keys():
             direct[key]=repeat
   print("Writing {} selected repeats table...".format(id))
-  with open("{}_inverted_repeats_12_100_selected.gbk".format(id),'w') as ifile:
-    ifile.write(''.join(inverted.values()))
-  with open("{}_direct_repeats_12_100_selected.gbk".format(id),'w') as dfile:
-    dfile.write(''.join(direct.values()))
+  with open("{}_inverted_repeats_selected.gbk".format(id),'w') as ifile:
+    lines=''.join(inverted.values()).split('\n')
+    if '' in lines:
+      lines.remove('')
+    i=0
+    for line in lines:
+      if not line.lstrip()=='':
+        if 'repeat_region   join' in line:
+          words=line.split()
+          if '' in words:
+            words.remove('')
+          line=' '*5+words[0]+' '*3+words[1]+'\n'
+          if i>0:
+            line='\n\n'+line
+        
+        elif '/' in line:
+          if '/repeat_len=' in line:
+            line=line.replace('/repeat_len=','/rpt_unit_range=')
+          elif '/repeat_dist=' in line:
+            line=line.replace('/repeat_dist=','/note="repeat distance is ')+' bp"'
+          elif '/repeat_identity=' in line:
+            line=line.replace('/repeat_identity=','/note="repeat identity is ')+'%"'
+          elif '/ugene_name=' in line:
+            line=line.replace('/ugene_name=','/standard_name=')
+          line=line.lstrip()
+          line=' '*21+line+'\n'
+          if "/standard_name=" in line:
+            line+=' '*21+'/color=255 204 204'
+        ifile.write(line)
+      i+=1
+  with open("{}_direct_repeats_selected.gbk".format(id),'w') as dfile:
+    lines=''.join(direct.values()).split('\n')
+    if '' in lines:
+      lines.remove('')
+    i=0
+    for line in lines:
+      if not line.lstrip()=='':
+        if 'repeat_region   join' in line:
+          words=line.split()
+          if '' in words:
+            words.remove('')
+          line=' '*5+words[0]+' '*3+words[1]+'\n'
+          line+=' '*21+'/rpt_type=direct\n'
+          if i>0:
+            line='\n\n'+line
+        elif '/' in line:
+          if '/repeat_len=' in line:
+            line=line.replace('/repeat_len=','/rpt_unit_range=')
+          elif '/repeat_dist=' in line:
+            line=line.replace('/repeat_dist=','/note="repeat distance is ')+' bp"'
+          elif '/repeat_identity=' in line:
+            line=line.replace('/repeat_identity=','/note="repeat identity is ')+'%"'
+          elif '/ugene_name=' in line:
+            line=line.replace('/ugene_name=','/standard_name=')
+          line=line.lstrip()
+          line=' '*21+line+'\n'
+          if "/standard_name=" in line:
+            line+=' '*21+'/color=204 239 255'
+        dfile.write(line)
+      i+=1
 
 def removedir(folder):
   import os, shutil
@@ -391,4 +449,4 @@ else:
       else:
         param['o']=None
       a+=1
-print("Execution time: {}".format(datetime.now() - start_time))
+print("\nExecution time: {}".format(datetime.now() - start_time))
