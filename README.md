@@ -47,3 +47,7 @@ select_repeats.py -conf *parameters file*
 - changing the name of the output file with the selected repeats
 - changing the formatting of the output file with the selected repeats
 - converting the parameters in the output file with the selected repeats to be able to open it on Artemis
+
+## 20/04/2022
+### (1.3.3)
+- fix when grabbing input files from a folder

@@ -19,7 +19,7 @@ import re
 param=dict()
 call=os.path.abspath(os.getcwd())
 
-version="1.3.2"
+version="1.3.3"
 
 print('Select_repeats v{} - insertion repeats selector\n'.format(version))
 
@@ -418,7 +418,7 @@ else:
       if z>1:
         input=param['i'][a]
       else:
-        input=param['i']
+        input="".join(param['i'])
       #print("input={}".format(input))
       validateinput(input)
       id=getid(input)
