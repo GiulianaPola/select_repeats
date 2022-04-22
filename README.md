@@ -48,6 +48,11 @@ select_repeats.py -conf *parameters file*
 - changing the formatting of the output file with the selected repeats
 - converting the parameters in the output file with the selected repeats to be able to open it on Artemis
 
-## 20/04/2022
-### (1.3.3)
+## 20/04/2022 (1.3.3)
 - fix when grabbing input files from a folder
+
+## 22/04/2022 (1.4.0)
+- adding the file.log file to the output folder, specifying program processing details
+- displaying fewer messages on the screen, detail in the file.log file 
+- adding the parameter -r (range), which specifies the coordinate range in which the repetition is accepted, and -s (selection), which specifies the CSV file that has the data for the selection decision
+- validation of the -r and -s parameters
