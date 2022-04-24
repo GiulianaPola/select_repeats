@@ -18,11 +18,11 @@ import os
 import re
 param=dict()
 call=os.path.abspath(os.getcwd())
-filtered=[]
-log=''
+log=None
 z=-1
+processed=0
 
-version="1.4.0"
+version="1.4.1"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
@@ -52,6 +52,11 @@ parser.add_argument('-version', action='store_true')
 parser.add_argument('-h', '--help', action='store_true')
 args = parser.parse_args()
 param = args.__dict__
+
+def getfilename(path):
+    import ntpath
+    head, tail = ntpath.split(path)
+    return tail or ntpath.basename(head)
 
 def renamedir(dir):
   i=2
@@ -95,13 +100,13 @@ def validateconf(conf):
          if ' e ' in value:
            value=value.split(' e ')
          if 'input' in arg or 'i_' in arg or arg=='i':
-           param['i']=value
+           param['i']=os.path.realpath(value)
          elif 'def' in arg:
            param['defi']=value
          elif 'range' in arg or arg=='r':
            param['r']=value
          elif 'csv' in arg or arg=='s':
-           param['s']=value 
+           param['s']=os.path.realpath(value)
          elif 'out' in arg or 'o_' in arg or arg=='o':
            #print(param['o'])
            param['o']=value
@@ -116,33 +121,33 @@ def validateconf(conf):
                    try:
                      os.mkdir(param['outdir'])
                    except:
-                     print("Directory '{}' wasn't created!".format(os.path.split(param['outdir'])[-1]))
+                     print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
                      quit()
                    else:
-                     print("Creating directory '{}'...".format(os.path.split(param['outdir'])[-1]))
+                     print("Creating directory '{}'...".format(getfilename(param['outdir'])))
                  else:
-                   print("Directory '{}' already exists!".format(os.path.split(param['outdir'])[-1]))
+                   print("Directory '{}' already exists!".format(getfilename(param['outdir'])))
                    param['outdir']=renamedir(param['outdir'])
                    try:
                      os.mkdir(param['outdir'])
                    except:
-                     print("Directory '{}' wasn't created!".format(os.path.split(param['outdir'])[-1]))
+                     print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
                      quit()
                    else:
-                     print("Creating directory '{}'...".format(os.path.split(param['outdir'])[-1]))
+                     print("Creating directory '{}'...".format(getfilename(param['outdir'])))
                else:
-                 print("Creating directory '{}'...".format(os.path.split(param['outdir'])[-1]))
+                 print("Creating directory '{}'...".format(getfilename(param['outdir'])))
              else:
-               print("Directory '{}' already exists!".format(os.path.split(param['outdir'])[-1]))
+               print("Directory '{}' already exists!".format(getfilename(param['outdir'])))
                param['outdir']=renamedir(param['outdir'])
                try:
                  os.mkdir(param['outdir'])
                except:
-                 print("Directory '{}' wasn't created!".format(os.path.split(param['outdir'])[-1]))
+                 print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
                  quit()
                else:
-                 print("Creating directory '{}'...".format(os.path.split(param['outdir'])[-1]))
-         elif 'parameter_set' in arg:
+                 print("Creating directory '{}'...".format(getfilename(param['outdir'])))
+         elif 'parameter_set' in arg or 'set' in arg:
            if 'sets' not in param:
              param['sets']=[value] 
            else:
@@ -179,21 +184,23 @@ def validateinput(file):
     try:
       open(file,"r")
     except:
-      print("'{}' (-i) couldn't be opened, skipped!".format(os.path.split(file)[-1]))
-      log.write("\n'{}' (-i) couldn't be opened, skipped!".format(os.path.split(file)[-1]))
+      print("'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
+      log.write("\n'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
       return False
     else:
+      print("\nOpening '{}' (-i)...".format(getfilename(file)))
+      log.write("\n\nOpening '{}' (-i)...".format(getfilename(file)))
       return True
 
 def getid(input):
   try:
-    name=os.path.split(input)[-1]
+    name=getfilename(input)
     m=re.search(r'(\d)[^\d]*$',name)
     #print(input,name,m)
     param['id']=name[0:m.start()+1]
   except:
-    print("'{}' is not a GenBank file, skipped!".format(name))
-    log.write("\n'{}' is not a GenBank file, skipped!".format(name))
+    print("'{}' is not a GenBank file, skipped!".format(getfilename(input)))
+    log.write("\n'{}' is not a GenBank file, skipped!".format(getfilename(input)))
     return False
   else:
     return True
@@ -241,7 +248,7 @@ def convertEMBL(file,id):
   try:
     EMBL=open(file,"r")
   except:
-    log.write("\n'{}' (-i) couldn't be opened, skipped!".format(os.path.split(file)[-1]))
+    log.write("\n'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
     returned=False
   else:
     text=EMBL.read()
@@ -275,13 +282,13 @@ def convertEMBL(file,id):
              try:
                int(num)
              except:
-               log.write("\n'{}' (-i) has wrong format, missing nucleotide count, skipped!".format(os.path.split(file)[-1]))
+               log.write("\n'{}' (-i) has wrong format, missing nucleotide count, skipped!".format(getfilename(file)))
                returned=False
              else:
                new+=str(i+1).rjust(9," ")+' '+seq+'\n'
                i=int(num)
            else:
-             log.write("\n'{}' (-i) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(os.path.split(file)[-1]))
+             log.write("\n'{}' (-i) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(getfilename(file)))
              returned=False
           #print(param['o'])
           try:
@@ -298,16 +305,19 @@ def convertEMBL(file,id):
             GenBank.write("//")
             GenBank.close()
         else:
-          log.write("\n'{}' (-i) doesn't contain base count, skipped!".format(os.path.split(file)[-1]))
+          log.write("\n'{}' (-i) doesn't contain base count, skipped!".format(getfilename(file)))
           returned=False
       else:
-        log.write("\n'{}'(-i) has wrong format, missing 'FT' in lines, skipped!".format(os.path.split(file)[-1]))
+        log.write("\n'{}'(-i) has wrong format, missing 'FT' in lines, skipped!".format(getfilename(file)))
         returned=False
     else:
-      log.write("\n'{}'(-i) has wrong format, missing sequence header, skipped!".format(os.path.split(file)[-1]))
+      log.write("\n'{}'(-i) has wrong format, missing sequence header, skipped!".format(getfilename(file)))
       returned=False
   if returned==False:
     print("'{}' EMBL table wasn't converted, skipped!".format(id))
+  else:
+    print("'{}' EMBL table was converted!".format(id))
+    log.write("\n'{}' EMBL table was converted!".format(id))
   return returned
 
 def validatesets(sets,id):
@@ -321,8 +331,15 @@ def validatesets(sets,id):
       s='ugene '+s
     if not '--tmp-dir=' in s:
       s+=' --tmp-dir=tmp'
+      if 'outdir' in param.keys():
+        param['tmp']=os.path.join(param['outdir'],'tmp')
+      else:
+        param['tmp']=os.path.join(call,'tmp')
     else:
-      param['tmp']=(s.split('--tmp-dir=')[1]).split()[0]
+      if 'outdir' in param.keys():
+        param['tmp']=os.path.join(param['outdir'],(s.split('--tmp-dir=')[1]).split()[0])
+      else:
+        param['tmp']=os.path.join(call,(s.split('--tmp-dir=')[1]).split()[0])
     if not '--name=' in s:
       if '--inverted=True' in s:
         s+=' --name=TIR'
@@ -357,71 +374,76 @@ def removedir(folder):
 def validatecsv(param):
   returned=True
   if os.path.isfile(param['s']):
-    try:
-      with open(param['s'],"r") as arquivo:
-        text='\n'+arquivo.read().replace("\r","")+'\n'
-        index=text.rfind(param['id'])
-        if index==-1:
-          log.write("\n'{}' was not found in the decision table, selecting '{}' repeats without coordinate restriction!".format(param['id'], param['id']))
-          returned=False
-        else:
-          start=text.rfind('\n',0,index)
-          end=text.find('\n',index)
-          coordinates=text[start+1:end]
-          if ";" in coordinates:
-            coordinates=coordinates.split(";")
-          elif "\t" in coordinates:
-            coordinates=coordinates.split("\t")
-          elif "," in coordinates:
-            coordinates=coordinates.split(",")
-          elif " " in coordinates:
-            coordinates=coordinates.split(" ")
+    file=param['s']
+  else:
+    file=os.path.join(call,param['s'])
+  try:
+    arquivo=open(file,"r")
+  except:
+    print("'{}' (-s) couldn't be opened!".format(getfilename(param['s'])))
+    log.write("'{}' (-s) couldn't be opened!".format(getfilename(param['s'])))
+    returned=False
+  else:
+    text='\n'+arquivo.read().replace("\r","")+'\n'
+    index=text.rfind(param['id'])
+    if index==-1:
+      log.write("\n'{}' was not found in the decision table, selecting '{}' repeats without coordinate restriction!".format(param['id'], param['id']))
+      returned=False
+    else:
+      start=text.rfind('\n',0,index)
+      end=text.find('\n',index)
+      coordinates=text[start+1:end]
+      if ";" in coordinates:
+        coordinates=coordinates.split(";")
+      elif "\t" in coordinates:
+        coordinates=coordinates.split("\t")
+      elif "," in coordinates:
+        coordinates=coordinates.split(",")
+      elif " " in coordinates:
+        coordinates=coordinates.split(" ")
+      else:
+        returned=False
+        log.write("\nDecision table (-s) delimiter not recognized, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+      if returned==True:
+        while '' in coordinates:
+            coordinates.remove('')
+        numbers=[]
+        for element in coordinates:
+          try:
+            int(element)
+          except:
+            pass
+          else:
+            numbers.append(int(element))
+        numbers=list(sorted(numbers))
+        if len(numbers)==2:
+          coordinates=[]
+          for number in numbers:
+            coordinates.append(number-param['r'])
+            coordinates.append(number+param['r'])
+          if len(coordinates)==4 and (len(set(coordinates)) == len(coordinates)):
+            param['selection']=coordinates
           else:
             returned=False
-            log.write("\nDecision table (-s) delimiter not recognized, selecting '{}' repeats without coordinate restriction!".format(param['id']))
-          if returned==True:
-            while '' in coordinates:
-                coordinates.remove('')
-            #print("385 Coordinates: '{}'".format(coordinates))
-            numbers=[]
-            for element in coordinates:
-              try:
-                int(element)
-              except:
-                pass
-              else:
-                numbers.append(int(element))
-            numbers=list(sorted(numbers))
-            #print("395 Numbers: '{}'".format(numbers))
-            if len(numbers)==2:
-              coordinates=[]
-              for number in numbers:
-                coordinates.append(number-param['r'])
-                coordinates.append(number+param['r'])
-              #print("401 Coordinates: '{}'".format(coordinates))
-            else:
-              returned=False
-              log.write("\nDecision table (-s) has only one coordinate, selecting '{}' repeats without coordinate restriction!".format(param['id']))
-            if len(coordinates)==4 and (len(set(coordinates)) == len(coordinates)):
-              param['coordinates']=coordinates
-            else:
-              returned=False
-              log.write("\nTwo or more coordinates of acceptable range are equal, selecting '{}' repeats without coordinate restriction!".format(param['id']))
-    except:
-      log.write("\n'{}' (-s) couldn't be opened!".format(os.path.split(param['s'])[-1]))
-      returned=False
+            log.write("\nTwo or more coordinates of acceptable range are equal, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+        else:
+          returned=False
+          log.write("\nDecision table (-s) has only one coordinate, selecting '{}' repeats without coordinate restriction!".format(param['id']))
   if returned==False:
-    print("Decision table is not valid, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+    print("Decision table (-s) is not valid, selecting '{}' repeats without coordinate restriction!".format(param['id']))
 
-def select_reps(finds,id):
-  log.write("\nFiltering '{}' regions from {} to {} and {} to {}...".format(id,param['coordinates'][0],param['coordinates'][1],param['coordinates'][2],param['coordinates'][3]))
+def select_reps(finds,id,selection):
+  filtered=[]
   direct=dict()
   inverted=dict()
+  if not selection==[]:
+    log.write("\nFiltering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
+    print("Filtering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
   for find in finds:
       try:
         file=open(find,"r")
       except:
-        log.write("\nUGENE '{}' file wasn't opened!".format(os.path.split(find)[-1]))
+        log.write("\nUGENE '{}' file wasn't opened!".format(getfilename(find)))
       else:
         text=file.read()
         import re
@@ -434,8 +456,8 @@ def select_reps(finds,id):
           repeat=region[0:end]
           #print(repeat)
           valid=True
-          #print("param['coordinates']:'{}'".format(param['coordinates']))
-          if 'coordinates' in param.keys():
+          #print("param['selection']:'{}'".format(param['selection']))
+          if not selection==[]:
             coordinates=[]
             for coordinate in key.split(","):
               if coordinates==[]:
@@ -444,7 +466,7 @@ def select_reps(finds,id):
                 coordinates.append(int(coordinate.split("..")[-1]))
             coordinates=list(sorted(coordinates))
             #print("coordinates:'{}'".format(coordinates))
-            if coordinates[0]>=param['coordinates'][0] and coordinates[0]<=param['coordinates'][1] and coordinates[1]>=param['coordinates'][2] and coordinates[1]<=param['coordinates'][3]:
+            if coordinates[0]>=selection[0] and coordinates[0]<=selection[1] and coordinates[1]>=selection[2] and coordinates[1]<=selection[3]:
               valid=True
             else:
               valid=False
@@ -462,8 +484,11 @@ def select_reps(finds,id):
             else:
               if key not in direct.keys():
                 direct[key]=repeat
+  if filtered==[] and not selection==[]:
+    log.write("\nAll '{}' repeat regions are within the filtering limits!".format(id))
   writerepeatstable(direct,False,id)
   writerepeatstable(inverted,True,id)
+  print("'{}' repeat regions were selected!".format(id))
 
 def writerepeatstable(repeats,inverted,id):
   if inverted==True:
@@ -473,8 +498,12 @@ def writerepeatstable(repeats,inverted,id):
   try:
     open(filename,'w')
   except:
-    print("'{}' selected repeat regions table wasn't written!".format(id))
-    log.write("\n'{}' selected repeat regions table wasn't written!".format(id))
+    if inverted==True:
+      print("'{}' selected inverted repeats table wasn't written!".format(id))
+      log.write("\n'{}' selected inverted repeat regions table wasn't written!".format(id))
+    else:
+      print("'{}' selected direct repeats table wasn't written!".format(id))
+      log.write("\n'{}' selected direct repeats table wasn't written!".format(id))
   else:
     with open(filename,'w') as file:
       lines=''.join(repeats.values()).split('\n')
@@ -561,41 +590,50 @@ else:
       else:
         input="".join(param['i'])
       #print("input='{}'".format(input))
-      log.write("\n\nOpening '{}' (-i)...".format(os.path.split(input)[-1]))
-      print("\nOpening '{}' (-i)...".format(os.path.split(input)[-1]))
       if validateinput(input):
         if getid(input):
          validateoutargs(param)
          #print(param)
          if 'outdir' in param.keys():
-               os.chdir(param['outdir'])
+           os.chdir(param['outdir'])
          if convertEMBL(input,param['id']):
+           processed+=1
            if 'sets' in param.keys():
              if validatesets(param['sets'],param['id']):
                 ugene_time = datetime.now()
                 print("Executing UGENE...")
-                for s in param['ugene']:
-                  os.system(s)
-                print("UGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
-                log.write("\nUGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
-                if os.path.isdir('tmp'):
-                  removedir('tmp')
-                  os.rmdir('tmp')
-                elif 'tmp' in param.keys() and os.path.isdir(param['tmp']):
-                  removedir(param['tmp'])
-                  os.rmdir(param['tmp'])
-                if 's' in param.keys():
-                  validatecsv(param) 
-                select_reps(param['finds'],param['id'])
-        if 'coordinates' in param.keys():
-          param.pop('coordinates')
-        if 'outdir' in param.keys():
-          param['o']=param['outdir']
-        else:
-          param['o']=None
-        a+=1
+                try:
+                  for s in param['ugene']:
+                    os.system(s)
+                except:
+                  print("'{}' UGENE execution didn't finish, skipped!".format(param['id']))
+                else:
+                  print("UGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
+                  log.write("\nUGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
+                  if 'tmp' in param.keys() and os.path.isdir(param['tmp']):
+                    removedir(param['tmp'])
+                    os.rmdir(param['tmp'])
+                  if 's' in param.keys():
+                    validatecsv(param)
+                  if 'selection' in param.keys():
+                    select_reps(param['finds'],param['id'],param['selection'])
+                  else:
+                    select_reps(param['finds'],param['id'],[])
+      if 'selection' in param.keys():
+        param.pop('selection')
+      if 'outdir' in param.keys():
+        param['o']=param['outdir']
+      else:
+        param['o']=None
+      a+=1
 import io
-if isinstance(log, io.TextIOBase):
-  log.write("\n\nExecution time: {}".format(datetime.now() - start_time))
+execution=datetime.now() - start_time
+if not log==None:
+  log.write("\n\nExecution time: {}".format(execution))
+  log.write("\nNumber of processed files: {}".format(processed))
+  log.write("\nExecution time per file: {}".format(execution/processed))
   log.close()
-print("\nExecution time: {}".format(datetime.now() - start_time))
+print("\nExecution time: {}".format(execution))
+if processed>0:
+  print("Number of processed files: {}".format(processed))
+  print("Execution time per file: {}".format(execution/processed))

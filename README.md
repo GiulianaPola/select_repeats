@@ -56,3 +56,6 @@ select_repeats.py -conf *parameters file*
 - displaying fewer messages on the screen, detail in the file.log file 
 - adding the parameter -r (range), which specifies the coordinate range in which the repetition is accepted, and -s (selection), which specifies the CSV file that has the data for the selection decision
 - validation of the -r and -s parameters
+
+## 23/04/2022 (1.4.1)
+- correction when calculating the coordinate limit that will be accepted
