@@ -1,6 +1,14 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 import traceback
 import warnings
+import io
+import argparse
+import sys
+from datetime import datetime
+import os
+import re
+import ntpath
 
 def warn_with_traceback(message, category, filname, reno, fil=None, re=None):
 
@@ -10,19 +18,15 @@ def warn_with_traceback(message, category, filname, reno, fil=None, re=None):
 
 warnings.showwarning = warn_with_traceback
 
-import argparse
-import sys
-from datetime import datetime
+
 start_time = datetime.now()
-import os
-import re
 param=dict()
 call=os.path.abspath(os.getcwd())
 log=None
-z=-1
+nseqs=-1
 processed=0
 
-version="1.4.1"
+version="1.4.2"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
@@ -54,36 +58,36 @@ args = parser.parse_args()
 param = args.__dict__
 
 def getfilename(path):
-    import ntpath
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
 
 def renamedir(dir):
-  i=2
-  out=dir+str(i)
+  i=1
+  out=dir+"("+str(i)+")"
   while os.path.isdir(out):
     i+=1
-    out=dir+str(i)
+    out=dir+"("+str(i)+")"
   return out
 
 def renamefile(file):
-  i=2
+  i=1
   filename, file_extension = os.path.splitext(file)
   if not file_extension=='':
-    out=filename+str(i)+'.'+file_extension
+    out=filename+"("+str(i)+")"+'.'+file_extension
   else:
-    out=filename+str(i)
+    out=filename+"("+str(i)+")"
   while os.path.isfile(out):
     i+=1
     if not file_extension=='':
-      out=filename+str(i)+'.'+file_extension
+      out=filename+"("+str(i)+")"+'.'+file_extension
     else:
-      out=filename+str(i)
+      out=filename+"("+str(i)+")"
   return out
 
 def validateconf(conf):
+  #print("85 Validando configuração...")
   if not os.path.isfile(conf):
-      print("Configuration file (-conf) doesn't exist!")
+      print(getfilename(conf)," (-conf) doesn't exist!")
       quit()
   else:
       file=open(conf,'r')
@@ -100,7 +104,12 @@ def validateconf(conf):
          if ' e ' in value:
            value=value.split(' e ')
          if 'input' in arg or 'i_' in arg or arg=='i':
-           param['i']=os.path.realpath(value)
+           path=findpath(value)
+           if path == None:
+             print("'{}' (-i) doesn't exist".format(value))
+             quit()
+           else:
+             param['i']=path
          elif 'def' in arg:
            param['defi']=value
          elif 'range' in arg or arg=='r':
@@ -156,6 +165,7 @@ def validateconf(conf):
            param[str(arg)]=value
            
 def validatediv(div):
+  #print("160 Validando div...")
   if not isinstance(div, str):
     print("GenBank division (-div) is not string!")
     quit()
@@ -170,6 +180,7 @@ def validatediv(div):
     param['div']=div.upper()
 
 def validaterange(range):
+  #print("175 Validando range...")
   try:
     int(range)
   except:
@@ -179,20 +190,40 @@ def validaterange(range):
     #print("234 valid range: '{}'".format(param['r']))
     param['r']=int(range)
 
+def findpath(tail):
+  paths=[]
+  paths.append(os.path.realpath(tail))
+  paths.append(os.path.join(call,tail))
+  if 'conf' in param:
+    if not param['conf']==None:
+      #print(param['conf'])
+      path=os.path.split(os.path.realpath(param['conf']))
+      if not path[0]==None:
+       paths.append(os.path.join(path[0],tail))
+  #print(paths)
+  tail=None
+  for p in paths:
+    if os.path.exists(p):
+      tail=p
+      break
+  #print("199 Input=",tail)
+  return tail
+
 def validateinput(file):
-  if os.path.isfile(file):
-    try:
-      open(file,"r")
-    except:
-      print("'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
-      log.write("\n'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
-      return False
-    else:
-      print("\nOpening '{}' (-i)...".format(getfilename(file)))
-      log.write("\n\nOpening '{}' (-i)...".format(getfilename(file)))
-      return True
+  #print("186 Validando input...")
+  try:
+    open(file,"r")
+  except:
+    print("'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
+    log.write("\n'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
+    return False
+  else:
+    print("\nOpening '{}' (-i)...".format(getfilename(file)))
+    log.write("\n\nOpening '{}' (-i)...".format(getfilename(file)))
+    return True
 
 def getid(input):
+  #print("200 Extraindo id...")
   try:
     name=getfilename(input)
     m=re.search(r'(\d)[^\d]*$',name)
@@ -206,6 +237,7 @@ def getid(input):
     return True
 
 def validateoutargs(param):
+  #print("214 Validando outargs....")
   returned=True
   if param['o'] is None:
     out=[param['id']+'_UGENE.gbk',param['id']+'_repeats.gbk']
@@ -244,6 +276,7 @@ def validateoutargs(param):
   return returned
 
 def convertEMBL(file,id):
+  #print("253 Convertendo EMBL...")
   returned=True
   try:
     EMBL=open(file,"r")
@@ -321,6 +354,7 @@ def convertEMBL(file,id):
   return returned
 
 def validatesets(sets,id):
+  #print('331 Validando sets...')
   valid=[]
   param['finds']=[]
   for s in sets:
@@ -360,6 +394,7 @@ def validatesets(sets,id):
     return True
 
 def removedir(folder):
+  #print("371 Excluindo pasta...")
   import os, shutil
   for filename in os.listdir(folder):
       file_path = os.path.join(folder, filename)
@@ -372,6 +407,7 @@ def removedir(folder):
           log.write('\nFailed to delete %s. Reason: %s' % (file_path, e))
 
 def validatecsv(param):
+  #print("384 Validando csv...")
   returned=True
   if os.path.isfile(param['s']):
     file=param['s']
@@ -403,7 +439,7 @@ def validatecsv(param):
         coordinates=coordinates.split(" ")
       else:
         returned=False
-        log.write("\nDecision table (-s) delimiter not recognized, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+        log.write("\nDecision table (-s) delimiter not recogninseqsed, selecting '{}' repeats without coordinate restriction!".format(param['id']))
       if returned==True:
         while '' in coordinates:
             coordinates.remove('')
@@ -433,6 +469,7 @@ def validatecsv(param):
     print("Decision table (-s) is not valid, selecting '{}' repeats without coordinate restriction!".format(param['id']))
 
 def select_reps(finds,id,selection):
+  #print("446 Selecionando repetições...")
   filtered=[]
   direct=dict()
   inverted=dict()
@@ -491,6 +528,7 @@ def select_reps(finds,id,selection):
   print("'{}' repeat regions were selected!".format(id))
 
 def writerepeatstable(repeats,inverted,id):
+  #print("505 Escrevendo tabela de repetições...")
   if inverted==True:
     filename="{}_inverted_repeats_selected.gbk".format(id)
   else:
@@ -559,12 +597,13 @@ else:
   else:
     validatediv(param['div'].strip())
   if 'r' in param.keys():
-    validaterange(param['r'])
+    if not param['r']==None:
+      validaterange(param['r'])
   if param['i'] is None:
     print("Missing input file or dir (-i)!")
     quit()
   else:
-    z=1
+    nseqs=1
     param['i']=os.path.realpath(param['i'])
     parameters='\n'.join(str(param)[1:-1].split(', '))
     if os.path.isdir(param['i']):
@@ -573,29 +612,27 @@ else:
         quit()
       else:
         param['i'] = [os.path.join(os.path.abspath(param['i']),f) for f in os.listdir(param['i']) if os.path.isfile(os.path.join(param['i'], f))]
-        z=len(param['i'])
+        nseqs=len(param['i'])
+    if 'outdir' in param.keys():
+      os.chdir(param['outdir'])
     a=0
-    if 'outdir' in param:
-      log=open(os.path.join(param['outdir'],"file.log"),"w")
-    else:
-      log=open("file.log","w")
+    log=open("file.log","w")
     log.write('Current working directory: {}'.format(call))
     log.write('\n{}\n'.format(' '.join(sys.argv)))
     log.write('\nSelect_repeats v{} - repeats regions selector\n'.format(version))
     log.write('\nParameters:\n{}'.format(parameters))
     #print("param['i']='{}'".format(param['i']))
-    while a<z:
-      if z>1:
+    while a<nseqs:
+      if nseqs>1:
         input=param['i'][a]
       else:
         input="".join(param['i'])
       #print("input='{}'".format(input))
-      if validateinput(input):
+      input=findpath(input)
+      if (not input==None) and validateinput(input):
         if getid(input):
          validateoutargs(param)
          #print(param)
-         if 'outdir' in param.keys():
-           os.chdir(param['outdir'])
          if convertEMBL(input,param['id']):
            processed+=1
            if 'sets' in param.keys():
@@ -614,7 +651,11 @@ else:
                     removedir(param['tmp'])
                     os.rmdir(param['tmp'])
                   if 's' in param.keys():
-                    validatecsv(param)
+                    if not param['s']==None:
+                      path=findpath(param['s'])
+                      if not path==None:
+                        param['s']=path
+                        validatecsv(param)
                   if 'selection' in param.keys():
                     select_reps(param['finds'],param['id'],param['selection'])
                   else:
@@ -626,12 +667,12 @@ else:
       else:
         param['o']=None
       a+=1
-import io
 execution=datetime.now() - start_time
 if not log==None:
   log.write("\n\nExecution time: {}".format(execution))
   log.write("\nNumber of processed files: {}".format(processed))
-  log.write("\nExecution time per file: {}".format(execution/processed))
+  if processed>0:
+    log.write("\nExecution time per file: {}".format(execution/processed))
   log.close()
 print("\nExecution time: {}".format(execution))
 if processed>0:

@@ -58,4 +58,8 @@ select_repeats.py -conf *parameters file*
 - validation of the -r and -s parameters
 
 ## 23/04/2022 (1.4.1)
-- correction when calculating the coordinate limit that will be accepted
+- fix when calculating the coordinate limit that will be accepted
+
+## 10/05/2022 (1.4.2)
+- fix when checking for the existence of the input file or folder
+- fix to ignore the -r and -s parameters if they are not given
