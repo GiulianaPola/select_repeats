@@ -17,8 +17,12 @@ select_repeats.py -conf *parameters file*
 
 - -conf *text file* - Text file with the parameters
 
+-o <string>     Name of the output file (feature table in GenBank format)
+
 **Optional parameters:**
-- -o (string) - Name of the output file (feature table in GenBank format)
+- -ir <integer>   Internal range of coordinates in which the repetition is accepted
+- -er <integer>   External range of coordinates in which the repetition is accepted
+- -s <csv table file>     CSV file that has the data for decision making in the selection
 
 ## 12/03/2022 (1.0.0)
 - validation and addition of parameters -i (EMBL feature table),-defi (sequence definition), -div (GenBank division)
@@ -63,3 +67,7 @@ select_repeats.py -conf *parameters file*
 ## 10/05/2022 (1.4.2)
 - fix when checking for the existence of the input file or folder
 - fix to ignore the -r and -s parameters if they are not given
+
+## 24/05/2022 (1.5.0)
+- changing the -i parameter to -in
+- replacement of the -r parameter with -ir and -er

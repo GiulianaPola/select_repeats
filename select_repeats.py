@@ -26,31 +26,33 @@ log=None
 nseqs=-1
 processed=0
 
-version="1.4.2"
+version="1.5.0"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
 help = 'Select_repeats v{} - repeats regions selector\n'.format(version)
 help = help + '(c) 2022. Arthur Gruber & Giuliana Pola\n'
-help = help + 'Usage: select_repeats.py -i <EMBL file> -o <output filename> -div <GenBank division> -defi <sequence description>\n'
+help = help + 'Usage: select_repeats.py -in <EMBL file> -o <output filename> -div <GenBank division> -defi <sequence description>\n'
 help = help + 'select_repeats.py -conf <parameters file>\n'
 help = help + '\nMandatory parameters:\n'
-help = help + '-i <text file>\tFeature table in EMBL format\n'
+help = help + '-in <text file>\tFeature table in EMBL format\n'
 help = help + '-o <string>\tName of the output file (feature table in GenBank format)\n'
 help = help + '-div <three-letter string>\tGenBank division\n'
 help = help + '-defi <string>\tSequence definition\n'
 help = help + '-conf <text file>\tText file with the parameters\n'
 help = help + '\nOptional parameters:\n'
-help = help + '-r <integer>\tRange of coordinates in which the repetition is accepted\n'
+help = help + '-ir <integer>\tInternal range of coordinates in which the repetition is accepted\n'
+help = help + '-er <integer>\tExternal range of coordinates in which the repetition is accepted\n'
 help = help + '-s <csv table file>\tCSV file that has the data for decision making in the selection' 
 
 parser = argparse.ArgumentParser(add_help=False)
-parser.add_argument('-i')
+parser.add_argument('-in')
 parser.add_argument('-o')
 parser.add_argument('-div')
 parser.add_argument('-defi')
 parser.add_argument('-conf')
-parser.add_argument('-r')
+parser.add_argument('-ir')
+parser.add_argument('-er')
 parser.add_argument('-s') 
 parser.add_argument('-version', action='store_true')
 parser.add_argument('-h', '--help', action='store_true')
@@ -103,17 +105,22 @@ def validateconf(conf):
          value='='.join(lin.split('=')[1:]).strip().strip('\"')
          if ' e ' in value:
            value=value.split(' e ')
-         if 'input' in arg or 'i_' in arg or arg=='i':
+         if 'input' in arg or 'i_' in arg or arg=='i' or arg=='in':
            path=findpath(value)
            if path == None:
-             print("'{}' (-i) doesn't exist".format(value))
+             print("'{}' (-in) doesn't exist".format(value))
              quit()
            else:
-             param['i']=path
+             param['in']=path
          elif 'def' in arg:
            param['defi']=value
-         elif 'range' in arg or arg=='r':
-           param['r']=value
+         elif arg=='r':
+           param['er']=value
+           param['ir']=value
+         elif 'external range' in arg or arg=='er':
+           param['er']=value
+         elif 'internal range' in arg or arg=='ir':
+           param['ir']=value
          elif 'csv' in arg or arg=='s':
            param['s']=os.path.realpath(value)
          elif 'out' in arg or 'o_' in arg or arg=='o':
@@ -184,11 +191,11 @@ def validaterange(range):
   try:
     int(range)
   except:
-    print("'{}' (-r) isn't integer!".format(range))
+    print("'{}' (range) isn't integer!".format(range))
     quit() 
   else:
     #print("234 valid range: '{}'".format(param['r']))
-    param['r']=int(range)
+    return int(range)
 
 def findpath(tail):
   paths=[]
@@ -214,12 +221,12 @@ def validateinput(file):
   try:
     open(file,"r")
   except:
-    print("'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
-    log.write("\n'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
+    print("'{}' (-in) couldn't be opened, skipped!".format(getfilename(file)))
+    log.write("\n'{}' (-in) couldn't be opened, skipped!".format(getfilename(file)))
     return False
   else:
-    print("\nOpening '{}' (-i)...".format(getfilename(file)))
-    log.write("\n\nOpening '{}' (-i)...".format(getfilename(file)))
+    print("\nOpening '{}' (-in)...".format(getfilename(file)))
+    log.write("\n\nOpening '{}' (-in)...".format(getfilename(file)))
     return True
 
 def getid(input):
@@ -281,7 +288,7 @@ def convertEMBL(file,id):
   try:
     EMBL=open(file,"r")
   except:
-    log.write("\n'{}' (-i) couldn't be opened, skipped!".format(getfilename(file)))
+    log.write("\n'{}' (-in) couldn't be opened, skipped!".format(getfilename(file)))
     returned=False
   else:
     text=EMBL.read()
@@ -315,13 +322,13 @@ def convertEMBL(file,id):
              try:
                int(num)
              except:
-               log.write("\n'{}' (-i) has wrong format, missing nucleotide count, skipped!".format(getfilename(file)))
+               log.write("\n'{}' (-in) has wrong format, missing nucleotide count, skipped!".format(getfilename(file)))
                returned=False
              else:
                new+=str(i+1).rjust(9," ")+' '+seq+'\n'
                i=int(num)
            else:
-             log.write("\n'{}' (-i) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(getfilename(file)))
+             log.write("\n'{}' (-in) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(getfilename(file)))
              returned=False
           #print(param['o'])
           try:
@@ -338,13 +345,13 @@ def convertEMBL(file,id):
             GenBank.write("//")
             GenBank.close()
         else:
-          log.write("\n'{}' (-i) doesn't contain base count, skipped!".format(getfilename(file)))
+          log.write("\n'{}' (-in) doesn't contain base count, skipped!".format(getfilename(file)))
           returned=False
       else:
-        log.write("\n'{}'(-i) has wrong format, missing 'FT' in lines, skipped!".format(getfilename(file)))
+        log.write("\n'{}'(-in) has wrong format, missing 'FT' in lines, skipped!".format(getfilename(file)))
         returned=False
     else:
-      log.write("\n'{}'(-i) has wrong format, missing sequence header, skipped!".format(getfilename(file)))
+      log.write("\n'{}'(-in) has wrong format, missing sequence header, skipped!".format(getfilename(file)))
       returned=False
   if returned==False:
     print("'{}' EMBL table wasn't converted, skipped!".format(id))
@@ -452,19 +459,26 @@ def validatecsv(param):
           else:
             numbers.append(int(element))
         numbers=list(sorted(numbers))
-        if len(numbers)==2:
+        if len(numbers)==2 and len(set(numbers))==len(numbers):
+          log.write("\nCoordinates: {}-{}".format(numbers[0],numbers[1]))
           coordinates=[]
-          for number in numbers:
-            coordinates.append(number-param['r'])
-            coordinates.append(number+param['r'])
-          if len(coordinates)==4 and (len(set(coordinates)) == len(coordinates)):
-            param['selection']=coordinates
-          else:
-            returned=False
-            log.write("\nTwo or more coordinates of acceptable range are equal, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+          if param['ir']==None and param['er']==None:
+            coordinates=numbers
+          elif param['er']==None and not param['ir']==None:
+            coordinates.append(min(numbers)+param['ir'])
+            coordinates.append(max(numbers)-param['ir'])
+          elif param['ir']==None and not param['er']==None:
+            coordinates.append(min(numbers)-param['er'])
+            coordinates.append(max(numbers)+param['er'])
+          elif not(param['ir']==None and param['er']==None):
+            coordinates.append(min(numbers)-param['er'])
+            coordinates.append(min(numbers)+param['ir'])
+            coordinates.append(max(numbers)-param['ir'])
+            coordinates.append(max(numbers)+param['er'])
+          param['selection']=coordinates
         else:
           returned=False
-          log.write("\nDecision table (-s) has only one coordinate, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+          log.write("\nDecision table (-s) has only one unique coordinate, selecting '{}' repeats without coordinate restriction!".format(param['id']))
   if returned==False:
     print("Decision table (-s) is not valid, selecting '{}' repeats without coordinate restriction!".format(param['id']))
 
@@ -474,8 +488,12 @@ def select_reps(finds,id,selection):
   direct=dict()
   inverted=dict()
   if not selection==[]:
-    log.write("\nFiltering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
-    print("Filtering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
+    if len(selection)==4:
+      log.write("\nFiltering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
+      print("Filtering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
+    elif len(selection)==2:
+      log.write("\nFiltering '{}' repeats from {} to {}...".format(id,selection[0],selection[1]))
+      print("Filtering '{}' repeats from {} to {}...".format(id,selection[0],selection[1]))
   for find in finds:
       try:
         file=open(find,"r")
@@ -503,17 +521,16 @@ def select_reps(finds,id,selection):
                 coordinates.append(int(coordinate.split("..")[-1]))
             coordinates=list(sorted(coordinates))
             #print("coordinates:'{}'".format(coordinates))
-            if coordinates[0]>=selection[0] and coordinates[0]<=selection[1] and coordinates[1]>=selection[2] and coordinates[1]<=selection[3]:
-              valid=True
-            else:
-              valid=False
-              if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
-                if "Inverted '{}'".format(id) not in filtered:
-                  log.write("\nInverted '{}' was filtered!".format(id))
-                  filtered.append("Inverted '{}'".format(id))
-              elif "Direct '{}'".format(id) not in filtered:
-                log.write("\nDirect '{}' was filtered!".format(id))
-                filtered.append("Direct '{}'".format(id))
+            if len(selection)==4:
+              if coordinates[0]>=selection[0] and coordinates[0]<=selection[1] and coordinates[1]>=selection[2] and coordinates[1]<=selection[3]:
+                valid=True
+              else:
+                valid=False
+            elif len(selection)==2:
+              if coordinates[0]>=selection[0] and coordinates[1]<=selection[-1]:
+                valid=True
+              else:
+                valid=False
           if valid:
             if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
               if key not in inverted.keys():
@@ -521,6 +538,14 @@ def select_reps(finds,id,selection):
             else:
               if key not in direct.keys():
                 direct[key]=repeat
+          else:
+            if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
+              if "Inverted '{}'".format(id) not in filtered:
+                  log.write("\nInverted '{}' was filtered!".format(id))
+                  filtered.append("Inverted '{}'".format(id))
+              elif "Direct '{}'".format(id) not in filtered:
+                log.write("\nDirect '{}' was filtered!".format(id))
+                filtered.append("Direct '{}'".format(id))
   if filtered==[] and not selection==[]:
     log.write("\nAll '{}' repeat regions are within the filtering limits!".format(id))
   writerepeatstable(direct,False,id)
@@ -596,23 +621,26 @@ else:
     quit()
   else:
     validatediv(param['div'].strip())
-  if 'r' in param.keys():
-    if not param['r']==None:
-      validaterange(param['r'])
-  if param['i'] is None:
-    print("Missing input file or dir (-i)!")
+  if 'ir' in param.keys():
+    if not param['ir']==None:
+      param['ir']=validaterange(param['ir'])
+  if 'er' in param.keys():
+    if not param['er']==None:
+      param['er']=validaterange(param['er'])
+  if param['in'] is None:
+    print("Missing input file or dir (-in)!")
     quit()
   else:
     nseqs=1
-    param['i']=os.path.realpath(param['i'])
+    param['in']=os.path.realpath(param['in'])
     parameters='\n'.join(str(param)[1:-1].split(', '))
-    if os.path.isdir(param['i']):
-      if len(os.listdir(param['i'])) == 0:
-        print("Directory '{}' (-i) is empty!".format(param['i']))
+    if os.path.isdir(param['in']):
+      if len(os.listdir(param['in'])) == 0:
+        print("Directory '{}'  is empty!".format(param['in']))
         quit()
       else:
-        param['i'] = [os.path.join(os.path.abspath(param['i']),f) for f in os.listdir(param['i']) if os.path.isfile(os.path.join(param['i'], f))]
-        nseqs=len(param['i'])
+        param['in'] = [os.path.join(os.path.abspath(param['in']),f) for f in os.listdir(param['in']) if os.path.isfile(os.path.join(param['in'], f))]
+        nseqs=len(param['in'])
     if 'outdir' in param.keys():
       os.chdir(param['outdir'])
     a=0
@@ -621,12 +649,12 @@ else:
     log.write('\n{}\n'.format(' '.join(sys.argv)))
     log.write('\nSelect_repeats v{} - repeats regions selector\n'.format(version))
     log.write('\nParameters:\n{}'.format(parameters))
-    #print("param['i']='{}'".format(param['i']))
+    #print("param['in']='{}'".format(param['in']))
     while a<nseqs:
       if nseqs>1:
-        input=param['i'][a]
+        input=param['in'][a]
       else:
-        input="".join(param['i'])
+        input="".join(param['in'])
       #print("input='{}'".format(input))
       input=findpath(input)
       if (not input==None) and validateinput(input):
