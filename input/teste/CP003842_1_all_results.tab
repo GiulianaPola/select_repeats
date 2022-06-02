@@ -1,0 +1,1518 @@
+FT   gene            145..372
+FT                   /locus_tag="ORF_01"
+FT   CDS             145..372
+FT                   /locus_tag="ORF_01"
+FT                   /note="ORF_01"
+FT                   /note="score is 8.02"
+FT                   /note=":, TPR, Tetratricopeptide repeat, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 65.00, e-value is
+FT                   0.00"
+FT                   /note=":, TPR, Tetratricopeptide repeat, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 55.80, e-value is
+FT                   0.00"
+FT                   /note=":, TPR_1, Tetratricopeptide repeat, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 45.50, e-value is
+FT                   0.00"
+FT                   /note="GO_function:protein binding (GO:0005515)"
+FT                   /note="similar to Uniref90:K0B6Q7:percent identity is
+FT                   100.00, e-value is 0.00, score is 155.00"
+FT                   /note="similar to Uniref90:A0A0C5BWT0:percent identity is
+FT                   89.33, e-value is 0.00, score is 142.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR019734"
+FT                   /inference="protein motif:InterPro:IPR001440"
+FT                   /inference="protein motif:InterPro:IPR011990"
+FT                   /inference="protein motif:InterPro:IPR013026"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6Q7"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0C5BWT0"
+FT                   /translation="MDKIDELVSQGKSFLEDGKYDDALGFFEQALLLNQDNPDLWNYKGITLRSLGRYEEAMDCFNKSLQIDPRDRHSS"
+FT                   /transl_table=11
+FT                   /product="TPR_REGION domain-containing protein n=1
+FT                   Tax=Candidatus Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B6Q7_9ARCH"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            424..915
+FT                   /locus_tag="ORF_02"
+FT   CDS             424..915
+FT                   /locus_tag="ORF_02"
+FT                   /note="ORF_02"
+FT                   /note="score is 7.90"
+FT                   /note=":, TPR, Tetratricopeptide repeat, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 74.30, e-value is
+FT                   0.00"
+FT                   /note=":, TPR, Tetratricopeptide repeat, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 68.50, e-value is
+FT                   0.00"
+FT                   /note=":, TPR, Tetratricopeptide repeat, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 54.60, e-value is
+FT                   0.00"
+FT                   /note=":, TPR_domain_protein, putative PEP-CTERM system
+FT                   TPR-repeat lipoprotein, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 80.10, e-value is 0.00"
+FT                   /note=":, TPR_domain_protein, putative PEP-CTERM system
+FT                   TPR-repeat lipoprotein, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 59.70, e-value is 0.00"
+FT                   /note=":, TPR_domain_protein, putative PEP-CTERM system
+FT                   TPR-repeat lipoprotein, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 57.00, e-value is 0.00"
+FT                   /note=":, TPR_domain_protein, putative PEP-CTERM system
+FT                   TPR-repeat lipoprotein, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 41.60, e-value is 0.00"
+FT                   /note=":, TPR_domain_protein, putative PEP-CTERM system
+FT                   TPR-repeat lipoprotein, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 39.70, e-value is 0.00"
+FT                   /note="GO_function:protein binding (GO:0005515)"
+FT                   /note="similar to Uniref90:K0B849:percent identity is
+FT                   99.38, e-value is 0.00, score is 328.00"
+FT                   /note="similar to Uniref90:A0A087S127:percent identity is
+FT                   82.10, e-value is 0.00, score is 275.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR019734"
+FT                   /inference="protein motif:InterPro:IPR013026"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR011990"
+FT                   /inference="similar to AA sequence:Uniref90:K0B849"
+FT                   /inference="similar to AA sequence:Uniref90:A0A087S127"
+FT                   /translation="VLNDTERMMAEAYECVEEGDFHDALNLYDLVLEKEPSNVSALIDKGVTLQNMGRIKLAIRSYDKALSISPTNIDALLNKGTALHSDQKYAEAMECYDAVLQIDKKCAMALAYKGLSLGETGKLQDALKHFKKALSIDNEFDLASISKDMAQNLIKSIKETKTQ"
+FT                   /transl_table=11
+FT                   /product="TPR_REGION domain-containing protein n=1
+FT                   Tax=Candidatus Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B849_9ARCH"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(902..1075)
+FT                   /locus_tag="ORF_03"
+FT   CDS             complement(902..1075)
+FT                   /locus_tag="ORF_03"
+FT                   /note="ORF_03"
+FT                   /note="score is 5.41"
+FT                   /note="similar to Uniref90:A9A4E8:percent identity is
+FT                   91.23, e-value is 0.00, score is 83.60"
+FT                   /note="similar to Uniref90:A0A7K4FA63:percent identity is
+FT                   78.95, e-value is 0.00, score is 83.60"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR013087"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:A9A4E8"
+FT                   /inference="similar to AA sequence:Uniref90:A0A7K4FA63"
+FT                   /translation="MVLPLVDEHKPKCYLCHEGFENLEKLREHQKSEHKEFFESHEKEMNREPAPGDVTVF"
+FT                   /transl_table=11
+FT                   /product="C2H2-type domain-containing protein n=10
+FT                   Tax=Thaumarchaeota TaxID=651137 RepID=A9A4E8_NITMS"
+FT                   /color=0 0 255
+FT   gene            1152..2249
+FT                   /locus_tag="ORF_04"
+FT   CDS             1152..2249
+FT                   /locus_tag="ORF_04"
+FT                   /note="ORF_04"
+FT                   /note="score is 5.88"
+FT                   /note=":, ThiH, Thiamine biosynthesis enzyme ThiH and
+FT                   related uncharacterized enzymes, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 410.00, e-value is 0.00"
+FT                   /note="S:, putative menaquinone biosynthesis radical SAM
+FT                   enzyme, SCO4494 family, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 399.00, e-value is 0.00"
+FT                   /note="GO_function:catalytic activity (GO:0003824)"
+FT                   /note="GO_function:iron-sulfur cluster binding
+FT                   (GO:0051536)"
+FT                   /note="GO_function:transferase activity, transferring
+FT                   alkyl or aryl (other than methyl) groups (GO:0016765)"
+FT                   /note="similar to Uniref90:A0A087S129:percent identity is
+FT                   96.16, e-value is 0.00, score is 733.00"
+FT                   /note="similar to Uniref90:A0A2A3TA24:percent identity is
+FT                   91.51, e-value is 0.00, score is 703.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR034405"
+FT                   /inference="protein motif:InterPro:IPR007197"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR013785"
+FT                   /inference="protein motif:InterPro:IPR006638"
+FT                   /inference="protein motif:InterPro:IPR020050"
+FT                   /inference="similar to AA sequence:Uniref90:A0A087S129"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2A3TA24"
+FT                   /translation="MLEQLAGDSQALDRAIAGEELSYKDGLELMNYDNLHLLGAVADARRKELVGDTVTFAASYYMNYTNVCAASCQMCAFYRKEGAEDAYTLTPQEIEQRVGIAKQMGATEVHIVGGFHPKLPLEYYEDMMRTIKKSHPQLNIKALTAAEIFYLSKLTKNSTKEILSRLKDAGLDSMPGGGAELFHPDIRKKIVRGKCTGQEWLDVIEEAHNMGIKSNVTMLYGHIEKPEHIVDHLIKIRELQKKTNGFITLIPLKFSLDNTELEQEHLVNNECSSVYDLKVIALSRLMLANTLNNISVYWVAYGKKLAQVALSNGGSDLVGTAFSEEIYRAAGKATSSSVDELATMVKEIGRVPAQRNTHFDILKTF"
+FT                   /transl_table=11
+FT                   /product="FO synthase subunit 2 protein n=28
+FT                   Tax=Thaumarchaeota TaxID=651137 RepID=A0A087S129_9ARCH"
+FT                   /db_xref=":"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(2380..2562)
+FT                   /locus_tag="ORF_05"
+FT   CDS             complement(2380..2562)
+FT                   /locus_tag="ORF_05"
+FT                   /note="ORF_05"
+FT                   /note="score is 8.10"
+FT                   /note="S:, Thiamine_BP, Thiamine-binding protein, method
+FT                   is RPS-BLAST+, version is 2.5.0+, score is 58.30, e-value
+FT                   is 0.00"
+FT                   /note=":, uncharacterized protein, MTH1187 family, method
+FT                   is RPS-BLAST+, version is 2.5.0+, score is 55.90, e-value
+FT                   is 0.00"
+FT                   /note="similar to Uniref90:K0B5B7:percent identity is
+FT                   100.00, e-value is 0.00, score is 120.00"
+FT                   /note="similar to Uniref90:A0A0C5BWS5:percent identity is
+FT                   85.00, e-value is 0.00, score is 106.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR029756"
+FT                   /inference="protein motif:InterPro:IPR002767"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:K0B5B7"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0C5BWS5"
+FT                   /translation="MGTILESDDMDTIYKATKQMSETVHNLGIDRVEVIIKIDSRRDKHLKMQEKVDSIKKHLD"
+FT                   /transl_table=11
+FT                   /product="Thiamine_BP domain-containing protein n=1
+FT                   Tax=Candidatus Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B5B7_9ARCH"
+FT                   /db_xref="S:"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(2724..3017)
+FT                   /locus_tag="ORF_06"
+FT   CDS             complement(2724..3017)
+FT                   /locus_tag="ORF_06"
+FT                   /note="ORF_06"
+FT                   /note="score is 13.62"
+FT                   /note="similar to Uniref90:K0B6R0:percent identity is
+FT                   100.00, e-value is 0.00, score is 121.00"
+FT                   /note="similar to Uniref90:A0A3M6KDT4:percent identity is
+FT                   83.51, e-value is 0.00, score is 107.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6R0"
+FT                   /inference="similar to AA sequence:Uniref90:A0A3M6KDT4"
+FT                   /translation="MQNNVKLVLIDKKIFAGGIVMIAAGIIIGLTTGEPPTGQAGMTEEEIIDLMVAEDENQALQLLYGLLIGVGFLLVLISFGARRRKGSAKRTEKKPAE"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=3 Tax=Nitrosopumilus
+FT                   TaxID=338191 RepID=K0B6R0_9ARCH"
+FT                   /color=0 0 255
+FT   gene            complement(3068..3358)
+FT                   /locus_tag="ORF_07"
+FT   CDS             complement(3068..3358)
+FT                   /locus_tag="ORF_07"
+FT                   /note="ORF_07"
+FT                   /note="score is 11.75"
+FT                   /note="similar to Uniref90:A0A0C5BWN3:percent identity is
+FT                   93.75, e-value is 0.00, score is 189.00"
+FT                   /note="similar to Uniref90:K0BAV5:percent identity is
+FT                   88.54, e-value is 0.00, score is 182.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0C5BWN3"
+FT                   /inference="similar to AA sequence:Uniref90:K0BAV5"
+FT                   /translation="MGDGIGGPVVGILTNNAFELLVSHVRKDNKEEYGKTEKIIMSKIDDPQQPQYEEKTKEDLERALKGKFVSCNVQYRDKKTDALVCNVFVQKPPEGF"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Nitrosopumilus
+FT                   piranensis TaxID=1582439 RepID=A0A0C5BWN3_9ARCH"
+FT                   /color=0 0 255
+FT   gene            complement(3615..4373)
+FT                   /locus_tag="ORF_08"
+FT   CDS             complement(3615..4373)
+FT                   /locus_tag="ORF_08"
+FT                   /note="ORF_08"
+FT                   /note="score is 2.91"
+FT                   /note="similar to Uniref90:K0BDD0:percent identity is
+FT                   93.65, e-value is 0.00, score is 356.00"
+FT                   /note="similar to Uniref90:I3D1I3:percent identity is
+FT                   69.05, e-value is 0.00, score is 256.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:K0BDD0"
+FT                   /inference="similar to AA sequence:Uniref90:I3D1I3"
+FT                   /translation="MTNTKQILILPVLVALVSVLAFTGQDASAVVSTVHDKISCNAPAIGGSWSSATSTCVVGTLVIGPTDKLVIGADTTFSIGSVTSSGVIVNHGTILIASGGVITTSGEFTNNGVIDSTKGTITNSGPFKNLGELTSSGTITNGPTGVIKNEGQLTSTGVITTSGTIKVGIDGVLISSGTFTNSLNLVNSGTIMTSGTFTNSGPVMNFDTILNEGLFSNSNTITNWGNILNLCNGSITNSGTIAIHRVIELCIA"
+FT                   /transl_table=11
+FT                   /product="Outer membrane autotransporter n=2
+FT                   Tax=Nitrosopumilus TaxID=338191 RepID=K0BDD0_9ARCH"
+FT                   /color=0 0 255
+FT   gene            complement(4478..4828)
+FT                   /locus_tag="ORF_09"
+FT   CDS             complement(4478..4828)
+FT                   /locus_tag="ORF_09"
+FT                   /note="ORF_09"
+FT                   /note="score is 7.09"
+FT                   /note="similar to Uniref90:K0B3I5:percent identity is
+FT                   98.99, e-value is 0.00, score is 195.00"
+FT                   /note="similar to Uniref90:A0A2H9RSD5:percent identity is
+FT                   83.67, e-value is 0.00, score is 164.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR036388"
+FT                   /inference="protein motif:InterPro:IPR036390"
+FT                   /inference="similar to AA sequence:Uniref90:K0B3I5"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2H9RSD5"
+FT                   /translation="MKRHTYEQWFCIIIEHILSKTINPKVVEILKTKSLVPTFDPSMKTLMRIVKFMKENPSEGKTQLALDTKLNYARLAKHIVWMEKKGLVESVIEDNKINISLTSTGIDFAKIISKIS"
+FT                   /transl_table=11
+FT                   /product="HTH_45 domain-containing protein n=1
+FT                   Tax=Candidatus Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B3I5_9ARCH"
+FT                   /color=0 0 255
+FT   gene            complement(5324..6151)
+FT                   /locus_tag="ORF_10"
+FT   CDS             complement(5324..6151)
+FT                   /locus_tag="ORF_10"
+FT                   /note="ORF_10"
+FT                   /note="score is 7.14"
+FT                   /note="S:, The conserved hypothetical protein Af1704
+FT                   exhibits the type 2 periplasmic-binding protein fold,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 431.00,
+FT                   e-value is 0.00"
+FT                   /note=":, Predicted periplasmic solute-binding protein,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 316.00,
+FT                   e-value is 0.00"
+FT                   /note="GO_process:menaquinone biosynthetic process
+FT                   (GO:0009234)"
+FT                   /note="GO_function:lyase activity (GO:0016829)"
+FT                   /note="similar to Uniref90:A9A4F3:percent identity is
+FT                   95.64, e-value is 0.00, score is 546.00"
+FT                   /note="similar to Uniref90:A0A7K4DTR9:percent identity is
+FT                   90.91, e-value is 0.00, score is 527.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR030869"
+FT                   /inference="protein motif:InterPro:IPR003773"
+FT                   /inference="similar to AA sequence:Uniref90:A9A4F3"
+FT                   /inference="similar to AA sequence:Uniref90:A0A7K4DTR9"
+FT                   /translation="MEISVGHTPDSDDAFMFYGMFTGKVPSPDFKVNHVIEDIEKLNRKATDPQLDVTAVSVHACAYIPGYTILRSGGSFGIGYGPIVTARKQMSIDEIKKCKIAIPGKMTSAFLLLQLMIGKFDYVEMNFSDIPEAVKSGKVDAGLVIHETQLSYEQEGNVKILDVGEWWDKTTNGLPVPLGINVMKTDLGMETIHKFDKYLQASIEYGLENMDDALEYAMQYSRGKPRDLIEKFVKMYVNKVTVNMGDAGEESIRKVFEMAKEKGLVPDFELSIATK"
+FT                   /transl_table=11
+FT                   /product="1,4-dihydroxy-6-naphtoate synthase n=16
+FT                   Tax=Thaumarchaeota TaxID=651137 RepID=A9A4F3_NITMS"
+FT                   /db_xref="S:"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            6235..7140
+FT                   /locus_tag="ORF_11"
+FT   CDS             6235..7140
+FT                   /locus_tag="ORF_11"
+FT                   /note="ORF_11"
+FT                   /note="score is 5.74"
+FT                   /note=":, glucosamine-fructose-6-phosphate
+FT                   aminotransferase; Provisional, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 47.30, e-value is 0.00"
+FT                   /note="similar to Uniref90:K0B6R4:percent identity is
+FT                   100.00, e-value is 0.00, score is 613.00"
+FT                   /note="similar to Uniref90:A0A3M6K1M9:percent identity is
+FT                   77.08, e-value is 0.00, score is 486.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6R4"
+FT                   /inference="similar to AA sequence:Uniref90:A0A3M6K1M9"
+FT                   /translation="MNTIDAFEKDIFSQVDFLKSFQKQKPISQSLQKNTIFSGSGDSLVSAMLAESFSGGVVRAIDPLDLYKNKLLVKSKNVYFVSISGNTITNVKTAKIAHKSTAITAKNNSRLSKSADNTILLCAPTSDVFTAGSITFLESALTCISLVKSIRLPNVSKIFSKANIDSKKIKVSKRIYVLGNLFTFPLAMFCAAKFYEVMGYDVHYCRIEQFSHMELFSAKKGDTVIIFEQKNAHNCNLAKNLKKIGMHVVHPDIPSDKLAQMLYCTFFSELIALNEAKKKRKKDCHFVTAKNIRNVSNQMIY"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B6R4_9ARCH"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            7190..9382
+FT                   /locus_tag="ORF_12"
+FT   CDS             7190..9382
+FT                   /locus_tag="ORF_12"
+FT                   /note="ORF_12"
+FT                   /note="score is 6.85"
+FT                   /note=":, elongation factor EF-2; Reviewed, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 1165.00, e-value
+FT                   is 0.00"
+FT                   /note=":, Elongation_factor_2, translation elongation
+FT                   factor aEF-2, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 758.00, e-value is 0.00"
+FT                   /note="GO_process:translational elongation (GO:0006414)"
+FT                   /note="GO_function:GTP binding (GO:0005525)"
+FT                   /note="GO_function:GTPase activity (GO:0003924)"
+FT                   /note="GO_function:translation elongation factor activity
+FT                   (GO:0003746)"
+FT                   /note="similar to Uniref90:A9A4F5:percent identity is
+FT                   95.62, e-value is 0.00, score is 1441.00"
+FT                   /note="similar to Uniref90:A0A447G7G2:percent identity is
+FT                   89.73, e-value is 0.00, score is 1375.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR004543"
+FT                   /inference="protein motif:InterPro:IPR000795"
+FT                   /inference="protein motif:InterPro:IPR000640"
+FT                   /inference="protein motif:InterPro:IPR035647"
+FT                   /inference="protein motif:InterPro:IPR020568"
+FT                   /inference="protein motif:InterPro:IPR004161"
+FT                   /inference="protein motif:InterPro:IPR027417"
+FT                   /inference="protein motif:InterPro:IPR031157"
+FT                   /inference="protein motif:InterPro:IPR005225"
+FT                   /inference="protein motif:InterPro:IPR009000"
+FT                   /inference="protein motif:InterPro:IPR041095"
+FT                   /inference="protein motif:InterPro:IPR005517"
+FT                   /inference="protein motif:InterPro:IPR014721"
+FT                   /inference="similar to AA sequence:Uniref90:A9A4F5"
+FT                   /inference="similar to AA sequence:Uniref90:A0A447G7G2"
+FT                   /translation="MVKFKSTSEVLKIIKNKDQIRNFGVIAHVDHGKTTMSDSLLAYSGIIAPSAAGKALAMDFDKEEQQRGITIYQANVTLLFSQKGKEYVINMIDTPGHVDFSGRVIRSLRAIDGAVVVCDAVEGIMTQTETVTRMALEERVKPVLFINKVDRLIKELRLTPEKMQAQLAEVVSNFNQLIDTYAEPEYKEKWKVSIQDASVTFGSAKDRWAINIDLMKERGITFKDVIDAYTNEKVEELVEKAPLADAVLGMVVKHHPAPHEAVQYRIPQIWKGDLESDVGKALLACDDTGPTIMMIVNMVLDPAAGPVAIGRLFSGTIKDGQTINIIDEKREGRVQSVNFFMGNQREQVGELGAGNIPALLGLTEARAGNTLSSVKGIQMFEGVKYVSEPVVQVAIEPKHPKDLPKLVEVLKQLTIEDPNLIVKIDEESGETIVAGMGVLHLDVATHRIQDAKVEIVTSEPLINYRETVKSACEPIMAKSPNRHNKIFMKVEPLEPAIANMLRTGEISDMKDKKVVADLLKGAGWDTDTIKRVMKFDSRGNVLINGTKGVQFVQESTDSINSGFEEVMKEGPLCREQMRDCKFTFTHFVPHEDTAHRGLSQLGPASRRACMGALLTAGTAVLEPTLAIEVRVPTDLVGNVATVLSGKRGKVLDMSQKGASSIVTGEIPASETFTLSEEMRGQTAGRATWNTSFKAWTEVPKSMLATAVADIRKRKGLAPDPPRAEEFIDKE"
+FT                   /transl_table=11
+FT                   /product="Elongation factor 2 n=36 Tax=Thaumarchaeota
+FT                   TaxID=651137 RepID=A9A4F5_NITMS"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   misc_feature    9365..17577
+FT   gene            9505..10005
+FT                   /locus_tag="ORF_13"
+FT   CDS             9505..10005
+FT                   /locus_tag="ORF_13"
+FT                   /note="ORF_13"
+FT                   /note="score is 8.57"
+FT                   /note="similar to Casposon_DB:RS0108995:percent identity
+FT                   is 100.00, e-value is 0.00, score is 268.00"
+FT                   /note="similar to Casposon_DB:03860:percent identity is
+FT                   100.00, e-value is 0.00, score is 268.00"
+FT                   /note="similar to Uniref90:K0B686:percent identity is
+FT                   100.00, e-value is 0.00, score is 268.00"
+FT                   /note="similar to Uniref90:A0A2H9MSK8:percent identity is
+FT                   60.00, e-value is 0.00, score is 162.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0108995"
+FT                   /inference="similar to AA sequence:Casposon_DB:03860"
+FT                   /inference="similar to AA sequence:Uniref90:K0B686"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2H9MSK8"
+FT                   /translation="MKPITIFRFFSPIRYIEIIAVLSAFQILDIAWQSDVIIFNFFFPVIIGSAAFDAVFHKDGFKAGFKSAGIKYYTGMGIQFVGSAVSALASFNTDPEKIPVIIMYTVLLLGIGGALEGFHFFSEKKLKNIVLTPVQKILALIGLTLLIFFFGLYTVLELVPRTPWFN"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   CDS             10013..11056
+FT                   /locus_tag="cas1 - ORF_14"
+FT                   /note="ORF_14"
+FT                   /note="score is 7.40"
+FT                   /note="S:, Cas1_I-II-III, CRISPR/Cas system-associated
+FT                   protein Cas1, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 166.00, e-value is 0.00"
+FT                   /note="S:, Cas_Cas1, CRISPR associated protein Cas1,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 164.00,
+FT                   e-value is 0.00"
+FT                   /note="GO_process:defense response to virus (GO:0051607)"
+FT                   /note="GO_process:maintenance of CRISPR repeat elements
+FT                   (GO:0043571)"
+FT                   /note="GO_function:endonuclease activity (GO:0004519)"
+FT                   /note="GO_function:metal ion binding (GO:0046872)"
+FT                   /note="GO_function:nucleic acid binding (GO:0003676)"
+FT                   /note="similar to Casposon_DB:RS0109000:percent identity
+FT                   is 100.00, e-value is 0.00, score is 616.00"
+FT                   /note="similar to Casposon_DB:03865:percent identity is
+FT                   100.00, e-value is 0.00, score is 616.00"
+FT                   /note="similar to Uniref90:K0B3J1:percent identity is
+FT                   100.00, e-value is 0.00, score is 616.00"
+FT                   /note="similar to Uniref90:UPI00037CA3E1:percent identity
+FT                   is 82.75, e-value is 0.00, score is 509.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR042206"
+FT                   /inference="protein motif:InterPro:IPR042211"
+FT                   /inference="protein motif:InterPro:IPR002729"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109000"
+FT                   /inference="similar to AA sequence:Casposon_DB:03865"
+FT                   /inference="similar to AA sequence:Uniref90:K0B3J1"
+FT                   /inference="similar to AA sequence:Uniref90:UPI00037CA3E1"
+FT                   /translation="MPYEKIVLSGKGYVSTEALSLLSENNRNVILLDNHGKPVTFCNGMMDSLTATKYRMAQYDTFRNPEKCEYLRKQIISAKKESQLKLLRLIGSEISELPDSEHISAKVYWTEFAKFIPEKYQFHSRNQSHITSSKNNATDIINALLNYGYSVLAGEISKFVCGFGLDPYLGFMHRSHTGFQPLVYDIIEPFRWLVDYTVYSMANHSSTRQRIKLKEYSFTKDGTVVLEYSLIKRFLEMLERQFSQERKYSFRHGKKTKDGLKSVQEITVVKIIIQNLVEYSTGKQKSLESNNFAFFDF"
+FT                   /transl_table=11
+FT                   /product="NSJ_RS0109000 CRISPR-associated endonuclease
+FT                   Cas1 52849:53892 forward MW:40344"
+FT                   /db_xref="S:"
+FT                   /color=255 0 255
+FT   gene            10163..11056
+FT                   /locus_tag="ORF_14"
+FT   gene            complement(11028..11429)
+FT                   /locus_tag="ORF_15"
+FT   CDS             complement(11028..11429)
+FT                   /locus_tag="ORF_15"
+FT                   /note="ORF_15"
+FT                   /note="score is 7.95"
+FT                   /note="similar to Casposon_DB:RS0109005:percent identity
+FT                   is 100.00, e-value is 0.00, score is 180.00"
+FT                   /note="similar to Casposon_DB:03870:percent identity is
+FT                   100.00, e-value is 0.00, score is 180.00"
+FT                   /note="similar to Uniref90:K0B5C7:percent identity is
+FT                   100.00, e-value is 0.00, score is 180.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109005"
+FT                   /inference="similar to AA sequence:Casposon_DB:03870"
+FT                   /inference="similar to AA sequence:Uniref90:K0B5C7"
+FT                   /translation="MNTPILIIGIILMVIGVFVYFTIQPDVSNCGSFVGQFGQVISTNISSGCQTVYQIQTISAVIVVVGLGLTIAGAVMKNSSQTTTNRVLAIIASIIAFFGFQMIFPFPYGIVFAIISVIVIIFPLFRNRKKQNY"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            complement(11473..11667)
+FT                   /locus_tag="ORF_16"
+FT   CDS             complement(11473..11667)
+FT                   /locus_tag="ORF_16"
+FT                   /note="ORF_16"
+FT                   /note="score is 6.41"
+FT                   /note="similar to Casposon_DB:RS0109010:percent identity
+FT                   is 98.44, e-value is 0.00, score is 132.00"
+FT                   /note="similar to Casposon_DB:03875:percent identity is
+FT                   98.44, e-value is 0.00, score is 132.00"
+FT                   /note="similar to Uniref90:K0B6R7:percent identity is
+FT                   98.44, e-value is 0.00, score is 132.00"
+FT                   /note="similar to Uniref90:A0A2A3TB66:percent identity is
+FT                   43.64, e-value is 0.00, score is 45.80"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109010"
+FT                   /inference="similar to AA sequence:Casposon_DB:03875"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6R7"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2A3TB66"
+FT                   /translation="VGLKEWLKGEPDPKKSYQVKVICTNCDRVITVRIGHGWSVEGWSKNAKCANCKRKGSFQKYRQY"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            complement(11714..12010)
+FT                   /locus_tag="ORF_17"
+FT   CDS             complement(11714..12010)
+FT                   /locus_tag="ORF_17"
+FT                   /note="ORF_17"
+FT                   /note="score is 8.04"
+FT                   /note="similar to Casposon_DB:RS0109015:percent identity
+FT                   is 98.98, e-value is 0.00, score is 157.00"
+FT                   /note="similar to Casposon_DB:03880:percent identity is
+FT                   98.98, e-value is 0.00, score is 157.00"
+FT                   /note="similar to Uniref90:K0B861:percent identity is
+FT                   98.98, e-value is 0.00, score is 157.00"
+FT                   /note="similar to Uniref90:A0A3M6K3D6:percent identity is
+FT                   45.83, e-value is 0.00, score is 69.70"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109015"
+FT                   /inference="similar to AA sequence:Casposon_DB:03880"
+FT                   /inference="similar to AA sequence:Uniref90:K0B861"
+FT                   /inference="similar to AA sequence:Uniref90:A0A3M6K3D6"
+FT                   /translation="VNRIQVILGVVGGILLIAIIAYIANEEYQKQQWAERLSTGHTECQILRASGDEWIKCELEYIQEAREFCWKYPDFNRDMCVNLEKQIEESPELNKIFP"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            12081..12878
+FT                   /locus_tag="ORF_18"
+FT   CDS             12081..12878
+FT                   /locus_tag="ORF_18"
+FT                   /note="ORF_18"
+FT                   /note="score is 4.48"
+FT                   /note="similar to Casposon_DB:RS0109020:percent identity
+FT                   is 100.00, e-value is 0.00, score is 495.00"
+FT                   /note="similar to Casposon_DB:03885:percent identity is
+FT                   100.00, e-value is 0.00, score is 495.00"
+FT                   /note="similar to Uniref90:K0B692:percent identity is
+FT                   100.00, e-value is 0.00, score is 495.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109020"
+FT                   /inference="similar to AA sequence:Casposon_DB:03885"
+FT                   /inference="similar to AA sequence:Uniref90:K0B692"
+FT                   /translation="MKFVLLLILIGMITPVFAQESSFDEQLMNSTEYSKIIDRLYLLENENKQLENLIHNFDDGISSKLSKIDESLIQSGDVANKSLWLGLYISMVFAGIAIAATIIYSIKLGSQTKLIETDIKTRIRPILSRKELRKKITNSTEQHVGELHTLSKQKALFHFQNTGTLPAVNISRNYYAEIRETPSNEIKLDPTKYVDAFKMASLAPNEYYSTDIFWLDPCFDDAVDKNTCYFGLIIWYHDSKGTRYHYHIEGYFDKGEMMLNHVDMD"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            complement(12875..13141)
+FT                   /locus_tag="ORF_19"
+FT   CDS             complement(12875..13141)
+FT                   /locus_tag="ORF_19"
+FT                   /note="ORF_19"
+FT                   /note="score is 4.59"
+FT                   /note="similar to Casposon_DB:RS0109025:percent identity
+FT                   is 100.00, e-value is 0.00, score is 182.00"
+FT                   /note="similar to Casposon_DB:03890:percent identity is
+FT                   100.00, e-value is 0.00, score is 182.00"
+FT                   /note="similar to Uniref90:K0B3J8:percent identity is
+FT                   100.00, e-value is 0.00, score is 182.00"
+FT                   /note="similar to Uniref90:K0BAW4:percent identity is
+FT                   79.55, e-value is 0.00, score is 151.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109025"
+FT                   /inference="similar to AA sequence:Casposon_DB:03890"
+FT                   /inference="similar to AA sequence:Uniref90:K0B3J8"
+FT                   /inference="similar to AA sequence:Uniref90:K0BAW4"
+FT                   /translation="MKLVVSVSKTYTHRGNHRHKTSTKKRWHIYYYDEEGNFRTQRVNWIMAMYYKTQKRKRLKYVCTECLSQFVSLVKSHKEEVECPYCEV"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            complement(13186..13764)
+FT                   /locus_tag="ORF_20"
+FT   CDS             complement(13186..13764)
+FT                   /locus_tag="ORF_20"
+FT                   /note="ORF_20"
+FT                   /note="score is 10.17"
+FT                   /note="similar to Casposon_DB:RS0109030:percent identity
+FT                   is 100.00, e-value is 0.00, score is 306.00"
+FT                   /note="similar to Casposon_DB:03895:percent identity is
+FT                   100.00, e-value is 0.00, score is 306.00"
+FT                   /note="similar to Uniref90:K0B5D2:percent identity is
+FT                   100.00, e-value is 0.00, score is 306.00"
+FT                   /note="similar to Uniref90:A0A2D7BN22:percent identity is
+FT                   50.00, e-value is 0.00, score is 58.20"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR036390"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109030"
+FT                   /inference="similar to AA sequence:Casposon_DB:03895"
+FT                   /inference="similar to AA sequence:Uniref90:K0B5D2"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2D7BN22"
+FT                   /translation="MTQYEFKILEIIQKNPDIHHNGILDLSVPKYMAKKTAQRAIQSLISRGLIFVNKVGRQTQYSFNEGKEQINPDDLRKSVLVWSMFDEHDTKMLEKRYSELSTMQKTGEALFQIQLALQNISQLSLLESLENPSEESLKKERIKLKKRIRKIINLVRKDKDYKIVYPVMMQILSSRKLEFSLNVDRPEFKIKK"
+FT                   /transl_table=11
+FT                   /product="NSJ_RS0109030 Winged helix DNA-binding domain
+FT                   superfamily protein 56022:56636 reverse MW:24037"
+FT                   /color=0 0 255
+FT   gene            13856..14089
+FT                   /locus_tag="ORF_21"
+FT   CDS             13856..14089
+FT                   /locus_tag="ORF_21"
+FT                   /note="ORF_21"
+FT                   /note="score is 11.50"
+FT                   /note="similar to Casposon_DB:RS0109035:percent identity
+FT                   is 100.00, e-value is 0.00, score is 154.00"
+FT                   /note="similar to Casposon_DB:03900:percent identity is
+FT                   100.00, e-value is 0.00, score is 154.00"
+FT                   /note="similar to Uniref90:K0B6S1:percent identity is
+FT                   100.00, e-value is 0.00, score is 154.00"
+FT                   /note="similar to Uniref90:K0BBW8:percent identity is
+FT                   63.01, e-value is 0.00, score is 92.80"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109035"
+FT                   /inference="similar to AA sequence:Casposon_DB:03900"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6S1"
+FT                   /inference="similar to AA sequence:Uniref90:K0BBW8"
+FT                   /translation="MTLKKIKPKDMILEPVITDFGNRKVSQQNFSKIVALPKTALDNCGITTDVNVKLVQFDGEKFLTLSPVIEKGGDKTE"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            14073..14264
+FT                   /locus_tag="ORF_22"
+FT   CDS             14073..14264
+FT                   /locus_tag="ORF_22"
+FT                   /note="ORF_22"
+FT                   /note="score is 6.60"
+FT                   /note="similar to Casposon_DB:03905:percent identity is
+FT                   98.41, e-value is 0.00, score is 128.00"
+FT                   /note="similar to Casposon_DB:RS11125:percent identity is
+FT                   93.10, e-value is 0.00, score is 110.00"
+FT                   /note="similar to Uniref90:K0B866:percent identity is
+FT                   98.41, e-value is 0.00, score is 128.00"
+FT                   /note="similar to Uniref90:K0BE55:percent identity is
+FT                   81.13, e-value is 0.00, score is 87.80"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:03905"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS11125"
+FT                   /inference="similar to AA sequence:Uniref90:K0B866"
+FT                   /inference="similar to AA sequence:Uniref90:K0BE55"
+FT                   /translation="VIKLSETLYPPFLKWGQYTSQDSENPDTIELKVAETNTFETEFSINVLALIKEKRHGKNTTLN"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            14302..14562
+FT                   /locus_tag="ORF_23"
+FT   CDS             14302..14562
+FT                   /locus_tag="ORF_23"
+FT                   /note="ORF_23"
+FT                   /note="score is 9.84"
+FT                   /note="similar to Casposon_DB:03910:percent identity is
+FT                   98.84, e-value is 0.00, score is 146.00"
+FT                   /note="similar to Casposon_DB:RS0109045:percent identity
+FT                   is 100.00, e-value is 0.00, score is 42.40"
+FT                   /note="similar to Uniref90:K0B6A0:percent identity is
+FT                   98.84, e-value is 0.00, score is 146.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:03910"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109045"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6A0"
+FT                   /translation="VEQDCKVTSQRRHTGSQDVAWNIKEWKKNQEVQSRETLDSPFFDNSDGIMAEDKDKLLKQLDALKIFPNNKLVRELKNQIKTKLKN"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            14744..16528
+FT                   /locus_tag="ORF_24"
+FT   CDS             14744..16528
+FT                   /locus_tag="polb - ORF_24"
+FT                   /note="ORF_24"
+FT                   /note="score is 8.23"
+FT                   /note=":, putative DNA polymerase type B; Provisional,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 160.00,
+FT                   e-value is 0.00"
+FT                   /note=":, DNA_pol_B_2, DNA polymerase type B, organellar
+FT                   and viral, method is RPS-BLAST+, version is 2.5.0+, score
+FT                   is 102.00, e-value is 0.00"
+FT                   /note="GO_process:DNA replication (GO:0006260)"
+FT                   /note="GO_function:DNA binding (GO:0003677)"
+FT                   /note="GO_function:DNA-directed DNA polymerase activity
+FT                   (GO:0003887)"
+FT                   /note="GO_function:nucleotide binding (GO:0000166)"
+FT                   /note="similar to Casposon_DB:RS0109050:percent identity
+FT                   is 100.00, e-value is 0.00, score is 1204.00"
+FT                   /note="similar to Casposon_DB:03915:percent identity is
+FT                   100.00, e-value is 0.00, score is 1204.00"
+FT                   /note="similar to Uniref90:K0B3K3:percent identity is
+FT                   100.00, e-value is 0.00, score is 1204.00"
+FT                   /note="similar to Uniref90:K0BAW0:percent identity is
+FT                   82.16, e-value is 0.00, score is 977.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR012337"
+FT                   /inference="protein motif:InterPro:IPR043502"
+FT                   /inference="protein motif:InterPro:IPR004868"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109050"
+FT                   /inference="similar to AA sequence:Casposon_DB:03915"
+FT                   /inference="similar to AA sequence:Uniref90:K0B3K3"
+FT                   /inference="similar to AA sequence:Uniref90:K0BAW0"
+FT                   /translation="MAESVPVTDCKNLRRVFTKKPQNRDPATSHKRRVYAIDTETYNGNIFLIADSDGRFLDKITPKSCLDWLFCRKYEGSWCFFYHLGYDAEVILKLLGSELFKYKNTGRLKFSFENYTIEYHPNKCLKISKGHHSVIFYDIAQFYHAKLSDAYQNNIRKLPKEYLDIKSKRSQFSITFYKRNTRKIRDYCITDCKLTKELAEHWIKLFHDAFGFYPARWVSSGYLAEKVLINNGINFPKFDDVPYDVQEMAFSCYYGGRFEITKRGFIGTAYKYDINSAYPHSLTKIPDLTKGRWIKRKSIHKDAKLGFFRIIADIPDCKYIPPFPFRTNGIIIFPSGKFETYVTLHELKVADSKHYKILDSYQFIPNGKPVYPFEKFVHSMYDKRLELKKDGNPLQLPIKIILNSIYGKTGQKVNRIMGNLFNPVIFASITGMTRACLYDFVMQNDIENDVVSFATDSVCTTIPLDIDSERLGEFSLEEKADDVFVLQNGFYRFNGKWKQRGIGKLGSKEIEHLDTFEKDGKLYYRFKVLRSSRLRSSILQDCIPQIGKIREYVREVNLNADRKRLWLNQIQSVDSRTKNDSVPISLSHFYKETI"
+FT                   /transl_table=11
+FT                   /product="NSJ_RS0109050 type B DNA polymerase 57582:59366
+FT                   forward MW:69509"
+FT                   /db_xref=":"
+FT                   /color=0 255 255
+FT   gene            16545..17489
+FT                   /locus_tag="ORF_25"
+FT   CDS             16545..17489
+FT                   /locus_tag="ORF_25"
+FT                   /note="ORF_25"
+FT                   /note="score is 8.57"
+FT                   /note=":, AlbA_2, Putative DNA-binding domain, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 85.40, e-value is
+FT                   0.00"
+FT                   /note="S:, Predicted transcriptional regulator containing
+FT                   an HTH domain and an uncharacterized domain shared with
+FT                   the mammalian protein Schlafen, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 67.40, e-value is 0.00"
+FT                   /note="similar to Casposon_DB:RS0109055:percent identity
+FT                   is 100.00, e-value is 0.00, score is 639.00"
+FT                   /note="similar to Casposon_DB:03920:percent identity is
+FT                   100.00, e-value is 0.00, score is 639.00"
+FT                   /note="similar to Uniref90:K0B5D6:percent identity is
+FT                   100.00, e-value is 0.00, score is 639.00"
+FT                   /note="similar to Uniref90:A0A2S2KSP1:percent identity is
+FT                   55.91, e-value is 0.00, score is 287.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR007421"
+FT                   /inference="protein motif:InterPro:IPR038461"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0109055"
+FT                   /inference="similar to AA sequence:Casposon_DB:03920"
+FT                   /inference="similar to AA sequence:Uniref90:K0B5D6"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2S2KSP1"
+FT                   /translation="MIEIPDDVEKWTRGKVIDLVDEGYDENDILEFKKEVNSDSERLSKTACAFANTNGGTIIFGIDNDREKALHVDQRVVGLEDSDQLKRNIIDKIKNIQPSIPIKNLIFRKTNIKLPNKRVIVVLKIASSNNKPHQYKHIFYKRLSDGNEPMDVTEVKQLMLESVKQTHHEVLMILELSYVKEALENTKKSFMENKNSLGSLDYLDITSTIHFQHHLAYGYPTDLPVTLIELIHEITRLSNLPNSFASTLNGKPPKFIIDDAKSENFSDPKEFVKGLILTRINTALECLEKISLILERDYVETEFIHPIQNMQDKS"
+FT                   /transl_table=11
+FT                   /product="NSJ_RS0109055 'ATP-binding protein','Schlafen,
+FT                   AlbA_2 domain superfamily' 59383:60327 forward MW:36046"
+FT                   /db_xref=":"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(17758..18234)
+FT                   /locus_tag="ORF_26"
+FT   CDS             complement(17758..18234)
+FT                   /locus_tag="ORF_26"
+FT                   /note="ORF_26"
+FT                   /note="score is 7.92"
+FT                   /note="similar to Uniref90:K0B6S6:percent identity is
+FT                   99.33, e-value is 0.00, score is 304.00"
+FT                   /note="similar to Uniref90:K0BCI6:percent identity is
+FT                   66.67, e-value is 0.00, score is 222.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6S6"
+FT                   /inference="similar to AA sequence:Uniref90:K0BCI6"
+FT                   /translation="MNIKNLRYNLNANIFASIIPKKLSKSAYGYSMAESVFAGLPAANMKGKWIQLTTLSFPSSAIVPIGHIGPWNGGGWDDKFDDAYWREKQRPQAECGKDLKNITTDKSGIQLSNKLWKLLGLVGEKTVSVNWHFVPIPKNKKALVIDKDTKKTYLDPYF"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B6S6_9ARCH"
+FT                   /color=0 0 255
+FT   gene            18443..18979
+FT                   /locus_tag="ORF_27"
+FT   CDS             18443..18979
+FT                   /locus_tag="ORF_27"
+FT                   /note="ORF_27"
+FT                   /note="score is 7.43"
+FT                   /note=":, Ferredoxin, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 47.10, e-value is 0.00"
+FT                   /note="S:, MtMvhB_like, Uncharacterized
+FT                   polyferredoxin-like protein, method is RPS-BLAST+, version
+FT                   is 2.5.0+, score is 48.20, e-value is 0.00"
+FT                   /note="S:, MtMvhB_like, Uncharacterized
+FT                   polyferredoxin-like protein, method is RPS-BLAST+, version
+FT                   is 2.5.0+, score is 40.80, e-value is 0.00"
+FT                   /note="similar to Uniref90:K0B870:percent identity is
+FT                   100.00, e-value is 0.00, score is 371.00"
+FT                   /note="similar to Uniref90:A0A2H9MS95:percent identity is
+FT                   88.14, e-value is 0.00, score is 328.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR017900"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR017896"
+FT                   /inference="similar to AA sequence:Uniref90:K0B870"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2H9MS95"
+FT                   /translation="MPIAENFPEGLKPIGKIKHADGENFHHVWGPGRSNAEAFKDDKVKAAYAKRDEKQVPLGISGTMVAVDWDSCVADGACIESCPVQVFQWYRTEKDTPAIDAINETFEGTGSSEKDERKDYTDKADPIREHDCIWCMACVSVCPPQAIKVEQGNLEFHEKEAGTFVKMESGSANPHAHA"
+FT                   /transl_table=11
+FT                   /product="4Fe-4S ferredoxin n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B870_9ARCH"
+FT                   /db_xref=":"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(19226..19618)
+FT                   /locus_tag="ORF_28"
+FT   CDS             complement(19226..19618)
+FT                   /locus_tag="ORF_28"
+FT                   /note="ORF_28"
+FT                   /note="score is 9.24"
+FT                   /note="similar to Uniref90:A0A370M2E4:percent identity is
+FT                   80.00, e-value is 0.00, score is 216.00"
+FT                   /note="similar to Uniref90:K0B6A9:percent identity is
+FT                   100.00, e-value is 0.00, score is 202.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR014710"
+FT                   /inference="protein motif:InterPro:IPR011051"
+FT                   /inference="similar to AA sequence:Uniref90:A0A370M2E4"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6A9"
+FT                   /translation="VRKYRNLIKKGVNEPLHKVPFHKKAPIKRLSMLSKKMIPQSDTHIAVHFVDAEKKLPEYSIPHKHDNDEINLILSEDSKLKYKIDLEDETYTVTSPCTIFIPKGLTHSAQAISGKGMFVCIILSDGHSSK"
+FT                   /transl_table=11
+FT                   /product="2-isopropylmalate synthase n=2 Tax=TACK group
+FT                   TaxID=1783275 RepID=A0A370M2E4_9CREN"
+FT                   /color=0 0 255
+FT   gene            complement(19623..19868)
+FT                   /locus_tag="ORF_29"
+FT   CDS             complement(19623..19868)
+FT                   /locus_tag="ORF_29"
+FT                   /note="ORF_29"
+FT                   /note="score is 1.63"
+FT                   /note="similar to Uniref90:A0A075G448:percent identity is
+FT                   58.49, e-value is 0.00, score is 63.90"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:A0A075G448"
+FT                   /translation="MLIATIRPTSKLPEVAPSTAKHVTIAVYGKNKIPTLRRKFFGPNFGTNHSEVLSDCNNTSSIVIAYNIHLNRSSYLIENPM"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=3 Tax=environmental
+FT                   samples TaxID=651140 RepID=A0A075G448_9ARCH"
+FT                   /color=0 0 255
+FT   gene            19975..20391
+FT                   /locus_tag="ORF_30"
+FT   CDS             19975..20391
+FT                   /locus_tag="ORF_30"
+FT                   /note="ORF_30"
+FT                   /note="score is 4.20"
+FT                   /note=":, PT_UbiA_UBIAD1, 1,4-Dihydroxy-2-naphthoate
+FT                   octaprenyltransferase, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 39.00, e-value is 0.00"
+FT                   /note="similar to Uniref90:K0B3K9:percent identity is
+FT                   100.00, e-value is 0.00, score is 272.00"
+FT                   /note="similar to Uniref90:A0A075GYI1:percent identity is
+FT                   64.44, e-value is 0.00, score is 186.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:K0B3K9"
+FT                   /inference="similar to AA sequence:Uniref90:A0A075GYI1"
+FT                   /translation="MISLGAAFSIGLYFAFLDSPLLFPIGIAEGFFLFAYNLEWFGGKFHNKITTIISWGILPVFAGSAIQTNSITLETVAISGITALITYVLIRNTRPYKILKQNNGDQQEIRRRELFLKILPLGVIIGTILFFIVKYYVI"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=2 Tax=Nitrosopumilus
+FT                   TaxID=338191 RepID=K0B3K9_9ARCH"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(20396..21073)
+FT                   /locus_tag="ORF_31"
+FT   CDS             complement(20396..21073)
+FT                   /locus_tag="ORF_31"
+FT                   /note="ORF_31"
+FT                   /note="score is 4.03"
+FT                   /note=":, UbiE, Methylase involved in
+FT                   ubiquinone/menaquinone biosynthesis, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 111.00, e-value is 0.00"
+FT                   /note=":, ubiE, bifunctional demethylmenaquinone
+FT                   methyltransferase/2-methoxy-6-polyprenyl-1,4-benzoquinol
+FT                   methylase UbiE, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 102.00, e-value is 0.00"
+FT                   /note="similar to Uniref90:K0B5E1:percent identity is
+FT                   99.56, e-value is 0.00, score is 468.00"
+FT                   /note="similar to Uniref90:A0A370LH60:percent identity is
+FT                   56.95, e-value is 0.00, score is 281.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR029063"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR025714"
+FT                   /inference="similar to AA sequence:Uniref90:K0B5E1"
+FT                   /inference="similar to AA sequence:Uniref90:A0A370LH60"
+FT                   /translation="VNQNPRNLVPRFFNDTAKTYDKIANWATFGQDKYWKDKIIQNIPSADSVLDLACGTGILTRMIAQKFPHAKITGVDISQTYLQIAKQNSTGFENISFVYQDAEELDLKEKFDCICSSYIPKYCDPKTLIQKCISHLNPKGTIILHDFIFPQNRLLQNLWNAYFEILLFAGNFVPSWKFAFKELPNLIRESRWVDDYTETLEKNNFIVSRHDMTWHTSSIIFAKMI"
+FT                   /transl_table=11
+FT                   /product="UbiE/COQ5 methyltransferase n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B5E1_9ARCH"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(21108..21260)
+FT                   /locus_tag="ORF_32"
+FT   CDS             complement(21108..21260)
+FT                   /locus_tag="ORF_32"
+FT                   /note="ORF_32"
+FT                   /note="score is 1.10"
+FT                   /note="similar to Uniref90:K0B6S8:percent identity is
+FT                   100.00, e-value is 0.00, score is 101.00"
+FT                   /note="similar to Uniref90:A0A370LTU5:percent identity is
+FT                   72.92, e-value is 0.00, score is 76.60"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6S8"
+FT                   /inference="similar to AA sequence:Uniref90:A0A370LTU5"
+FT                   /translation="MPGALIAYFILRKDDPSKAKNCLLIGVVLLAFYAAYYVVFEIMLRMYEFS"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B6S8_9ARCH"
+FT                   /color=0 0 255
+FT   gene            complement(21618..22748)
+FT                   /locus_tag="ORF_33"
+FT   CDS             complement(21618..22748)
+FT                   /locus_tag="ORF_33"
+FT                   /note="ORF_33"
+FT                   /note="score is 8.60"
+FT                   /note="similar to Uniref90:K0B874:percent identity is
+FT                   100.00, e-value is 0.00, score is 616.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:K0B874"
+FT                   /translation="VNSIESDPHCLHKKELFLLSALGVILIGIAAIPETYGESHEKIGKKIQNIELQITHLQNLPENINEITLSGNVFQFMQIKDSLLELNKMEDISLFPFKTNIDTLKKEYIKTLETHIDSIREHERESGLLIQEKKLVAKITKQKMNFEINESKQEEVKNKKLKIQDYLDRKGPEEKYQKLINEIAIRNAQQGQNRLDKDLHKEALQEIAKSKEWNLVIPAIERSLNQVHDEKLKEKLVKLKEKMQRMLELRKISAMQEGNEGGFGALLDDPIIKVLVDDILKEMKGYTLEEALGAPLEDSESIVEKSEETQIQPDDGDSPHASEYTRGMPETLGKPDIKVGKPDDPGKPDRTGPSNNEKNTNNSKSDNKKSVKTKSK"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B874_9ARCH"
+FT                   /color=0 0 255
+FT   gene            complement(22769..22936)
+FT                   /locus_tag="ORF_34"
+FT   CDS             complement(22769..22936)
+FT                   /locus_tag="ORF_34"
+FT                   /note="ORF_34"
+FT                   /note="score is 0.92"
+FT                   /note="similar to Uniref90:K0B6B3:percent identity is
+FT                   100.00, e-value is 0.00, score is 107.00"
+FT                   /note="similar to Uniref90:K0B6J4:percent identity is
+FT                   73.81, e-value is 0.00, score is 51.60"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6B3"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6J4"
+FT                   /translation="LASSIISIANVFSMSSEASAVTAPNTLSNFSIKVVTDDQIDLSRSAPYDGGSPIT"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B6B3_9ARCH"
+FT                   /color=0 0 255
+FT   gene            23283..23594
+FT                   /locus_tag="ORF_35"
+FT   CDS             23283..23594
+FT                   /locus_tag="ORF_35"
+FT                   /note="ORF_35"
+FT                   /note="score is 6.77"
+FT                   /note="similar to Uniref90:K0B3L5:percent identity is
+FT                   99.03, e-value is 0.00, score is 216.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:K0B3L5"
+FT                   /translation="LGSKTTIGISLATVFFGVIALIWFTGYSSDHIENANRNLMTAHEELNRIVDEAIIHCQTDGTGCDTIMPQWLEECKKPEMEKIASCHDGRIEQLVQQPITMTK"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B3L5_9ARCH"
+FT                   /color=0 0 255
+FT   gene            23700..24089
+FT                   /locus_tag="ORF_36"
+FT   CDS             23700..24089
+FT                   /locus_tag="ORF_36"
+FT                   /note="ORF_36"
+FT                   /note="score is 1.56"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /translation="MSIIRPITFIDGRSTIKEIMVRISVMVQAHDFPRSSPQAITKEATPSTIIAALPAPIAPPPRFIPIEPIIVPKNAPTAIAMAPETISSIAMIVTPTGLVLADNSFGGGWIVISIHNIIWDELFFHMVCS"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            24166..24624
+FT                   /locus_tag="ORF_37"
+FT   CDS             24166..24624
+FT                   /locus_tag="ORF_37"
+FT                   /note="ORF_37"
+FT                   /note="score is 4.43"
+FT                   /note="similar to Uniref90:K0B6T3:percent identity is
+FT                   100.00, e-value is 0.00, score is 206.00"
+FT                   /note="similar to Uniref90:A0A7D5M8D2:percent identity is
+FT                   54.17, e-value is 0.00, score is 83.20"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR036388"
+FT                   /inference="protein motif:InterPro:IPR036390"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6T3"
+FT                   /inference="similar to AA sequence:Uniref90:A0A7D5M8D2"
+FT                   /translation="MSIYKHDKNMAVIKKQNSKVRKDKNSKNIKKTLKTKTNPNTKKLTKHVIWMEKKGRVKKNNDLDLKEKFRKELEKKQFEPSMKMLIRITESIKQKGSRNKTTLSRDTKTNYTRLTKHVVWMEKKGLVESEIKNHSIAIALTSKGRFFVDTIL"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B6T3_9ARCH"
+FT                   /color=0 0 255
+FT   gene            24707..25264
+FT                   /locus_tag="ORF_38"
+FT   CDS             24707..25264
+FT                   /locus_tag="ORF_38"
+FT                   /note="ORF_38"
+FT                   /note="score is 9.11"
+FT                   /note="similar to Uniref90:K0B878:percent identity is
+FT                   100.00, e-value is 0.00, score is 369.00"
+FT                   /note="similar to Uniref90:A0A7D5M7X7:percent identity is
+FT                   60.89, e-value is 0.00, score is 213.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:K0B878"
+FT                   /inference="similar to AA sequence:Uniref90:A0A7D5M7X7"
+FT                   /translation="MKKLVCDTDVQREPQVIIWNNTQILKWSDFKKKSDPDSEASANAAIGFESKPIIEYLKVGKQLKYKIKDLQLNAIFIPNLSWVTKNINLKEGNLLLKHEQGHFDLAEEVIRKIKNKSTGIYKVFTIKEKNKNNMKEATLQVNKIRDDIESELQNEFNIQESKYDNKTNHGLIKIHQKNIIKDSKN"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=1 Tax=Candidatus
+FT                   Nitrosopumilus koreensis AR1 TaxID=1229908
+FT                   RepID=K0B878_9ARCH"
+FT                   /color=0 0 255
+FT   gene            25486..25869
+FT                   /locus_tag="ORF_39"
+FT   CDS             25486..25869
+FT                   /locus_tag="ORF_39"
+FT                   /note="ORF_39"
+FT                   /note="score is 11.94"
+FT                   /note=":, Ketosteroid isomerase-related protein, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 76.70, e-value is
+FT                   0.00"
+FT                   /note="S:, SnoaL_2, SnoaL-like domain, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 56.90, e-value is
+FT                   0.00"
+FT                   /note="similar to Uniref90:K0B6B9:percent identity is
+FT                   100.00, e-value is 0.00, score is 266.00"
+FT                   /note="similar to Uniref90:A0A0D5C395:percent identity is
+FT                   80.16, e-value is 0.00, score is 223.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR032710"
+FT                   /inference="protein motif:InterPro:IPR037401"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:K0B6B9"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0D5C395"
+FT                   /translation="MANVELIKQFYHAFKNKDKETYLGLCDENITWQLSEGMPNGGVYVGKDAVFKEYFPKMLSNFKEFHAIPEQFTDMKDHVMVNGMYSGISNTGKSFEVAFSHVYHIQDDKIIQFRQFTDTQKIQESLK"
+FT                   /transl_table=11
+FT                   /product="Putative ketosteroid isomeraserelated
+FT                   protein-like protein n=1 Tax=Candidatus Nitrosopumilus
+FT                   koreensis AR1 TaxID=1229908 RepID=K0B6B9_9ARCH"
+FT                   /db_xref=":"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            26224..26478
+FT                   /locus_tag="ORF_40"
+FT   CDS             26224..26478
+FT                   /locus_tag="ORF_40"
+FT                   /note="ORF_40"
+FT                   /note="score is 10.34"
+FT                   /note="similar to Uniref90:UPI00035F1D58:percent identity
+FT                   is 100.00, e-value is 0.00, score is 85.50"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:UPI00035F1D58"
+FT                   /translation="VKLRYFKKLRDYTNLSIFYYRNRLKMAAKTKPKTPKKVTKVKSMQDAKNKIYSRIKKGENFSEIVKTKFDINGSTVKNGLNLKF"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+SQ   Sequence 26529 BP; 8707 A; 4611 C; 4668 G; 8543 T; 0 other
+     atctgtattg tccaaatcca cactctcata acgggaaaaa tttatttaaa ttttcactag        60
+     attactgaaa atttgtttaa tctgtcaggc tcgcaatctg ttgtgtcttt tcaaatttaa       120
+     aacaaatagg ttgccatatc tcttatggat aaaatcgatg aacttgtttc tcagggcaag       180
+     tcatttttgg aagacgggaa atacgatgat gccttggggt tttttgagca agcacttctt       240
+     ttgaatcaag acaaccctga cttgtggaac tacaagggaa tcacacttcg aagtcttgga       300
+     agatacgaag aggcaatgga ctgctttaac aaatcactgc aaattgaccc acgtgaccga       360
+     cattcctctt gattttatgt tgacaaacag tgaatctata ttattaacaa aatattatct       420
+     gatgtgttga atgacacaga aagaatgatg gcagaagcct acgaatgtgt tgaagagggt       480
+     gattttcatg atgcgcttaa tctctatgat cttgtactag aaaaagagcc ttcaaacgtt       540
+     agtgccctaa ttgacaaagg agtaactttg caaaacatgg gcagaatcaa acttgcaatt       600
+     cgctcatacg ataaggcatt atcaatatct cctacaaaca ttgatgcttt gcttaacaag       660
+     ggaactgcat tgcattctga tcaaaagtat gctgaggcaa tggagtgcta tgatgcagta       720
+     ctgcaaattg acaaaaagtg tgcaatggca cttgcataca agggactttc cttgggtgag       780
+     actggaaaac tgcaagatgc cttgaagcat ttcaaaaagg cattatccat tgacaatgaa       840
+     tttgacttgg caagcatctc aaaggatatg gcacaaaatt tgataaaatc aattaaagaa       900
+     actaaaacac agtaacgtcg ccaggtgctg gttctcggtt catctctttt tcgtgtgact       960
+     cgaaaaattc tttgtgttct gatttttgat gttctctgag tttttctaaa ttctcaaacc      1020
+     cctcatgaca cagatagcat tttggcttgt gttcgtctac tagaggaagt accatggtat      1080
+     gatatctttg cttggctact tatttcttga gcctaactaa ggaatatatc atgaaagaga      1140
+     cgccagactg tatgctagag cagttggcag gcgattctca ggcactagat cgagccatag      1200
+     caggagaaga actgtcctac aaagacggtc ttgagctgat gaattatgat aacctgcatt      1260
+     tacttggagc agtagctgat gcccgcagaa aagaactagt tggagatact gtgacttttg      1320
+     cagcatccta ctacatgaac tacacaaacg tctgtgctgc aagctgccaa atgtgtgcat      1380
+     tttacagaaa agaaggtgca gaggatgctt acacactaac tcctcaagag attgagcaac      1440
+     gagttggaat tgcaaaacag atgggggcaa ctgaagttca catcgttgga ggatttcatc      1500
+     caaaacttcc actagaatac tatgaagaca tgatgagaac cataaagaaa agccatccac      1560
+     aactaaacat caaagcacta actgctgctg agattttcta tctatcaaaa cttacaaaaa      1620
+     attccactaa agaaattttg tctcgtctaa aagatgctgg actggattca atgccaggtg      1680
+     gtggtgcaga actgttccat ccagacatta gaaaaaaaat tgttagaggt aaatgtacag      1740
+     gacaagaatg gctagatgta attgaagagg cccataacat gggaatcaaa agcaatgtga      1800
+     caatgcttta tggacacatt gaaaaacctg aacacattgt tgatcatcta ataaaaatcc      1860
+     gtgaactgca aaaaaagaca aatggtttca tcacacttat tcctctaaag tttagccttg      1920
+     ataacaccga actagaacaa gaacacttgg taaacaatga gtgctcttct gtttatgacc      1980
+     tgaaagttat tgcactgtct agactaatgc ttgcaaatac actaaacaac atctctgttt      2040
+     attgggtggc atacggaaag aaactagctc aggttgcact atcaaatggt ggcagtgatt      2100
+     tggttggaac tgcattttct gaggagattt atcgcgctgc aggaaaggca accagttctt      2160
+     ctgttgatga gcttgcaact atggtaaaag agataggacg tgtccctgcg caaagaaata      2220
+     ctcactttga tatattgaag acattttagt ttcgcaattc taaattctgt tggtaccatg      2280
+     gcaaagaaaa agacattaaa aaaaagagaa aaccttcaat gtcactggca ttgtccttgc      2340
+     gatgattgca gagcagctga agagcagtct ttttgagaac tagtctagat gttttttaat      2400
+     agagtctacc ttttcttgca tctttaggtg cttgtctctt cgtgaatcaa tcttgattat      2460
+     gacttcgacc ctgtcgattc ctagattgtg aacagtctca ctcatctgct ttgttgcctt      2520
+     gtaaatggta tccatgtcat ctgactctaa aattgtcccc atcgggttta tttcgtattt      2580
+     gaggttctcg attttttgaa tcgattctat tgcctttgca atgtaaaaac tggcgctggt      2640
+     tgttctggta gctattggat agatgctaat ctctgcatga atcaacttat tttctgtgtt      2700
+     taattgggat taaaaagttt gaatcactct gcaggtttct tttctgttct ttttgcactg      2760
+     ccttttctgc gccttgctcc aaaacttatc aaaaccaaca agaatcctac gccaattagc      2820
+     aatccataca gtaactgtaa tgcctgattc tcgtcttcag ctaccatcaa gtcaataatc      2880
+     tcttcttccg tcattccagc ttgtcctgta ggtggctcac ctgttgtcaa tcctattatg      2940
+     attcctgcag caatcatgac aatgcctcct gcaaaaattt tcttgtcaat tagtaccaat      3000
+     ttgacattgt tttgcatcta tcgtatatta ggaaattggt ttttgttttt atttgaaata      3060
+     gtttgatcta aaatccttct ggtggctttt gtacaaatac gttgcagaca agtgcatctg      3120
+     tttttttgtc tctgtattga acattgcatg aaacaaattt tcctttcagt gctctttcta      3180
+     aatcctcttt tgtcttttct tcgtattgtg gttgttgtgg atcgtcaatc ttgctcatga      3240
+     ttattttttc tgtcttgcca tactcctctt tgttgtcttt tctgacatga cttacaagca      3300
+     actcaaatgc gttgttagtc aaaattccca caaccggacc gcctattccg tcacccattg      3360
+     attctaaatt ttttttgttc tataattact tgatgaactg ttccctctct gttttatata      3420
+     ctgaaattcg tttagttttt cattttagaa atgttgtttg gcaatctcca gttcaacgtc      3480
+     tgtcaaacaa aatttcaggt agtggtcatt tgtaatcatt cacaagacaa tatcaaaaat      3540
+     caatcaaaca ggcattaaat tttttaaaaa atcaaaatta tgatagtcta atctaaaaaa      3600
+     ataaaaaaat gggtttaggc tatacagagt tctattactc tatggatagc tattgttcct      3660
+     gaatttgtaa ttgatccatt acacaagttg agtatgtttc cccagttggt gattgtgtta      3720
+     ctattagaaa acaatccttc atttagaatt gtatcaaaat tcataaccgg accactgttg      3780
+     gtgaatgtgc ctgatgtcat gatggtgccg ctgttgacca agttcaaaga gttggtaaat      3840
+     gtgccactac taattagtac gccatctatt cctactttga tagtaccgga tgtcgtaatt      3900
+     acaccagtgc ttgtcaattg accttcattt tttataacac ctgttgggcc gttagtaatt      3960
+     gttccagatg atgttagttc accaaggttc ttgaaaggac cgctatttgt tattgtacct      4020
+     ttagtgctat caataacacc attattggta aattcaccag atgttgtaat tacaccgcca      4080
+     cttgcaatga ggattgttcc atggtttact ataacaccac tactagtgac gctaccaatg      4140
+     ctaaaagtgg tatctgcacc gataactagt ttatcagttg ggccaatcac aagagttcca      4200
+     actacacatg ttgaagtagc agagctccat gatccgccta ttgctggagc attacaagat      4260
+     attttatcat ggacagtaga gactactgct gatgcgtctt gaccagtaaa ggctaaaaca      4320
+     gaaactaatg caactaatac aggaagtatt agaatttgct ttgtatttgt cattgtatgt      4380
+     tttatgaaat ttattgtatt aactcacgct gacatgaatg ttggtttgat gtacatattt      4440
+     gatggtatag cagacaaata tgtacgtata ttgaatgtta actaattttt gaaattattt      4500
+     ttgcaaagtc tatgccagta ctagtcagag aaatattgat tttgttatcc tcaattacag      4560
+     actcaacaag accctttttc tccatccata caatatgttt tgcaagtcgt gcatagttta      4620
+     gtttggtatc aagggctagc tgcgtttttc cttcagatgg attttctttc ataaatttta      4680
+     ctatgcgcat aagagttttc atgcttggat caaaagttgg cacaagagat ttggttttca      4740
+     gaatttctac tactttagga ttgatggttt tactcaatat gtgctcaatt ataatgcaaa      4800
+     accactgttc ataagtatgc ctcttcatac aggcagggac taattccctc tgcgatttgt      4860
+     ttggcaatat cgcttggttt accgtcttag aatttgtaat gcaagacata ccactataac      4920
+     gtaaaatttc tcaaatggta tttgattact agttacaatc gattatctga cctatctgtt      4980
+     atctagtcac tttttagata agaatcaatc atttactatc ccaaaagtat caaaaagagt      5040
+     ttagaatcta gtcgtcagat tcttcaaatt cttcgtcttg ttcataccca tcttttagtt      5100
+     ctagttgatg gtcttcttct ttcatttctt cttgttcagc ttttttccat tctttttctt      5160
+     tgtcttcaga catgaattac aaaatacgtt tctggcatat taacaaattc tctattttca      5220
+     gttttgagac tataaggatc attgattttc aaagaattta ccattaacct agttcatttt      5280
+     taatagtact gatttttaga ggcaatacaa ggaaattttg tacttatttt gtggcaatac      5340
+     ttagctcaaa gtctggaaca agccccttct cttttgccat ctcgaatact tttcttattg      5400
+     attcttcacc tgcatcgccc atgttgactg tgactttgtt tacgtacatt tttacaaatt      5460
+     tttcaatcaa atcccttggc tttcctctag agtattgcat tgcatattct agtgcatcat      5520
+     ccatattctc taatccgtac tctattgagg cctgaagata cttgtcaaac ttgtggattg      5580
+     tctccattcc caagtctgtc ttcattacat tgattccaag tggaactggg agtccgtttg      5640
+     tggtcttgtc ccaccattcc cctacatcta gaatctttac gtttccttct tgctcatatg      5700
+     ataactgtgt ctcgtgaatc acaagccctg catcgacctt gcctgacttt acagcctctg      5760
+     gaatgtcgct aaagttcatc tccacataat caaactttcc aatcatcagt tgtaatagca      5820
+     aaaatgctga tgtcatcttt cctggaattg caatcttgca tttttttatc tcatcaatgc      5880
+     tcatctgttt tcttgcagtg acaattggac cgtaccctat tccaaaactt ccgccacttc      5940
+     gcaagatagt atatcctgga atgtatgcac atgcatgaac tgaaactgca gtaacgtcta      6000
+     gctgtggatc tgtagctttg cggtttagtt tctcaatgtc ttcaattacg tgatttactt      6060
+     taaagtctgg tgatggaact tttcctgtaa acataccata aaacatgaat gcatcatcag      6120
+     aatcaggagt atgtcccact gaaatttcca taatccgttc agatacagtc gtaataaaaa      6180
+     tcaaaacctg ttgcagagag attttctaat atatgccaaa aattattttc ttttatgaat      6240
+     acaattgatg catttgaaaa ggacatattc tctcaagttg attttctaaa atcatttcaa      6300
+     aaacaaaaac caatctcaca atctcttcaa aaaaacacaa tcttttctgg aagcggtgat      6360
+     tcattggtat ctgcaatgct tgctgaatct ttttctggtg gagtggtaag agcaattgat      6420
+     cctttggatt tgtacaaaaa caaacttctt gtaaaatcaa aaaacgtcta ttttgtctct      6480
+     atttctggaa ataccattac taacgttaaa actgcaaaga ttgcacacaa atcaactgca      6540
+     attactgcca aaaacaacag cagattatca aaatctgcag ataataccat cttgctttgc      6600
+     gcgcctacct ctgatgtatt tactgcagga agtatcacgt ttttagaaag cgcacttact      6660
+     tgcatctctt tggtaaaatc aatacgtctt ccaaatgtgt ctaagatatt ttcaaaagcg      6720
+     aatattgact ctaaaaaaat caaggtatca aaaagaatct atgtcttggg aaatctattc      6780
+     acatttcctc ttgcaatgtt ttgtgcagca aagttctatg aggtgatggg ttatgatgtc      6840
+     cactattgca gaattgagca attctctcac atggagttgt tttcagcaaa gaaaggcgac      6900
+     actgtaatta tctttgagca aaaaaatgca cacaactgta atctggcaaa aaacctcaaa      6960
+     aaaattggca tgcatgtggt tcatccagac ataccatctg acaaactagc tcagatgctg      7020
+     tactgcacat ttttctcaga actgattgcg ctaaatgagg caaagaagaa acgaaaaaaa      7080
+     gattgccact ttgtcactgc aaaaaatatt cgaaatgtta gcaaccaaat gatttactga      7140
+     tcttttttac aaggaacgtt taatagctga atcttagggt tttgggaata tggtaaaatt      7200
+     caagtcaacc agtgaggtcc tgaaaattat caaaaacaag gatcagatcc gaaactttgg      7260
+     tgttattgct cacgttgacc acggaaagac taccatgagt gacagtctct tggcttactc      7320
+     tggaattatc gctccatcag ctgctggaaa ggcacttgca atggactttg ataaagaaga      7380
+     gcaacaaaga ggaattacaa tttatcaggc aaacgttact ttgctgtttt cacagaaagg      7440
+     aaaagaatat gtcattaaca tgattgatac ccctggacac gtagacttta gtggaagggt      7500
+     aattcgtagc cttagggcaa ttgatggtgc agtggttgta tgtgatgctg ttgagggtat      7560
+     aatgactcag actgaaactg taactagaat ggcactagag gagagggtaa aacctgtatt      7620
+     gtttatcaac aaagtagaca gactcatcaa ggaactgcga ttgactcctg aaaagatgca      7680
+     ggcacaatta gcagaagtcg tttcaaactt taatcaatta attgacacat atgcagaacc      7740
+     tgaatacaaa gaaaagtgga aggtatcaat tcaggatgca agtgtcacat ttggttctgc      7800
+     aaaggacaga tgggcaatta acatagattt gatgaaagaa agaggaatca cattcaaaga      7860
+     tgtcattgat gcatatacaa atgaaaaagt agaagaacta gtagagaaag caccactagc      7920
+     tgatgcagtt cttggaatgg ttgtaaagca tcatcctgct ccacacgagg cagtccagta      7980
+     cagaattcca caaatctgga aaggtgattt ggagtctgat gttggcaaag cactacttgc      8040
+     atgcgatgat actggtccga caattatgat gattgtaaac atggtcttag atcctgcagc      8100
+     aggtcctgtt gcaattggaa gactgttctc tggaacaatc aaagacggac aaactatcaa      8160
+     cattatagat gaaaaacgtg aaggaagagt tcagtctgta aactttttca tgggaaacca      8220
+     aagagagcaa gttggtgagc ttggcgctgg aaacattcct gcattattag gattaactga      8280
+     agctagagca ggaaacacat tatcatctgt taagggaatt caaatgtttg aaggtgtaaa      8340
+     gtatgtctct gaacctgttg ttcaagttgc aatcgagcca aaacatccta aagatttacc      8400
+     taaactagtc gaagttctaa aacaactaac aattgaggat cctaacctta tcgtaaagat      8460
+     tgatgaggag agcggtgaga caattgttgc aggaatgggt gtgttacacc ttgatgttgc      8520
+     cactcaccgt atccaggatg ccaaagtcga gattgttaca tctgaacctc tgattaacta      8580
+     cagagagaca gtaaagtctg catgtgagcc aatcatggca aaatctccaa acagacacaa      8640
+     caagatcttc atgaaagtcg agccactaga gcctgcaatt gcaaacatgt taagaacagg      8700
+     cgaaatcagc gacatgaaag acaaaaaagt tgttgctgac ttgctaaagg gcgctggatg      8760
+     ggatactgat acaattaaga gagtgatgaa gtttgattct cgcggcaatg tcttgattaa      8820
+     cggaacaaaa ggtgttcaat ttgtacaaga gtcaactgac tctattaact ctggatttga      8880
+     agaagtaatg aaagaaggac ctctctgcag agagcagatg agggattgta aattcacgtt      8940
+     tactcacttt gtacctcacg aggacactgc acacaggggt ttgtctcaac tgggaccagc      9000
+     ttctcgtcgt gcatgcatgg gtgcattgct tactgcagga actgcagtgc tagagccaac      9060
+     tctggcaatt gaggttcgtg tgccaactga cttggttgga aacgtcgcca ctgttctttc      9120
+     tggaaaacgt ggcaaggtct tggacatgtc acaaaaaggc gcatcaagta tcgttacagg      9180
+     tgagattcca gcctctgaga catttacatt gtctgaagag atgagaggcc agactgcagg      9240
+     acgtgctaca tggaatactt cctttaaggc atggactgag gttccaaaat caatgcttgc      9300
+     aacagctgtt gctgatatca gaaagagaaa gggactagca ccagatcctc caagagcaga      9360
+     agagtttatt gataaagagt aaaaatagaa tccccccatt ccgttcctaa ttcactgctg      9420
+     tttttcgtta tgactagaga atgatttgga ttatgatttg ttgcaatctt ttgaaatact      9480
+     aggtattgaa taatttttta ttaaatgaaa cctattacaa ttttcagatt tttttcacca      9540
+     atcagatata ttgaaattat tgcagttctt tctgcttttc aaattttaga tattgcttgg      9600
+     caatcagacg ttatcatctt caattttttc tttccggtaa ttatcggaag tgctgcattt      9660
+     gatgcagtgt ttcacaagga tggtttcaaa gctggtttca aaagtgcagg gataaaatac      9720
+     tatacaggaa tggggatcca atttgtagga agcgctgttt cagcattagc cagtttcaat      9780
+     acagatccag aaaaaattcc agtcattatc atgtatactg tgcttctgtt aggaataggc      9840
+     ggagcactag aaggatttca ttttttttct gaaaagaaac tcaaaaacat tgtattaaca      9900
+     cctgttcaaa aaatattggc attaattgga cttactcttc tgatattttt ctttgggctt      9960
+     tacacagttc ttgaattagt tccacgcaca ccatggttta attgattatg ttttgacact     10020
+     caaaaatcag aaaaaccact acaatgtaaa attccttaaa ggctacggtc actctatctc     10080
+     ggtaaaagat tccaaaataa ttctaaagtc aaaccacgac ccattttctc caccagaaca     10140
+     agaagaatgg tttgtcaaaa acatgccata tgagaaaata gttctttcag gcaaaggata     10200
+     tgtctcaact gaagcattat cattactttc agagaacaat cgcaatgtca ttttgttaga     10260
+     caatcacgga aagcctgtta cattctgcaa tggcatgatg gattctctca ctgccacaaa     10320
+     atacagaatg gcacaatatg atacattccg aaatcctgag aaatgtgagt atctgcgtaa     10380
+     gcagattata tctgcaaaga aagaatctca actaaagtta ttacgattaa ttggaagtga     10440
+     aatttcagaa cttccagatt cagaacacat ttcagccaaa gtctattgga cagaatttgc     10500
+     aaaatttatc cctgaaaaat atcaatttca ttccagaaac caatctcaca tcacatcatc     10560
+     aaaaaataac gcaactgaca tcatcaatgc tctgctaaac tacggatatt ctgtacttgc     10620
+     aggagaaatt tccaagtttg tatgtggatt tggtcttgac ccgtaccttg gattcatgca     10680
+     tcgttctcat acaggatttc agccattggt gtatgatatc atagaaccgt tccgatggtt     10740
+     agtggattat actgtttatt ccatggcaaa tcatagttcc acaagacaga gaattaaact     10800
+     caaagagtat agttttacaa aagatggaac tgtagttttg gaatattctt tgatcaagag     10860
+     atttttggag atgttagaaa gacagttttc tcaagagaga aagtattcgt ttagacatgg     10920
+     aaagaagaca aaggatggtt tgaaatccgt tcaagaaatt actgttgtaa agattataat     10980
+     tcaaaattta gtagaataca gtacaggaaa acaaaaaagt ttagaatcta ataattttgc     11040
+     ttttttcgat ttctaaacaa tggaaaaata atgacaatta cagaaattat tgcaaatact     11100
+     attccatatg gaaatggaaa aatcatttga aatccaaaaa atgctattat gctagcaatg     11160
+     attgcaagta cacggtttgt tgtagtttgt gaggaatttt tcatgacagc accggcaatt     11220
+     gttaatccaa gacctacaac tacaataact gcagaaatgg tttgtatctg ataaactgtt     11280
+     tgacatccac tgcttatgtt tgtggaaatt acctgaccaa actgtcccac aaatgagcca     11340
+     caattagaaa catcaggttg aatcgtaaaa tacacaaaaa ctccaataac catcaaaata     11400
+     ataccaataa tcagaattgg ggtgttcata aaaattagaa tattagtatg aacttaagcg     11460
+     tttagaaata atctaatatt gtctatattt ctgaaaagat ccttttcttt tacagttggc     11520
+     acattttgca ttctttgacc agccctcaac tgaccaacca tgaccaattc taactgtgat     11580
+     tactctgtca cagtttgtgc agattacttt tacctgatag gatttctttg ggtcaggttc     11640
+     tccttttaac cactctttga gccccacaat agaatttcat tgtgtatgaa cttaagcata     11700
+     ttgaagttta cacttagggg aaaatcttat tcaattctgg gctttcctca atctgttttt     11760
+     ctagattcac acacatatca cgattaaaat caggatattt ccaacaaaac tctcttgcct     11820
+     cttggatgta ttctagttcg catttgatcc attcatctcc tgatgctcgc aaaatttggc     11880
+     attcagtatg accagtagat agtctctctg cccattgttg tttttgatat tcctcattgg     11940
+     caatatatgc aataattgca attagaagta ttcctccaac aaccccaaga ataacttgaa     12000
+     ttcgattcac aatctcattt gtttagtatg aacttaagca tattggcaaa ggaaataaac     12060
+     tggcaatcta tgatcatatt atgaaatttg tactattgtt aattttgata gggatgatta     12120
+     ctcctgtatt tgcacaagaa tcatcttttg atgaacaatt aatgaatagt acagaatatt     12180
+     cgaaaatcat agataggtta tacctccttg aaaatgaaaa taaacaactt gaaaatttaa     12240
+     ttcataattt tgatgatgga atttcttcaa aattatctaa aattgatgaa tctttaattc     12300
+     aatctggaga tgttgcaaac aaatcccttt ggttgggact ctatatttcc atggtatttg     12360
+     caggaattgc cattgcagca acaataattt attctataaa attaggatct caaaccaaat     12420
+     taattgaaac tgatatcaaa acacggatca gaccaatttt aagtcgaaaa gaattacgaa     12480
+     aaaaaattac taattcaaca gaacaacacg taggtgaatt acacacactt tctaaacaaa     12540
+     aagctctatt tcattttcag aatacaggta cattgcctgc ggtaaatata tctcggaatt     12600
+     attatgctga gattagagaa acaccttcca atgaaatcaa actagatcct acaaaatatg     12660
+     tggatgcctt caaaatggcc tcattggccc caaatgaata ctatagtaca gatatttttt     12720
+     ggcttgatcc atgttttgat gatgcagtgg ataaaaatac atgttatttt ggattgataa     12780
+     tttggtatca tgattcaaaa ggtacaagat atcactatca catagaagga tattttgaca     12840
+     aaggagaaat gatgttaaat cacgtagata tggattaaac ttcacaataa gggcattcga     12900
+     cttcttcttt gtgtgattta accaaactta caaactgtga caaacattca gtacaaacat     12960
+     acttcagtct ttttcttttc tgagtcttat aatacattgc cataatccaa ttcactcttt     13020
+     gagttctaaa atttccttcc tcatcataat agtagatgtg ccatcgcttc tttgtggatg     13080
+     ttttgtgtct gtggtttcct cgatgtgtgt atgtttttga cactgaaaca actagtttca     13140
+     tgctacctct atgctacttc aaactaataa gaacagatta tgatgttatt ttttaatttt     13200
+     aaattcagga cggtcaacat ttaatgaaaa ttctaatttt ctacttgata atatctgcat     13260
+     catgacggga taaacaattt tgtaatcttt gtcttttcta accaaattaa tgatttttct     13320
+     aattcttttt ttgagtttta ttctttcttt tttcaaagat tcctcactag ggttctctaa     13380
+     tgattccaat aaggacaatt gagaaatatt ttgtaatgct aattgtattt gaaacaatgc     13440
+     ttcaccagtt ttttgcattg tagataattc agaatatctt ttttccaaca tttttgtatc     13500
+     gtgctcatca aacattgacc acactaaaac agattttctc aaatcgtctg gattgatttg     13560
+     ctcttttccc tcattaaatg aatactgtgt ttgtctccca actttattta caaatatcag     13620
+     tcctcttgaa attagtgatt gtattgctct ttgagcagtc ttttttgcca tgtattttgg     13680
+     aacagaaaga tctaaaattc cattatgatg aatatcggga tttttttgta taatttccag     13740
+     tattttgaac tcgtattgag tcatttcaga agaatttggt cgtaattgtg cgtaatccat     13800
+     agtaggttaa cctaccactg gtaggctata cttgcattat agtgtatagt atgttatgac     13860
+     tttgaagaaa atcaaaccca aagacatgat tttagaacca gtaattactg actttggaaa     13920
+     cagaaaggta tcgcaacaga atttttcaaa gattgttgct ctgccaaaga ctgcattgga     13980
+     taactgtggc ataaccacag atgtcaatgt aaaactggtt cagtttgatg gagaaaagtt     14040
+     tctgacactt tctccagtaa ttgaaaaagg aggtgataaa actgagtgag accctctatc     14100
+     ctccattttt aaaatggggg cagtacacat ctcaagactc tgagaatcct gacaccatag     14160
+     agctcaaggt tgctgaaacc aatacctttg agacagaatt ctcaatcaat gtactagcat     14220
+     tgattaaaga aaaaagacat ggaaagaata caacgttaaa ctgaaaaacc atgattcagc     14280
+     aaatgcttct ttcctaaacc agtggaacag gattgcaaag tcacttcaca aaggagacat     14340
+     actggttctc aagacgtggc ttggaacatc aaagaatgga agaaaaatca ggaggtacag     14400
+     tctagagaaa ctctagactc tccttttttt gacaatagtg atggtattat ggcagaagac     14460
+     aaagataaac ttttgaaaca gttagacgca ctcaagattt ttccaaacaa caaactagta     14520
+     agagaattaa agaatcaaat taaaacaaaa ttaaaaaatt agaaattaca aaacccattc     14580
+     caccaaagaa aaatccaaac cttacacgct caaacaaact aaagcgatat cacaactaca     14640
+     tcaggcaaat cagaaacaac tttccaaatc taaaatacaa ccagataaga aaacagtttg     14700
+     caaaacgaaa gcgtggcgat gacgtatcaa ttcctgatgc agtatggcag aatccgtccc     14760
+     cgtaactgac tgcaagaatc tgagaagagt atttacaaaa aagcctcaga acagagatcc     14820
+     tgcaacatcg cacaagagaa gagtctatgc aattgataca gaaacctata acggcaacat     14880
+     ctttctgatt gccgactctg atgggagatt cttggataaa atcacgccaa aatcatgcct     14940
+     agactggctg ttttgcagaa aatatgaggg ttcgtggtgc tttttttatc atctcgggta     15000
+     tgatgcagaa gtaattctga aacttttagg ctctgaacta ttcaagtaca aaaatactgg     15060
+     aagactgaaa ttctcctttg aaaattacac catagagtat catccaaaca agtgtctgaa     15120
+     aatatcaaag ggacatcact ctgtgatatt ttatgacatt gcgcaattct atcatgcaaa     15180
+     actatctgat gcatatcaaa acaatatcag aaaactacct aaagagtatc ttgacataaa     15240
+     gtcaaaaagg agtcagttct caattacatt ttacaaaaga aacacaagaa aaatcagaga     15300
+     ttactgcatc acagactgca aactgacaaa agagttggca gagcactgga taaaattatt     15360
+     ccatgatgca tttggattct atcctgcaag atgggtatcc tctggatatc tggcagaaaa     15420
+     agtcttgatc aacaacggaa tcaatttccc aaagtttgat gatgttccat atgatgttca     15480
+     ggagatggcg ttttcatgtt actatggagg acgatttgaa attacaaagc gtggatttat     15540
+     tggaactgct tacaagtatg atatcaactc tgcatatccc cattccctga caaagattcc     15600
+     tgacctgacc aaaggacgat ggattaaaag aaagtcaatt cacaaagatg caaaacttgg     15660
+     attctttagg attattgcag acattccaga ctgcaagtat attccaccgt ttccgtttcg     15720
+     taccaatgga attattattt ttcctagtgg aaagtttgaa acgtatgtta cattacatga     15780
+     actaaaagtt gcagattcaa aacattacaa aattttggat tcatatcagt tcattccaaa     15840
+     cggcaagcca gtctatcctt ttgagaaatt tgttcattca atgtatgata aaagactgga     15900
+     actaaagaaa gacggaaacc cattgcagtt gccaatcaag ataattctca attcaatcta     15960
+     tggaaagact ggtcagaaag tcaatagaat aatgggaaat ctgttcaatc ctgtgatttt     16020
+     tgcaagtatt acaggcatga ctcgtgcctg cctgtatgac tttgtgatgc aaaatgatat     16080
+     tgaaaatgac gtggtgtctt ttgcaactga ttcagtatgc actaccattc cattagatat     16140
+     tgattcagaa agattaggag aattctcact agaagaaaaa gccgatgatg tgtttgtatt     16200
+     gcagaacgga ttctatcgat ttaacggaaa gtggaaacaa agagggattg gaaaactagg     16260
+     ttctaaggag attgagcatc ttgatacttt tgagaaagat ggaaaactgt actatcggtt     16320
+     caaggtattg agaagttcaa gattaagatc ctcaatattg caggattgca ttccacagat     16380
+     tggaaagatt agagagtatg tgagggaagt taatttgaat gcagatagaa aaagactttg     16440
+     gctaaatcaa attcaatctg ttgattctag aacaaaaaat gattctgtac ctatatcatt     16500
+     aagtcatttt tataaagaga caatttagta gatcttcata acatatgatt gaaattcctg     16560
+     acgatgttga aaaatggact agaggaaaag taatagattt agttgatgag ggatacgatg     16620
+     agaacgacat attagaattt aaaaaagaag taaattctga tagtgaacga ttatcaaaaa     16680
+     cagcatgtgc atttgcaaat acaaatggtg gtacaattat ttttggaatt gataatgatc     16740
+     gtgaaaaagc attacatgtt gatcagagag ttgtaggttt agaagactca gatcaattaa     16800
+     aaagaaacat aattgataaa ataaaaaaca ttcaacccag tattcctatc aaaaatctta     16860
+     tttttagaaa aacgaatatc aaattaccaa ataaaagagt aattgttgtt ttgaaaatag     16920
+     catcatccaa taacaaacct catcaataca aacacatctt ttacaaaaga ttgtctgatg     16980
+     ggaatgaacc tatggatgtt actgaagtta aacaactaat gctagaatca gttaaacaaa     17040
+     cacatcacga agttctgatg atcttggaac ttagttatgt aaaagaagca ctagaaaata     17100
+     caaaaaaatc atttatggaa aataaaaatt ctttaggcag tctggattat cttgacatta     17160
+     catcaacaat tcatttccaa catcatttgg catatggata tccgacagac ttgcctgtga     17220
+     cattaattga attgattcat gaaattacac gactttctaa ccttccaaac tcttttgctt     17280
+     caacactaaa tggtaaacct ccaaaattca taatcgatga tgcaaaaagt gaaaattttt     17340
+     ccgaccctaa agaatttgtc aaagggttga ttttaacacg aattaatact gcacttgagt     17400
+     gtcttgaaaa aatatctctt attttagaac gagattatgt agaaactgaa tttattcatc     17460
+     ctattcaaaa tatgcaagac aaatcctaac ttccatcatt ctctagtcat aacgaaaaac     17520
+     agcagtgaat taggaacgga atggggggat tctattttta ttgataaaga gtaaaaaggc     17580
+     agtcccccct ccttacgtac gaaaacatgc gttgtactat agcgaaacga cggtgtgatt     17640
+     tgttgggatt tgtttatttt agaattgtat ggaattttaa aagaaaacga attcgaatca     17700
+     tagtgtagaa agatattgaa aataattgtt atgctattga tctaaaaggc ttactgatca     17760
+     gaagtatgga tcgaggtatg tttttttcgt atctttatca attaccagtg cttttttatt     17820
+     tttaggtatt ggtacaaaat gccaattcac agatactgtt ttctctccca ccaatcccaa     17880
+     taatttccat agtttgtttg ataattgaat tccacttttg tctgtagtta tattttttag     17940
+     atcttttcca cattcggctt ggggtctctg tttctctctc cagtaggcat catcaaattt     18000
+     atcatcccat cccccgccat tccaaggacc aatatgaccg attggcacta ttgcacttga     18060
+     aggaaatgac aaagtagtta actgaatcca ttttcctttc atgtttgctg ctggcaatcc     18120
+     tgcaaaaaca ctctctgcca tactgtagcc gtatgcagat tttgatagtt tttttggaat     18180
+     tattgatgca aaaatattag cattcaaatt atatctcagg tttttgatat tcattacact     18240
+     attaacatgc gtgcaaaaga tattagtgtt gattagaacg tgtaggatgc aatgtcatga     18300
+     ttttaacaac gtagtttttg cgcgattata tctatagaca aatacaataa catcaaaaca     18360
+     tttgctaaat gtcgacatat ttgtacattg tatttacata atcatcagtt tcgcttaata     18420
+     tgatacggtt cactattaca tcatgccaat agcagaaaac tttccagaag gtctgaaacc     18480
+     aattggaaaa ataaaacatg ctgacggtga aaactttcat catgtttggg gccctggcag     18540
+     atcaaatgca gaagcattca aagatgacaa ggtaaaagct gcttatgcaa agagagatga     18600
+     aaaacaggtt ccattgggga taagtggcac aatggttgca gttgactggg actcttgtgt     18660
+     tgcagatggt gcatgtatag agtcatgtcc tgtccaagta ttccagtggt ataggactga     18720
+     aaaagacact cctgcaatag atgcaatcaa tgaaaccttt gaaggaactg gcagttctga     18780
+     gaaagatgaa agaaaggact ataccgacaa ggcagaccca attcgagaac acgattgtat     18840
+     atggtgcatg gcatgcgttt ctgtttgtcc tccacaggca atcaaagttg agcagggcaa     18900
+     tctggagttt catgaaaagg aagctggaac ttttgtaaag atggaatcag gttctgcaaa     18960
+     tccacatgcg catgcttgat tttattctaa atcttcactt aaacatagat tctcatccat     19020
+     aactatgatt ctaagacttc ttttagttta acatattctt caggagaaat tttgcctttt     19080
+     gccaatcttt tctttagggt tacaagaagg gctttgcctt tttatctgca aaaatagaaa     19140
+     ttccatagaa ttatgcgtaa agttccgagt gtatagtgct taagattcta aatattactt     19200
+     caattagata ttgaataatg cctttttatt ttgatgaatg cccatcagag agaattatgc     19260
+     atacaaacat tcctttgcct gatattgcct gagcgctgtg agttaggcct tttgggatga     19320
+     atatggtaca gggagatgtc acagtgtatg tctcatcttc tagatctatt ttgtacttta     19380
+     gcttagagtc ttcagacaag atcaagttaa tctcatcatt gtcatgtttg tgagggatgc     19440
+     tgtattctgg tagttttttt tcagcatcaa caaaatgtac tgcaatatgc gtatctgatt     19500
+     gcggaatcat ttttttgctt agcattgaga gtcgttttat tggtgctttt ttatgaaagg     19560
+     ggactttatg taatggctca tttactcctt ttttaattaa attccgatac tttctcacag     19620
+     tactacattg gattttctat taaataacta gacctgttta gatgaatatt atatgctatt     19680
+     actatactac tagtattatt gcaatcagat agaacctctg aatggtttgt tccaaagttt     19740
+     ggtccaaaaa actttcgccg cagtgttgga attttgtttt taccatacac tgcaatcgtt     19800
+     acatgttttg cagtactagg tgcaacctct ggcagtttag atgttggacg aattgttgca     19860
+     attagcataa tctattttct ggcacttgga gtcagtgcac atctacttga tgcaataggt     19920
+     ggaaagacaa agccttgggg agatcttcca aagaggaaat tatggagtat ctccatgatt     19980
+     tcattaggtg ctgcattttc aattgggctg tactttgcat tcttggattc acccttgctt     20040
+     tttccaatag gaattgcaga gggattcttt ttgtttgcat ataatctaga atggtttggt     20100
+     ggaaaatttc acaacaagat tacaaccata atttcatggg gaatcctgcc cgtatttgca     20160
+     ggctctgcca tccaaacaaa ctcaatcacg cttgagacag tggcaatatc aggcattact     20220
+     gcattaatca catatgtgct aattagaaac accaggccct acaagatact aaagcaaaac     20280
+     aacggagacc agcaagagat tagacgcaga gaactatttt tgaagatact gccactggga     20340
+     gtaattattg gaacaatttt gttttttatt gtaaaatatt atgtgattta agatttcaaa     20400
+     tcatttttgc aaaaataatt gatgatgtgt gccaggtcat atcatgtctt gatacgataa     20460
+     agttattttt ctccagagtt tctgtatagt catcaaccca tctgctttct cggattagat     20520
+     ttggcagttc tttaaaggca aacttccaag agggaacaaa gtttcctgca aacaataaaa     20580
+     tctcaaagta ggcattccac aagttttgca ataatctgtt ttgtggaaaa ataaaatcat     20640
+     gcagtattat ggtgcccttt ggattcagat gtgaaatgca tttttgaatt aaggttttgg     20700
+     gatcacagta ttttggaatg tatgatgaac agatgcagtc aaacttttct tttaggtcca     20760
+     actcttctgc atcttgataa acaaatgaga tgttttcaaa tcctgtggag ttttgttttg     20820
+     cgatttgcag atatgtctga gatatgtcta ccccggttat ttttgcgtgt ggaaattttt     20880
+     gggcaatcat cctagtcagg attcccgtac cacatgcaag atctaaaaca gagtcagcac     20940
+     ttggaatatt ttgaattatc ttgtctttcc agtacttgtc ttgtccaaac gttgcccaat     21000
+     ttgctatttt atcataggtt tttgcagtgt cattaaaaaa gcgcggaaca agatttcttg     21060
+     gattttggtt cactattgga ttaacacttc aaataattta aagaaattta agaaaactcg     21120
+     tacattctta gcattatttc aaagactaca tagtatgcag cataaaacgc caaaagaacc     21180
+     actccaatca gtaggcaatt ttttgccttt gaagggtcat cttttcgtaa gataaagtaa     21240
+     gcaatcagtg caccaggcat gctaaagaat agcggtagga cataccaaaa taaactgcgt     21300
+     tcttttctct cagacatgtc ttaagaatat cttttgtagc atttaatcta aaaatcaaaa     21360
+     attagtaata ggtgagcttt gccttttact ctttgtcgat aaaaaggcaa tccccccttt     21420
+     taggttcaag aatctgcggc ctactaaaac aagacgaaag tatgatttgt tggaaagggc     21480
+     ttattttcta gaatcttagt gttaaatcat gaaagattct gaaaaacatc attgctattc     21540
+     catccatatt attatgttca accacaatta gattttgagg gatatgaatt tgtgcatggt     21600
+     tttatatcag aatttgacta ttttgacttt gtttttactg attttttgtt atccgacttt     21660
+     gaattgtttg tatttttttc gttatttgat ggtccagttc tatctggttt gccaggatcg     21720
+     tctggctttc ctactttgat gtctggcttt ccaagagttt ctggcattcc ccttgtgtat     21780
+     tcacttgcat gaggcgaatc tccatcatct ggctgtatct gtgtttcttc acttttttct     21840
+     acgattgatt ctgagtcttc tagtggggct cccaatgctt cttcaagtgt atatcctttc     21900
+     atttctttga gaatatcatc tacaagaact ttgattattg gatcatctaa taatgctcca     21960
+     aatccgccct cgtttccttc ttgcatagca gatatctttc ttaattctaa cattctttgc     22020
+     attttttctt tgagtttcac aagtttttct tttaattttt catcatgtac ctgatttaat     22080
+     gaacgctcaa ttgcaggaat tacaagattc cattcttttg actttgcaat ttcttgtagt     22140
+     gcttctttgt gaaggtcttt gtctagtctg ttttgtcctt gttgcgcatt tcttattgca     22200
+     atctcattaa tcagtttctg atatttctct tcaggtcctt ttctatctaa ataatcttgg     22260
+     attttcaact ttttgttttt aacttcttct tgttttgatt catttatctc aaagttcatt     22320
+     ttttgcttag ttatttttgc tactagtttt ttttcttgaa ttaaaagtcc agactctctt     22380
+     tcatgttctc gaatagaatc aatatgggtt tctagcgttt tgatatattc tttttttaat     22440
+     gtatcaatat ttgttttgaa tggaaataat gaaatatctt ccattttatt taattctaat     22500
+     agagaatcct tgatttgcat aaattgaaat acattgcctg ataaagttat ttcattgata     22560
+     ttttctggta aattctgcaa atgagttatt tgtaattcta tgttttgtat cttttttcca     22620
+     attttttcat gtgattcacc atatgtttca ggtatggcag caattcctat caaaattact     22680
+     cctaatgcac tcaataagaa taactctttt ttatgtaaac aatgagggtc tgattctatc     22740
+     gaattcactt caaatatgtt attacatgtc aagtaattgg agagcctcca tcatatgggg     22800
+     cagaccgtga aagatcaatt tgatcatctg taactacttt gatagaaaag ttgctaagtg     22860
+     tatttggagc agttactgca cttgcttctg aagacattga aaaaacatta gctattgaaa     22920
+     taatagatga tgccaaaaat tttgtttgta agatgttcca tatactttta caattataaa     22980
+     tttgagtcaa cttgttttaa ttcggaaaaa tagtaattaa gaaaggctga catgttagtt     23040
+     agtatagcat acatgtttgt tagcgtaatt tacaaatttt ggaatattgt atctagaggg     23100
+     ctattgacaa ctattattta taaaataaaa ttttgcaatt aaggaagggg gctttgcctt     23160
+     tttactcttt atcaataaaa ggcactattc tctttttacg aaaagttagc aatagcctaa     23220
+     atcataatgg gtgtgcggtt tgttggaaaa tcgttataat gatagtatga atttgtgaaa     23280
+     tattgggttc aaaaacaaca attggaatta gtttggcaac tgtatttttt ggcgtaattg     23340
+     cattaatctg gtttactgga tacagttctg accatattga aaatgcaaat agaaacttga     23400
+     tgacagctca tgaagaattg aatagaattg ttgatgaggc aatcattcat tgtcaaactg     23460
+     acggtactgg atgtgataca ataatgcctc agtggttaga agaatgcaaa aaacctgaga     23520
+     tggaaaaaat tgcatcttgt catgatggcc gaatcgagca actagttcaa caacccatta     23580
+     ccatgacaaa ataatgctct ttgatttaac cttgatcgta tttaccaaat tacaaaacgg     23640
+     cagagccctt tccaaaatac gccttgacat gcggcctgaa caaatagtac aggattacaa     23700
+     tgtcaattat caggccaatc acattcattg atggcaggtc cacaatcaaa gaaattatgg     23760
+     tcagaatcag cgttatggtc caggcccacg actttccgcg gagcagcccc caggccatta     23820
+     caaaagaggc aacaccaagt acaatcattg cggcactacc tgcacccatt gcaccgccgc     23880
+     caagattcat tcccatcgaa cccatcattg ttccaaagaa tgctccgact gctattgcta     23940
+     tggcaccgga gactatctca agtattgcaa tgattgtcac cccgactggt cttgttctgg     24000
+     cagacaactc ttttggtggg ggatggattg taataagcat tcataacatc atatgggatg     24060
+     aattattttt tcatatggta tgttcttgac agattggaat aattaatttt atcactttat     24120
+     cagcaattat acaacacagt aactgaattt agaatcatta aatacatgtc catatacaaa     24180
+     catgataaaa acatggcagt aattaagaag caaaattcaa aggtaagaaa agataaaaat     24240
+     tctaaaaata ttaaaaaaac actaaaaaca aaaaccaacc ccaacacaaa gaaacttaca     24300
+     aaacatgtta tctggatgga gaaaaaaggc agggttaaaa aaaataatga cttggatctt     24360
+     aaagaaaaat ttaggaagga attagaaaaa aagcaatttg aaccaagcat gaagatgtta     24420
+     attcgcataa cagaatccat aaaacaaaaa ggttctagaa acaagacaac gctatcgcgc     24480
+     gacaccaaga caaactatac aagacttaca aaacatgttg tctggatgga gaaaaaaggc     24540
+     cttgtggaat cagaaataaa aaatcatagt attgctattg ctttaactag taaaggcaga     24600
+     ttctttgtag atacaatttt gtaatgaata attagtaagt taaacttaca tatgtgtaag     24660
+     ctatacttaa ctattttaca gattataact aaatgatcaa caatttatga aaaaactagt     24720
+     atgtgataca gatgtacaac gagaacctca agtgatcatt tggaacaaca ctcaaatctt     24780
+     aaaatggagt gattttaaaa aaaaatccga tcctgactca gaggcatcag ctaatgcagc     24840
+     aatagggttt gagtcaaaac ccataattga atatctcaaa gtgggaaagc aactcaaata     24900
+     taaaatcaaa gatttgcaat taaatgcaat tttcattcct aatttatctt gggtaacaaa     24960
+     aaatatcaat ctaaaagaag ggaatttact tttaaaacat gaacagggtc attttgatct     25020
+     agcagaagaa gtcattagaa aaattaaaaa taaatcaaca ggcatttaca aagtatttac     25080
+     gatcaaagaa aaaaataaga ataatatgaa agaagcaaca ttgcaagtaa ataaaataag     25140
+     agatgacatc gaatcagaac tacaaaatga gtttaatatc caagaatcaa aatatgataa     25200
+     taaaactaat catggattga tcaaaataca tcaaaaaaat ataataaaag attcaaaaaa     25260
+     ctaagactaa attaatcaag atcaaagaat atttgcacat caaagatgga accgtactaa     25320
+     tctgttttaa gaataattta tactcaatac taaaaaatga actaattcca cagttttaga     25380
+     atattgttag tgggctagaa tctatgttta agtggagatt tagaataaaa tcaagcatgt     25440
+     gcattgttgg aaattagtta ttaatggatt attcaaattc gatttatggc aaatgttgaa     25500
+     ttgataaaac agttctatca tgcttttaaa aacaaagaca aggaaacgta ccttggactg     25560
+     tgtgatgaaa atatcacatg gcagctatct gaaggaatgc caaatggcgg agtatacgta     25620
+     ggaaaagatg cagttttcaa agaatacttt ccaaaaatgc tatcaaactt taaagaattt     25680
+     catgccattc ctgaacagtt cacagacatg aaagaccatg taatggtaaa tggaatgtat     25740
+     tctggaatct caaatacggg aaaatcattt gaggttgctt tttctcatgt ttatcacatt     25800
+     caagatgaca aaataattca gtttagacag tttactgaca ctcaaaaaat ccaagaatca     25860
+     ttaaagtaat ttttttgtct atgggattag agaatttctt ccacttacca ttcttggtct     25920
+     ggattctcta gctgactcca tttgctttca attcttttga atatcttttt ttgtttactt     25980
+     aataattgga acatgactcc attatgcaaa atttgtattt aaccgccacg taggaattat     26040
+     cctgttgcat tctgaacatc ttgtttttct tagattgtct tgtgatctct tgtattctct     26100
+     taaacgagtc ttaattcctc ttattttctc ttagaaaatg cttgaatctg ctgtattgtg     26160
+     atagtttttg cttaaactgt gcctaatttc agtcacaaac aaacctgatt ttagtaaaat     26220
+     caagtgaaat taagatattt taagaaatta agagattaca caaacttaag tatcttttat     26280
+     tatagaaatc gattaaaaat ggctgccaaa acaaaaccaa aaactccaaa aaaagttacc     26340
+     aaagtcaaat ctatgcaaga tgcaaaaaat aaaatttatt caagaattaa aaaaggtgaa     26400
+     aatttcagtg agattgtcaa gaccaaattt gacattaatg gcagtacagt caaaaatggc     26460
+     ctgaatctta aattctagaa ttattcttca acaaatatcc aagataatcc tctaacttct     26520
+     tcccaaga                                                              26528
+//

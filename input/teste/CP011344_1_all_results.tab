@@ -1,0 +1,1332 @@
+FT   tRNA            complement(743..818)
+FT                   /locus_tag="ORF_02"
+FT                   /note="ORF_02"
+FT                   /note="score is 56.90"
+FT                   /gene="tRNA-Val(TAC)"
+FT                   /product="Valine (TAC) transfer RNA"
+FT                   /anticodon=(pos:34..36,aa:Val)
+FT                   /inference="profile:tRNAscan-SE:1.3"
+FT                   /color=255 000 000
+FT   tRNA            complement(743..818)
+FT                   /locus_tag="ORF_01"
+FT                   /note="ORF_01"
+FT                   /note="score is 90.00"
+FT                   /gene="tRNA-Val(TAC)"
+FT                   /product="Valine (TAC) transfer RNA"
+FT                   /anticodon=(pos:785..783,aa:Val)
+FT                   /inference="profile:tRNAscan-SE:1.3"
+FT                   /color=255 000 000
+FT   gene            918..1895
+FT                   /locus_tag="ORF_03"
+FT   CDS             918..1895
+FT                   /locus_tag="ORF_03"
+FT                   /note="ORF_03"
+FT                   /note="score is 11.37"
+FT                   /note=":, L-asparaginase_II, Type II (periplasmic)
+FT                   bacterial L-asparaginase, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 322.00, e-value is 0.00"
+FT                   /note=":, Asparaginase, Asparaginase, found in various
+FT                   plant, animal and bacterial cells, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 283.00, e-value is 0.00"
+FT                   /note="GO_process:asparagine metabolic process
+FT                   (GO:0006528)"
+FT                   /note="GO_process:cellular amino acid metabolic process
+FT                   (GO:0006520)"
+FT                   /note="GO_function:asparaginase activity (GO:0004067)"
+FT                   /note="similar to Uniref90:A0A0P6ZS45:percent identity is
+FT                   96.62, e-value is 0.00, score is 614.00"
+FT                   /note="similar to Uniref90:A0A2E4CSS9:percent identity is
+FT                   87.69, e-value is 0.00, score is 561.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR027474"
+FT                   /inference="protein motif:InterPro:IPR006034"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR004550"
+FT                   /inference="protein motif:InterPro:IPR036152"
+FT                   /inference="protein motif:InterPro:IPR037152"
+FT                   /inference="protein motif:InterPro:IPR040919"
+FT                   /inference="protein motif:InterPro:IPR027473"
+FT                   /inference="protein motif:InterPro:IPR020827"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P6ZS45"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E4CSS9"
+FT                   /translation="MTLPRILVLATGGTIAGQAGDAMRADYRPGQIGIEDYLKQASGLGVAADFTGRQIANIGSEDIDASIWSRLHAEIDLAMRDDGVDGIIVTHGTDTAEETAFLLDLTLPSTKPVVLVGAMRPADAVGYDGMRNFANAVRVAGDPDAAGRGVLVVMGDRVHSARDVRKAQTRATEAFRGFPRESVAIVTPSRLDWFGAPWRVGDSASLRFLSLPDVPILAVYAGMTATAAARQLSDDPPGIVVSGLGEGNMPDPVRQILVEHSRRGCLVVRASRTDEGLVDREPQDDANGFVASRALAPPKARLLTALLIANGITNRQEAQRHFDGR"
+FT                   /transl_table=11
+FT                   /product="L-asparaginase n=5 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P6ZS45_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(1980..3092)
+FT                   /locus_tag="ORF_04"
+FT   CDS             complement(1980..3092)
+FT                   /locus_tag="ORF_04"
+FT                   /note="ORF_04"
+FT                   /note="score is 15.28"
+FT                   /note="S:, ETR_like_1, 2-enoyl thioester reductase (ETR)
+FT                   like proteins, child 1, method is RPS-BLAST+, version is
+FT                   2.5.0+, score is 406.00, e-value is 0.00"
+FT                   /note="S:, ETR_like, 2-enoyl thioester reductase-like,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 192.00,
+FT                   e-value is 0.00"
+FT                   /note="GO_function:oxidoreductase activity (GO:0016491)"
+FT                   /note="similar to Uniref90:A0A0P7AE88:percent identity is
+FT                   99.46, e-value is 0.00, score is 763.00"
+FT                   /note="similar to Uniref90:A0A2D9IE06:percent identity is
+FT                   88.11, e-value is 0.00, score is 686.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR011032"
+FT                   /inference="protein motif:InterPro:IPR020843"
+FT                   /inference="protein motif:InterPro:IPR036291"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7AE88"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2D9IE06"
+FT                   /translation="MTTTGKQIFTTLESDGTLTVEVATSEFPEPKGNQVLVKMEAAPINPSDLALLVGQADLENADYSEGKIVAKMPEPFNSGSKGRHGQRMPVGNEGAGEVIATGDSDAAKALMGKRVSCVPGTAYAEYAIADANMCLPLGDISSKDGASAFVNPMTALGFVETAKMEGFKAIVHTAAASNLGQMLVRICQEDEMELVNIVRRQEQVDVLKGLGAKHIVNSSDDDFMKQLRNAIDETDAFIGFDPIGGGKAVDNAFKAMEQVAVGKMTEYSRYGSNQQKKMYIYGRLDLSPTVLTPSYGFGWTLSGWLLFPFMQGAGKETVARMRKRVLDNLTTTFKSEYTKEVTLEGMLEKDAVLQYRQMRTGEKYLVTPHG"
+FT                   /transl_table=11
+FT                   /product="NADH oxidase n=6 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P7AE88_9SPHN"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(3156..3932)
+FT                   /locus_tag="ORF_05"
+FT   CDS             complement(3156..3932)
+FT                   /locus_tag="ORF_05"
+FT                   /note="ORF_05"
+FT                   /note="score is 6.58"
+FT                   /note="S:, PseudoU_synth_EcTruA, Eukaryotic and bacterial
+FT                   pseudouridine synthases similar to E, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 343.00, e-value is
+FT                   0.00"
+FT                   /note=":, truA, tRNA pseudouridine(38-40) synthase TruA,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 339.00,
+FT                   e-value is 0.00"
+FT                   /note="GO_process:RNA modification (GO:0009451)"
+FT                   /note="GO_process:pseudouridine synthesis (GO:0001522)"
+FT                   /note="GO_function:RNA binding (GO:0003723)"
+FT                   /note="GO_function:pseudouridine synthase activity
+FT                   (GO:0009982)"
+FT                   /note="similar to Uniref90:A0A0P7AE33:percent identity is
+FT                   98.06, e-value is 0.00, score is 486.00"
+FT                   /note="similar to Uniref90:A0A395LLA7:percent identity is
+FT                   89.76, e-value is 0.00, score is 442.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR001406"
+FT                   /inference="protein motif:InterPro:IPR020097"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR020094"
+FT                   /inference="protein motif:InterPro:IPR020095"
+FT                   /inference="protein motif:InterPro:IPR020103"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7AE33"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LLA7"
+FT                   /translation="MAPTRYALTLEFDGTPFFGLQRQKDGPSVQQAVEEAAQAVTGQQVTLHSAGRTDTGVHAIAMRSHFDVESKLTPFRMGEAINAHLRPAPIAVTHCEAVPEDWHARFSCIGRRYLYRIINRRAPLTLEKNRAWLVSPECDAEAMHRAAQSLVGHHDFTTFRSVHCQAASPVKTLDRLDVERAGDEIRVHVAARSFLHHQVRSMVGCLALVGMGRWNEGRIAQVLEAKDRQELGLNAPSHGLYFVEAVYPDERAADEHSD"
+FT                   /transl_table=11
+FT                   /product="tRNA pseudouridine synthase A n=8
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A0P7AE33_9SPHN"
+FT                   /db_xref="S:"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(3972..4469)
+FT                   /locus_tag="ORF_06"
+FT   CDS             complement(3972..4469)
+FT                   /locus_tag="ORF_06"
+FT                   /note="ORF_06"
+FT                   /note="score is 8.09"
+FT                   /note="similar to Uniref90:A0A0P7A715:percent identity is
+FT                   96.97, e-value is 0.00, score is 268.00"
+FT                   /note="similar to Uniref90:A0A2E7UBF4:percent identity is
+FT                   87.88, e-value is 0.00, score is 249.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7A715"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E7UBF4"
+FT                   /translation="MRRSLAITIGAGMIAAGTALAACGAAEPGEAAGDSLPSVSSAAPADLSDGLITCAMPDFDGKTGLTVTERFILIDGQPKRYSDFNNQAFDLCQAGQDNCALKIENGVIRMDWTSANGTRSRYDVDLGTLDIAAYTTKAGEAERAVAFREGAKCVREPLPEGLQVM"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=5 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P7A715_9SPHN"
+FT                   /color=0 0 255
+FT   gene            complement(4554..5474)
+FT                   /locus_tag="ORF_07"
+FT   CDS             complement(4554..5474)
+FT                   /locus_tag="ORF_07"
+FT                   /note="ORF_07"
+FT                   /note="score is 8.42"
+FT                   /note=":, fmt, methionyl-tRNA formyltransferase; Reviewed,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 458.00,
+FT                   e-value is 0.00"
+FT                   /note=":, Fmt, Methionyl-tRNA formyltransferase, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 412.00, e-value is
+FT                   0.00"
+FT                   /note="GO_process:biosynthetic process (GO:0009058)"
+FT                   /note="GO_process:conversion of methionyl-tRNA to
+FT                   N-formyl-methionyl-tRNA (GO:0071951)"
+FT                   /note="GO_function:catalytic activity (GO:0003824)"
+FT                   /note="GO_function:hydroxymethyl-, formyl- and related
+FT                   transferase activity (GO:0016742)"
+FT                   /note="GO_function:methionyl-tRNA formyltransferase
+FT                   activity (GO:0004479)"
+FT                   /note="similar to Uniref90:A0A0N8H0V1:percent identity is
+FT                   94.12, e-value is 0.00, score is 548.00"
+FT                   /note="similar to Uniref90:A0A395LL25:percent identity is
+FT                   88.49, e-value is 0.00, score is 513.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR005794"
+FT                   /inference="protein motif:InterPro:IPR002376"
+FT                   /inference="protein motif:InterPro:IPR044135"
+FT                   /inference="protein motif:InterPro:IPR041711"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR036477"
+FT                   /inference="protein motif:InterPro:IPR037022"
+FT                   /inference="protein motif:InterPro:IPR011034"
+FT                   /inference="protein motif:InterPro:IPR001555"
+FT                   /inference="protein motif:InterPro:IPR005793"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0N8H0V1"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LL25"
+FT                   /translation="MRIVFMGTPDFAVPTLEALVHAAHEVVCVYTQPPRKAGRGKKLQPTPVHQAAERLGIEVRHPASLKSQEEKDAFAALDADVGVVAAYGLILPQAVLDAPTHGCLNVHASILPRWRGAAPIQRAILAGDTGTGVTIMQMEAGLDTGPMLATIRTPIDRKTAGDLTDELAEKGAQLMIGTLRELSKHIPVMQDDAEATHAPKIDKAEARLDWTQDAVQVERQVRAFAPWPGAFFEYEGAEGMERVKTLAAEIAEGSGAPGTVLDDALTVACGSGALRLTRVQRAGKPAMDTADFQRGRAIGKGAKLGS"
+FT                   /transl_table=11
+FT                   /product="Methionyl-tRNA formyltransferase n=8
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A0N8H0V1_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            5528..6121
+FT                   /locus_tag="ORF_08"
+FT   CDS             5528..6121
+FT                   /locus_tag="ORF_08"
+FT                   /note="ORF_08"
+FT                   /note="score is 8.05"
+FT                   /note=":, recR, recombination protein RecR; Reviewed,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 296.00,
+FT                   e-value is 0.00"
+FT                   /note=":, RecR, Recombinational DNA repair protein (RecF
+FT                   pathway), method is RPS-BLAST+, version is 2.5.0+, score
+FT                   is 256.00, e-value is 0.00"
+FT                   /note="GO_process:DNA recombination (GO:0006310)"
+FT                   /note="GO_process:DNA repair (GO:0006281)"
+FT                   /note="GO_function:DNA binding (GO:0003677)"
+FT                   /note="similar to Uniref90:A0A0P6ZKH4:percent identity is
+FT                   97.97, e-value is 0.00, score is 384.00"
+FT                   /note="similar to Uniref90:A0A4Q5SHR3:percent identity is
+FT                   87.37, e-value is 0.00, score is 342.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR000093"
+FT                   /inference="protein motif:InterPro:IPR006171"
+FT                   /inference="protein motif:InterPro:IPR015967"
+FT                   /inference="protein motif:InterPro:IPR023628"
+FT                   /inference="protein motif:InterPro:IPR034137"
+FT                   /inference="protein motif:InterPro:IPR023627"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P6ZKH4"
+FT                   /inference="similar to AA sequence:Uniref90:A0A4Q5SHR3"
+FT                   /translation="MASQEIETLASALARLPGLGPRSARRAVLHLVKKRETALPALLDALLSVQDTLEECRICGNVDTQDPCGICSDPRRDAKSICVVEDVADLWALDRAKLFSGTFHVLGGRLSALDGVRPEDLAIPGLLARVEAGVDEVVLAMNATLEGQTTAHYLAERLEDFPVRITQLAHGLPVGGELDYLDEGTLAQALRARRPLG"
+FT                   /transl_table=11
+FT                   /product="Recombination protein RecR n=9
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A0P6ZKH4_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            6161..6733
+FT                   /locus_tag="ORF_09"
+FT   CDS             6161..6733
+FT                   /locus_tag="ORF_09"
+FT                   /note="ORF_09"
+FT                   /note="score is 12.88"
+FT                   /note=":, def, peptide deformylase; Reviewed, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 260.00, e-value is
+FT                   0.00"
+FT                   /note=":, Def, N-formylmethionyl-tRNA deformylase, method
+FT                   is RPS-BLAST+, version is 2.5.0+, score is 242.00, e-value
+FT                   is 0.00"
+FT                   /note="GO_function:peptide deformylase activity
+FT                   (GO:0042586)"
+FT                   /note="similar to Uniref90:A0A0P7A7X5:percent identity is
+FT                   100.00, e-value is 0.00, score is 373.00"
+FT                   /note="similar to Uniref90:A0A395LLJ4:percent identity is
+FT                   96.32, e-value is 0.00, score is 362.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR023635"
+FT                   /inference="protein motif:InterPro:IPR036821"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7A7X5"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LLJ4"
+FT                   /translation="MAIREILEVPDPRLKTVSQPVEAGEFDDDLRTLVDDMFETMYAANGIGLAAIQVGVPKRILVIDLQPEDPDAEPIECDHDGHKHTHPATKKEPRVFINPEILDPNEELATYQEGCLSVPDIYADVDRPATCTVRWKDLDGKEHTEAMEGLLATCIQHEMDHLEGILFIDHLSRLKRQMALKKLKKLRVAA"
+FT                   /transl_table=11
+FT                   /product="Peptide deformylase n=8 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P7A7X5_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(6842..7240)
+FT                   /locus_tag="ORF_10"
+FT   CDS             complement(6842..7240)
+FT                   /locus_tag="ORF_10"
+FT                   /note="ORF_10"
+FT                   /note="score is 7.21"
+FT                   /note="S:, Cysteine-rich 4 helical bundle widely conserved
+FT                   in bacteria, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 71.20, e-value is 0.00"
+FT                   /note="similar to Uniref90:A0A395LKS8:percent identity is
+FT                   92.42, e-value is 0.00, score is 248.00"
+FT                   /note="similar to Uniref90:A0A0H4VDP4:percent identity is
+FT                   93.18, e-value is 0.00, score is 247.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR044543"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LKS8"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0H4VDP4"
+FT                   /translation="MSIKEMISEHPSVGADYNEQLAEAVKHAMYCAAICNSCVDACNAEEGDMSECIRKCSDCSDICQAVSTVAARRTHGNTAVIKSLLEACILACKVCAEECAKHDNPHCKRCEKMCRECMEDCVKALQGMVEAA"
+FT                   /transl_table=11
+FT                   /product="Four-helix bundle copper-binding protein n=3
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A395LKS8_9SPHN"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            7336..8802
+FT                   /locus_tag="ORF_11"
+FT   CDS             7336..8802
+FT                   /locus_tag="ORF_11"
+FT                   /note="ORF_11"
+FT                   /note="score is 14.98"
+FT                   /note=":, RmuC, RmuC family, method is RPS-BLAST+, version
+FT                   is 2.5.0+, score is 334.00, e-value is 0.00"
+FT                   /note=":, Predicted nuclease of restriction
+FT                   endonuclease-like fold, RmuC family, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 229.00, e-value is 0.00"
+FT                   /note="similar to Uniref90:A0A2E2NHV7:percent identity is
+FT                   98.36, e-value is 0.00, score is 862.00"
+FT                   /note="similar to Uniref90:A0A2E7UBA8:percent identity is
+FT                   92.42, e-value is 0.00, score is 805.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR003798"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E2NHV7"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E7UBA8"
+FT                   /translation="MEYAILGVVALLIGLGVGWYLGGRPAAELKTRLAESEREAKETDAKYLRAYAELEAAREKGARVDALEAELKETRARHETVLEEARRANGALSSELATLKEKTANFDEQKRLLVEAREELLKEFQNTGSAVLSKAQEAFLERASERFGHSEKSSEEKIRALLAPVGDRLKKYEDQVAALEEKRTNAFSSLAAQIEQMRLGQEEVRREAQRLGNSLTNAPKARGRWGERALQNVLEQCGLSEHTDFNLEQSLETAEGRLRPDAIVNVPGSKKLVIDAKVSLNAYQAAFEAEDEGERKRHLDLHAKSMRGHVQTLGSKSYQSQFDDAPDYVVMFVPGEHFVAAALDADPELWDFAFRNKVLLATPTNLVAIARTVAQVWRQDTIAKEAMEIGKAGGELYDRLAIAAEHMKRVGGGLESAVKNYNKFVGSFERNVLSAGRRLSEKGIEIGKREIEEIPQIAETPTYTSEDVAALEDEGEGKQLEDARDAAE"
+FT                   /transl_table=11
+FT                   /product="DNA recombination protein RmuC homolog n=5
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A2E2NHV7_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   misc_feature    8360..19640
+FT   gene            8975..9184
+FT                   /locus_tag="ORF_12"
+FT   CDS             8975..9184
+FT                   /locus_tag="ORF_12"
+FT                   /note="ORF_12"
+FT                   /note="score is 7.17"
+FT                   /note="similar to Uniref90:UPI00048E0EE3:percent identity
+FT                   is 100.00, e-value is 0.00, score is 142.00"
+FT                   /note="similar to Uniref90:A0A2D3RJA4:percent identity is
+FT                   77.27, e-value is 0.00, score is 102.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:UPI00048E0EE3"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2D3RJA4"
+FT                   /translation="MTDAVVEAPKVPHEHLVWIMTPDHRARYRQFLEFEMGVEPDDGESFGIPIMDGEPRDGQPFELVIRSPD"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            complement(9211..9678)
+FT                   /locus_tag="ORF_13"
+FT   CDS             complement(9211..9678)
+FT                   /locus_tag="ORF_13"
+FT                   /note="ORF_13"
+FT                   /note="score is 5.42"
+FT                   /note="similar to Uniref90:UPI0012E1527E:percent identity
+FT                   is 100.00, e-value is 0.00, score is 212.00"
+FT                   /note="similar to Uniref90:UPI00164D0772:percent identity
+FT                   is 44.33, e-value is 0.00, score is 85.10"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0012E1527E"
+FT                   /inference="similar to AA sequence:Uniref90:UPI00164D0772"
+FT                   /translation="MRAWLPQVNCESRDIMSANHEPDQLPEQSPLKGCRVLLLAGLLMGCGADDISLQPQTAFDLVCTSQAEETIRFRFDLSQSKWCLEDCAAAWTIDEQTDAEIKLSLRTRDDSDRWSISIDRYTSQFWIVRRGYGKEPQAFGQCERHKFSGFPQQQF"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            9744..10004
+FT                   /locus_tag="ORF_14"
+FT   CDS             9744..10004
+FT                   /locus_tag="ORF_14"
+FT                   /note="ORF_14"
+FT                   /note="score is 4.44"
+FT                   /note=":, HTH_XRE, Helix-turn-helix XRE-family like
+FT                   proteins, method is RPS-BLAST+, version is 2.5.0+, score
+FT                   is 56.40, e-value is 0.00"
+FT                   /note=":, HTH_XRE, Helix-turn-helix XRE-family like
+FT                   proteins, method is RPS-BLAST+, version is 2.5.0+, score
+FT                   is 53.70, e-value is 0.00"
+FT                   /note="GO_function:DNA binding (GO:0003677)"
+FT                   /note="similar to Uniref90:UPI0001DD1112:percent identity
+FT                   is 100.00, e-value is 0.00, score is 174.00"
+FT                   /note="similar to Uniref90:UPI00164DB233:percent identity
+FT                   is 72.94, e-value is 0.00, score is 133.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR010982"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR001387"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0001DD1112"
+FT                   /inference="similar to AA sequence:Uniref90:UPI00164DB233"
+FT                   /translation="MRGRELVGKNIKRLRVAQGISQEQLAFDASIDRSFLGGIERCDENPSVDTLDKIASVLSVNIAELFVPTAVHENISGLRPGRKKQS"
+FT                   /transl_table=11
+FT                   /product="helix-turn-helix transcriptional regulator n=1
+FT                   Tax=Citromicrobium TaxID=72173 RepID=UPI0001DD1112"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(10001..10492)
+FT                   /locus_tag="ORF_15"
+FT   CDS             complement(10001..10492)
+FT                   /locus_tag="cas1 - ORF_15"
+FT                   /note="ORF_15"
+FT                   /note="score is 8.97"
+FT                   /note="S:, Cas1_I-II-III, CRISPR/Cas system-associated
+FT                   protein Cas1, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 86.50, e-value is 0.00"
+FT                   /note="S:, Cas_Cas1, CRISPR associated protein Cas1,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 80.60,
+FT                   e-value is 0.00"
+FT                   /note="GO_process:defense response to virus (GO:0051607)"
+FT                   /note="GO_process:maintenance of CRISPR repeat elements
+FT                   (GO:0043571)"
+FT                   /note="GO_function:endonuclease activity (GO:0004519)"
+FT                   /note="GO_function:metal ion binding (GO:0046872)"
+FT                   /note="GO_function:nucleic acid binding (GO:0003676)"
+FT                   /note="similar to Casposon_DB:RS0108020:percent identity
+FT                   is 46.95, e-value is 0.00, score is 159.00"
+FT                   /note="similar to Casposon_DB:RS00460:percent identity is
+FT                   33.56, e-value is 0.00, score is 93.60"
+FT                   /note="similar to Uniref90:UPI0012E268B9:percent identity
+FT                   is 100.00, e-value is 0.00, score is 339.00"
+FT                   /note="similar to Uniref90:A0A2N4WRV6:percent identity is
+FT                   80.86, e-value is 0.00, score is 278.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR002729"
+FT                   /inference="protein motif:InterPro:IPR042206"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0108020"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS00460"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0012E268B9"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2N4WRV6"
+FT                   /translation="LESESFEDLNAIFAIEGECASAYFRAWQGLPVNWRGIVRRPVPQEWHAYNWRSSRATGKKAENRNASHPVNAMLNYAYAVKLAKLQLEAIADGYDPTIGIMHNSKRGSPAWALDMIELERASVDARILEFVADQRFAAADFILKKNGGCRLSPQLARMVASLA"
+FT                   /transl_table=11
+FT                   /product="F550_RS0108020 CRISPR-associated endonuclease
+FT                   Cas1 1659743:1660888 reverse MW:43882"
+FT                   /db_xref="S:"
+FT                   /color=255 0 255
+FT   gene            complement(10465..10914)
+FT                   /locus_tag="ORF_16"
+FT   CDS             complement(10465..10914)
+FT                   /locus_tag="cas1 - ORF_16"
+FT                   /note="ORF_16"
+FT                   /note="score is 6.19"
+FT                   /note="similar to Casposon_DB:RS0108020:percent identity
+FT                   is 53.09, e-value is 0.00, score is 81.60"
+FT                   /note="similar to Casposon_DB:RS02910:percent identity is
+FT                   30.77, e-value is 0.00, score is 41.60"
+FT                   /note="similar to Uniref90:A0A3N2QDK6:percent identity is
+FT                   80.82, e-value is 0.00, score is 126.00"
+FT                   /note="similar to Uniref90:A0A6N0WXJ3:percent identity is
+FT                   78.08, e-value is 0.00, score is 122.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0108020"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS02910"
+FT                   /inference="similar to AA sequence:Uniref90:A0A3N2QDK6"
+FT                   /inference="similar to AA sequence:Uniref90:A0A6N0WXJ3"
+FT                   /translation="LRIAHGALVIRDGFTHYPQKRAEYRFFPRDLDLPSRILLLDGSGTLSFQVLTWLAEQSVALARVNASGEIATLLAEEDMPLIGKRSIGNWPCALTYRSDRHSRLISFAGKSFRASLRLRFTSRLQNRAIWRWQKQMLLLIGWKARASKI"
+FT                   /transl_table=11
+FT                   /product="F550_RS0108020 CRISPR-associated endonuclease
+FT                   Cas1 1659743:1660888 reverse MW:43882"
+FT                   /color=255 0 255
+FT   gene            complement(11124..12110)
+FT                   /locus_tag="ORF_17"
+FT   CDS             complement(11124..12110)
+FT                   /locus_tag="ORF_17"
+FT                   /note="ORF_17"
+FT                   /note="score is 3.38"
+FT                   /note="similar to Uniref90:UPI000AAEE9B3:percent identity
+FT                   is 100.00, e-value is 0.00, score is 603.00"
+FT                   /note="similar to Uniref90:UPI000ADFE809:percent identity
+FT                   is 41.69, e-value is 0.00, score is 228.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:UPI000AAEE9B3"
+FT                   /inference="similar to AA sequence:Uniref90:UPI000ADFE809"
+FT                   /translation="LSVPGLVPGTLLESVSESVLAKRDASVREEQVMQITNTELADLLNSEFGFVGRNAITANVVRQWVDWDVLPRAQAQGQRVGNAPSWARSDSDVRKARRLAELRRMGLKRENALVVQTYIEWGHQDFDRVRVAFAAEWRKASSQLARRQSTFLNDRTFTEVSAASKKAIANQLGPLDHRLQGTRFEQSQEFYAVMAEIGRSGANSKLPSDELIAKALDHMAPRVSPLLNPLWIEAIGKVLSGIAGLPDEIENSGIEAIQNANKRDFRVARYHVRLFRKAVKGQLPNRDIQSALESEPTFQKLRELGPQILNVPWVILPFIQALKYEIPN"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            12111..12686
+FT                   /locus_tag="ORF_18"
+FT   CDS             12111..12686
+FT                   /locus_tag="ORF_18"
+FT                   /note="ORF_18"
+FT                   /note="score is 4.75"
+FT                   /note="similar to Casposon_DB:RS0108030:percent identity
+FT                   is 35.71, e-value is 0.00, score is 75.10"
+FT                   /note="similar to Casposon_DB:RS09855:percent identity is
+FT                   30.46, e-value is 0.00, score is 60.50"
+FT                   /note="similar to Uniref90:UPI0012E16AC1:percent identity
+FT                   is 99.45, e-value is 0.00, score is 359.00"
+FT                   /note="similar to Uniref90:UPI0013662173:percent identity
+FT                   is 71.05, e-value is 0.00, score is 279.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0108030"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS09855"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0012E16AC1"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0013662173"
+FT                   /translation="LVRKRDYKAEYARRIANAKKRGLSRAQARGHARAGERPIRGSKLERGEASLEAALKALRRTGTQVAAAKEAGVSVERFRRFLRENKLATRKGKTWIISDPATRQMLVISSGEARTRKLAGLEQASLNGRYLAAVKAFINSNDADLLSGFVGKSVRDTAGHEHPLETDPNTLYHLAASGSEIFEDIYRLVTD"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            12683..13063
+FT                   /locus_tag="ORF_19"
+FT   CDS             12683..13063
+FT                   /locus_tag="ORF_19"
+FT                   /note="ORF_19"
+FT                   /note="score is 5.64"
+FT                   /note="similar to Casposon_DB:RS09895:percent identity is
+FT                   29.03, e-value is 0.00, score is 51.60"
+FT                   /note="similar to Casposon_DB:RS01960:percent identity is
+FT                   35.37, e-value is 0.00, score is 42.70"
+FT                   /note="similar to Uniref90:UPI0012E15767:percent identity
+FT                   is 100.00, e-value is 0.00, score is 225.00"
+FT                   /note="similar to Uniref90:UPI001365196D:percent identity
+FT                   is 72.81, e-value is 0.00, score is 159.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS09895"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS01960"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0012E15767"
+FT                   /inference="similar to AA sequence:Uniref90:UPI001365196D"
+FT                   /translation="LKRGPNMTRHDRERRKQQRLKKLGSNNPICGACGENAWQCLEAHHVADFGRDEATVIVCANCHRKLSDAQKDHPSYDASSDPDLDRIGHFLLGLADLLEIIVEKLKEFAHVLIGLAEQDAGRRRGK"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            13060..16197
+FT                   /locus_tag="ORF_20"
+FT   CDS             13060..16197
+FT                   /locus_tag="polb - ORF_20"
+FT                   /note="ORF_20"
+FT                   /note="score is 10.18"
+FT                   /note=":, PolB, DNA polymerase elongation subunit (family
+FT                   B), method is RPS-BLAST+, version is 2.5.0+, score is
+FT                   64.00, e-value is 0.00"
+FT                   /note="S:, POLBc_B1, DNA polymerase type-B B1 subfamily
+FT                   catalytic domain, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 46.20, e-value is 0.00"
+FT                   /note="GO_function:DNA binding (GO:0003677)"
+FT                   /note="GO_function:nucleic acid binding (GO:0003676)"
+FT                   /note="GO_function:nucleotide binding (GO:0000166)"
+FT                   /note="similar to Casposon_DB:RS0108040:percent identity
+FT                   is 42.33, e-value is 0.00, score is 677.00"
+FT                   /note="similar to Casposon_DB:RS14220:percent identity is
+FT                   34.22, e-value is 0.00, score is 466.00"
+FT                   /note="similar to Uniref90:UPI0001DD110E:percent identity
+FT                   is 100.00, e-value is 0.00, score is 2114.00"
+FT                   /note="similar to Uniref90:UPI0013664B3C:percent identity
+FT                   is 61.30, e-value is 0.00, score is 1254.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR043502"
+FT                   /inference="protein motif:InterPro:IPR036397"
+FT                   /inference="protein motif:InterPro:IPR006134"
+FT                   /inference="protein motif:InterPro:IPR023211"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS0108040"
+FT                   /inference="similar to AA sequence:Casposon_DB:RS14220"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0001DD110E"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0013664B3C"
+FT                   /translation="MTIPVTDELPISLRAYAVRADNRSGPSRSHKRSEIEASEWHLIFDCETRVDPAQSLRFGAYQIRQSGALMEQGLFYAPENVTRAELAQIRSYADENHLECLTQTEFVEAILFTIGYDYRGTIVGFNLPFDISRIAIKSSSARGKMKGGFSFTLSEDKRRPNLQVKHISAKAAFIQFAAPMKSRTNRSRVKLGKREPIQRGHFIDCKTLANALLARSFSLASLCEALGVENSKIEYSDFEAPISDDFIGYALRDVQATWECYCELIERFDQLALAGTSPEKIYSEASLGKACLKAMGVKPWRECQPDFDPAIIGKVMSAYYGGRSEVHIRREERQVMLCDFLSMYPTVCTLMGLWSFVTSEGVEVHDATEKAKAILLGDILSELRCTQFWRGLTILVRVIPVGDIFPVRAKYADAQQATIGLNYLTNERGQWFTLADCLASTLLSGKPPNVIEAIEFRQSGTQAKLSGFDVGGNAAYSIHPKRDDFYKRLIELRQDTKAKLEQAKPDERAMLGIRQHALKIMANATSYGIFVEMNVENAKADERVDVFAGDEHAFASFPSKIEEPGTFFHPLLATLITGAARLMLAITEKLAIERGLEWAFCDTDSMALAKPRRMGEERFQSAVQEIIDWFGALNPYDFEGSILKSEGVNFATDSSGRHEQLYCLAISAKRYALYNRGDDEMPIIRKASAHGLGHLRAPYDERNPSRSIPKPKAKFAEMGISLWQHDLWFNIIGAIRSERPELVDFGFHPSLQLPAISRYAATSPTVLRWFNHFNEDKNYSDQVKPFGFLTALFATSIEVGATSGIEGQKRKAKKVSCAPISPFETDPAKAANQAFDRETGDFVPIEKLKTFAQAMAQYHLQPENKFLNGNFRDSGETERRHICAVSAVHIGKEANDLERQASIGFDPSAQPLYGLHPDQTAELQGELKRLCEVFSTYQISTYAGITAKKLSDFLNADCTSQQARHEASELEKITRYFRRKERRECEQLEKLEKLIADSGLRKAARKLCVDPSNLRRNILKRRSCITKADNPATSRLQLPLHREDS"
+FT                   /transl_table=11
+FT                   /product="F550_RS0108040 'DNA-directed DNA polymerase
+FT                   B','Ribonuclease H-like superfamily protein'
+FT                   1662970:1665978 forward MW:113437"
+FT                   /db_xref=":"
+FT                   /db_xref="S:"
+FT                   /color=0 255 255
+FT   gene            complement(16154..17524)
+FT                   /locus_tag="ORF_21"
+FT   CDS             complement(16154..17524)
+FT                   /locus_tag="ORF_21"
+FT                   /note="ORF_21"
+FT                   /note="score is 7.26"
+FT                   /note="similar to Uniref90:UPI0002F96586:percent identity
+FT                   is 100.00, e-value is 0.00, score is 933.00"
+FT                   /note="similar to Uniref90:UPI000A55EB23:percent identity
+FT                   is 99.70, e-value is 0.00, score is 678.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0002F96586"
+FT                   /inference="similar to AA sequence:Uniref90:UPI000A55EB23"
+FT                   /translation="MIIFKRQFPWVGRRNAKPEPLPIGQTEPLREFVYLDEVSLASLLASQKGEATENVTSQSGDESTAEVGGKVSSNTPMTPSAEVSSRFQTTNSNSLQTVSKATAQSRFRELHKFDYLRKIKPVEVLKSATSLEDLKDGSYENTCYRASDLKRGDLVEFKVQLSASWIFQISTMVAEFSEMFDQSPTMFMESVNFLDLYQAKNANKIISKLLAGLIPVDGVVSDYVVIADGEQNLIVHRNAISGFPIECSELRIVGVTEHLAYWKDIRRVLFADNEFTMLCRLSKSGIQNDWNPIKVADIFRDFAPDLARQIETSSRAAMTQSASSKRADMVEPIAAQLALALARYKDRLLSEIAHDVSEEELVALDRSIAALLLENTSAEGQRAAFAKVKALIEVSTRQEIDPSVDFDAREAVRKSLDLPLFPRSQNFANEPKINESSAFDEEPKNLLDVEVIAIYW"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   misc_feature    17155..26197
+FT                   /label=element
+FT                   /color=220 220 247
+FT   gene            complement(17521..18756)
+FT                   /locus_tag="ORF_22"
+FT   CDS             complement(17521..18756)
+FT                   /locus_tag="ORF_22"
+FT                   /note="ORF_22"
+FT                   /note="score is 8.38"
+FT                   /note="S:, RPT1, ATP-dependent 26S proteasome regulatory
+FT                   subunit, method is RPS-BLAST+, version is 2.5.0+, score is
+FT                   246.00, e-value is 0.00"
+FT                   /note=":, RecA-like_CDC48_NLV2_r1-like, first of two
+FT                   ATPase domains of CDC48 and NLV2, and similar ATPase
+FT                   domains, method is RPS-BLAST+, version is 2.5.0+, score is
+FT                   238.00, e-value is 0.00"
+FT                   /note="GO_function:ATP binding (GO:0005524)"
+FT                   /note="GO_function:ATPase activity (GO:0016887)"
+FT                   /note="similar to Uniref90:UPI0001DD110D:percent identity
+FT                   is 100.00, e-value is 0.00, score is 833.00"
+FT                   /note="similar to Uniref90:A0A6N7E844:percent identity is
+FT                   73.24, e-value is 0.00, score is 619.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR003593"
+FT                   /inference="protein motif:InterPro:IPR003959"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR027417"
+FT                   /inference="protein motif:InterPro:IPR003960"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0001DD110D"
+FT                   /inference="similar to AA sequence:Uniref90:A0A6N7E844"
+FT                   /translation="MSQYADDETLGDLLKIVHIEPETDFIFFRYPNGKTGRVRVDELHTFKKNDVILSYDGKWTKVPHEVWPDTFATCIIRSILDDGTILGESGGALVVLRNPGELDLEADFTVEVDNTTSAIVRVIAKEPIRARLHPADDVLSPSSFMVEPREGGLTFDDFGGYKGVVARAKELIETQLERRDELEKIGARPVKGILFTGPPGTGKTHLARIIANQAGASFYDISGPAIVSKWLGDTEELLRKIFEHAKSADSGKAIIFFDEIDSIAENRSGDSQESSRRLVAQFLTLMDGFDTSKNATVVIAATNRADALDPALTRPGRFDWEIEFGLPDLMDRYEILKIGTRTIRCSDGLPLLEIATRTHDWSAARLTSIWTEAALIAASDRRESIAGEDLAQAYERVARRPERKSENGSHK"
+FT                   /transl_table=11
+FT                   /product="26S protease regulatory subunit n=1
+FT                   Tax=Citromicrobium TaxID=72173 RepID=UPI0001DD110D"
+FT                   /db_xref="S:"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            18932..19972
+FT                   /locus_tag="ORF_23"
+FT   CDS             18932..19972
+FT                   /locus_tag="ORF_23"
+FT                   /note="ORF_23"
+FT                   /note="score is 7.48"
+FT                   /note="similar to Uniref90:UPI0018D0328E:percent identity
+FT                   is 99.66, e-value is 0.00, score is 580.00"
+FT                   /note="similar to Uniref90:A0A0F7KRA6:percent identity is
+FT                   55.71, e-value is 0.00, score is 317.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:UPI0018D0328E"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0F7KRA6"
+FT                   /translation="MTSDAKSIGKAAIGRMRNAAGSATIPPECGSIVAIKIIDDRMFMLSQRCLTSGVFADHIDPDRTNPNLPQIIQQKELEFGADHHFVRKTAGAAFELADATYLPETVPPDALLRMSLEVSSSMASVVEVANDLSSHQDQMREASKAQKLSAAYVPRTPNLKGKVRQSLAALRDVEIAIKGLTTLFFPKDSNNEPWDAKFLQAMTEKHGENAELDAWKNAAWEVLAGVANHRHAMIHPNENKCVIIRDYELQADGSLLAPTIEITHEASAVTRRDVVQFLETQVGDLAEVFEAILGYVCDLKVRTVIPQFESHVVALPNGETQRGSHMVWRTIAKEGAPFGGPKANAD"
+FT                   /transl_table=11
+FT                   /product="hypothetical protein"
+FT                   /color=0 0 255
+FT   gene            19983..20897
+FT                   /locus_tag="ORF_24"
+FT   CDS             19983..20897
+FT                   /locus_tag="ORF_24"
+FT                   /note="ORF_24"
+FT                   /note="score is 9.53"
+FT                   /note="similar to Uniref90:A0A2E2NHW2:percent identity is
+FT                   95.63, e-value is 0.00, score is 394.00"
+FT                   /note="similar to Uniref90:A0A2E0Q5K6:percent identity is
+FT                   45.32, e-value is 0.00, score is 175.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E2NHW2"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E0Q5K6"
+FT                   /translation="LSELDVRTIGKLLWIANFTSFCGQNFPVSTLSLYPPDLIRGGAAFSAAPKKPDPGSKPGMTWAFEWGGCMRALAMSILTGLLAVGLVAAPAIAQTATAEEGPGPLAPRDECTGLPGYAEFHQRLERAITLRDADALIALTDPDVTLDFGGGSGVDELRKRLDAGAYNSWRDLADAVQLGCGIGEDAAQDTDYIAFPWYFTKTFGGEVFETVIVTGVDVPLRFAPADDARVIERISWDWALVRYDDQYVDGPEETDQQTGYQAVITQDGAAGYIADHALRSIVDYRIAVNRIDGKWTITAFVAGD"
+FT                   /transl_table=11
+FT                   /product="Uncharacterized protein n=6 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A2E2NHW2_9SPHN"
+FT                   /color=0 0 255
+FT   gene            complement(21219..22022)
+FT                   /locus_tag="ORF_25"
+FT   CDS             complement(21219..22022)
+FT                   /locus_tag="ORF_25"
+FT                   /note="ORF_25"
+FT                   /note="score is 9.29"
+FT                   /note="S:, SpoU, rRNA methylases, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 188.00, e-value is 0.00"
+FT                   /note="S:, SpoU-like_rRNA-MTase, SAM-dependent rRNA
+FT                   methylase related to SpoU-TrmH, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 151.00, e-value is 0.00"
+FT                   /note="GO_process:RNA processing (GO:0006396)"
+FT                   /note="GO_function:RNA binding (GO:0003723)"
+FT                   /note="GO_function:RNA methyltransferase activity
+FT                   (GO:0008173)"
+FT                   /note="GO_function:methyltransferase activity
+FT                   (GO:0008168)"
+FT                   /note="similar to Uniref90:A0A0P6ZS40:percent identity is
+FT                   97.75, e-value is 0.00, score is 488.00"
+FT                   /note="similar to Uniref90:A0A395LLQ2:percent identity is
+FT                   84.68, e-value is 0.00, score is 429.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR029064"
+FT                   /inference="protein motif:InterPro:IPR029028"
+FT                   /inference="protein motif:InterPro:IPR029026"
+FT                   /inference="protein motif:InterPro:IPR001537"
+FT                   /inference="protein motif:InterPro:IPR013123"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P6ZS40"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LLQ2"
+FT                   /translation="MPRREITSYSNPTIKALRSLREKKHRQRERRFLAEGLRLLTDARESGRVPEVLVMASKRDPHPLIDALEHAVEAAGGDVIETTPDILSKITGKDNPQAVAGAFAEWDTSLDRIDRNAAPIWLVAQALRDPGNLGTMLRTADAVGAGGLILIDDCADPFGVEAVRASMGAIFTQNLARARWEEFLPWLRQGPGQLVAASLREAVPYRGAPYASPCFVMVGNESQGLPEAYETACDLRVTMPMRGRADSLNAAVAAAVLAYEVLASLEG"
+FT                   /transl_table=11
+FT                   /product="RNA methyltransferase n=9 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P6ZS40_9SPHN"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(22054..22332)
+FT                   /locus_tag="ORF_26"
+FT   CDS             complement(22054..22332)
+FT                   /locus_tag="ORF_26"
+FT                   /note="ORF_26"
+FT                   /note="score is 13.66"
+FT                   /note="S:, PTS-HPr, PTS HPr component phosphorylation
+FT                   site, method is RPS-BLAST+, version is 2.5.0+, score is
+FT                   95.50, e-value is 0.00"
+FT                   /note="S:, PTS-HPr_like, Histidine-containing
+FT                   phosphocarrier protein (HPr)-like proteins, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 86.00, e-value is
+FT                   0.00"
+FT                   /note="similar to Uniref90:A0A0P7AE81:percent identity is
+FT                   100.00, e-value is 0.00, score is 180.00"
+FT                   /note="similar to Uniref90:A0A2E7UG20:percent identity is
+FT                   82.61, e-value is 0.00, score is 148.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR035895"
+FT                   /inference="protein motif:InterPro:IPR000032"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR002114"
+FT                   /inference="protein motif:InterPro:IPR001020"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7AE81"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E7UG20"
+FT                   /translation="MSELRKTITIVNQRGLHARASAKLVEVTTRWPEATEIQVAKDGRAVDGRSILDLMMLGAARGDEIELIVAGEDAEAAMAEIAQLVETGFGEE"
+FT                   /transl_table=11
+FT                   /product="Serine kinase n=4 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P7AE81_9SPHN"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(22329..22757)
+FT                   /locus_tag="ORF_27"
+FT   CDS             complement(22329..22757)
+FT                   /locus_tag="ORF_27"
+FT                   /note="ORF_27"
+FT                   /note="score is 10.74"
+FT                   /note=":, ManX, Phosphotransferase system,
+FT                   mannose/fructose-specific component IIA, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 123.00, e-value is
+FT                   0.00"
+FT                   /note="S:, PTS_IIA_man, PTS_IIA, PTS system,
+FT                   mannose/sorbose specific IIA subunit, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 115.00, e-value is
+FT                   0.00"
+FT                   /note="GO_component:integral component of membrane
+FT                   (GO:0016021)"
+FT                   /note="GO_process:phosphoenolpyruvate-dependent sugar
+FT                   phosphotransferase system (GO:0009401)"
+FT                   /note="similar to Uniref90:A0A0P7AE30:percent identity is
+FT                   100.00, e-value is 0.00, score is 281.00"
+FT                   /note="similar to Uniref90:A0A395LLB6:percent identity is
+FT                   83.80, e-value is 0.00, score is 218.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR033887"
+FT                   /inference="protein motif:InterPro:IPR004701"
+FT                   /inference="protein motif:InterPro:IPR036662"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7AE30"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LLB6"
+FT                   /translation="MIGLILVTHGQLAREFVAAMEHVVGPQDAISSVCIGPQDDAEECRAQIRDQIGEVDRGEGVIILTDLFGGTPSNLAISLLEEGRVEVIAGINLPMLIRLARAREAMPVAEAVRAARDAGRNYITIASEFLARPSDEIKAAGK"
+FT                   /transl_table=11
+FT                   /product="PTS fructose transporter subunit IIA n=3
+FT                   Tax=unclassified Citromicrobium TaxID=2630544
+FT                   RepID=A0A0P7AE30_9SPHN"
+FT                   /db_xref=":"
+FT                   /db_xref="S:"
+FT                   /color=0 0 255
+FT   gene            complement(22819..23718)
+FT                   /locus_tag="ORF_28"
+FT   CDS             complement(22819..23718)
+FT                   /locus_tag="ORF_28"
+FT                   /note="ORF_28"
+FT                   /note="score is 8.35"
+FT                   /note=":, RNase adapter RapZ, method is RPS-BLAST+,
+FT                   version is 2.5.0+, score is 380.00, e-value is 0.00"
+FT                   /note=":, Predicted P-loop-containing kinase, method is
+FT                   RPS-BLAST+, version is 2.5.0+, score is 319.00, e-value is
+FT                   0.00"
+FT                   /note="GO_function:ATP binding (GO:0005524)"
+FT                   /note="similar to Uniref90:A0A0N8H0V0:percent identity is
+FT                   99.67, e-value is 0.00, score is 580.00"
+FT                   /note="similar to Uniref90:A0A395LL34:percent identity is
+FT                   80.27, e-value is 0.00, score is 469.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR005337"
+FT                   /inference="protein motif:InterPro:IPR027417"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0N8H0V0"
+FT                   /inference="similar to AA sequence:Uniref90:A0A395LL34"
+FT                   /translation="MSEPQKLMLVTGMSGAGKTTTLRVLEDLGWEAVDNFPVRLLRPLVREVLAGEDRVPLAIGFDTRTRGFEPQTVISIVKSLQEREDLALSTLFIDCRSSELERRYNETRRRHPLAHGRTALDGILAERDLLEPLRRWADMLIDTSQLATNELQQFVRQNFGTDGAPQIAVTVSSFGFARGMPPLADLVFDMRFLDNPHWVEDLREQTGLDEDVANFLHQTDGFEDNFTRIRELLMDLLPRYGAQGKSYVHIAFGCTGGRHRSVYTAERMAAALRDAGYSPTISHRNLASRAIDTVEMQTA"
+FT                   /transl_table=11
+FT                   /product="Nucleotide-binding protein AAJ72_09775 n=5
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A0N8H0V0_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(23810..25399)
+FT                   /locus_tag="ORF_29"
+FT   CDS             complement(23810..25399)
+FT                   /locus_tag="ORF_29"
+FT                   /note="ORF_29"
+FT                   /note="score is 8.79"
+FT                   /note="S:, BaeS, Signal transduction histidine kinase,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 171.00,
+FT                   e-value is 0.00"
+FT                   /note=":, sensory histidine kinase CreC; Provisional,
+FT                   method is RPS-BLAST+, version is 2.5.0+, score is 160.00,
+FT                   e-value is 0.00"
+FT                   /note="GO_component:integral component of membrane
+FT                   (GO:0016021)"
+FT                   /note="GO_process:phosphorylation (GO:0016310)"
+FT                   /note="GO_process:signal transduction (GO:0007165)"
+FT                   /note="GO_function:phosphorelay sensor kinase activity
+FT                   (GO:0000155)"
+FT                   /note="GO_function:transferase activity, transferring
+FT                   phosphorus-containing groups (GO:0016772)"
+FT                   /note="similar to Uniref90:A0A0P7A6Y9:percent identity is
+FT                   99.81, e-value is 0.00, score is 932.00"
+FT                   /note="similar to Uniref90:A0A2E7UG70:percent identity is
+FT                   85.39, e-value is 0.00, score is 800.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR036890"
+FT                   /inference="protein motif:InterPro:IPR003660"
+FT                   /inference="protein motif:InterPro:IPR025908"
+FT                   /inference="protein motif:InterPro:IPR003594"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR003661"
+FT                   /inference="protein motif:InterPro:IPR036097"
+FT                   /inference="protein motif:InterPro:IPR004358"
+FT                   /inference="protein motif:InterPro:IPR005467"
+FT                   /inference="protein motif:InterPro:IPR025919"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P7A6Y9"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E7UG70"
+FT                   /translation="MADRVRVRRIPRPLEGGGVFSRLSLTARILAVNILPLLLLGGGIVYLDSYRAQLLDERYKLARIEAQITAEALAGATRARQDALLLQIGKEQDMRLRLFDPEGKLIADSFELGEPTFTLDDPTDDPFELRFARFLDQIVDTVVSAQPVPRYNEPESNNADSWPELQRARELGISQIELRQAADRTPVITAAAPVGLQGTTLLTTRNAVDITESVRRARSTLGTGVFVTLAASILLSLFLARTIVTPLQTLSKAAQRVRLGREREVQVPRLPDRRDEIGMLARAVADMTDALRHRIDAVEHFAADVAHEIKNPLASLRSATESLGTVEDPALRAQLLDIAIHDVRRIDRLVTEISDASRIDAEMSRATFSMVDLTVLVGNIIERRRNRGLDQGCDIAFEHPRGSARVVGVPERLERVVDNLVDNAVSFSPAGGTIRIVIARQDDTLSLMVMDSGPGIPPEARDKIFERFHSDRPEKEDFGHHSGLGLAIARTIAEAHEGTMRAADRPDGEPGACLVLTLPLAPEDDSPTG"
+FT                   /transl_table=11
+FT                   /product="Histidine kinase n=5 Tax=Sphingomonadales
+FT                   TaxID=204457 RepID=A0A0P7A6Y9_9SPHN"
+FT                   /db_xref="S:"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+FT   gene            complement(25420..26076)
+FT                   /locus_tag="ORF_30"
+FT   CDS             complement(25420..26076)
+FT                   /locus_tag="ORF_30"
+FT                   /note="ORF_30"
+FT                   /note="score is 13.10"
+FT                   /note=":, OmpR, Response regulators consisting of a
+FT                   CheY-like receiver domain and a winged-helix DNA-binding
+FT                   domain, method is RPS-BLAST+, version is 2.5.0+, score is
+FT                   221.00, e-value is 0.00"
+FT                   /note=":, DNA-binding response regulator CreB;
+FT                   Provisional, method is RPS-BLAST+, version is 2.5.0+,
+FT                   score is 190.00, e-value is 0.00"
+FT                   /note="GO_process:phosphorelay signal transduction system
+FT                   (GO:0000160)"
+FT                   /note="GO_process:regulation of transcription,
+FT                   DNA-templated (GO:0006355)"
+FT                   /note="GO_function:DNA binding (GO:0003677)"
+FT                   /note="similar to Uniref90:A0A0P6ZKG7:percent identity is
+FT                   100.00, e-value is 0.00, score is 408.00"
+FT                   /note="similar to Uniref90:A0A2E7UI03:percent identity is
+FT                   89.04, e-value is 0.00, score is 360.00"
+FT                   /inference="ab initio prediction:Glimmer3:3.02"
+FT                   /inference="non-experimental evidence, no additional
+FT                   details recorded"
+FT                   /inference="protein motif:InterPro:IPR001789"
+FT                   /inference="protein motif:InterPro:IPR039420"
+FT                   /inference="protein motif:InterPro:-"
+FT                   /inference="protein motif:InterPro:IPR001867"
+FT                   /inference="protein motif:InterPro:IPR036388"
+FT                   /inference="protein motif:InterPro:IPR011006"
+FT                   /inference="similar to AA sequence:Uniref90:A0A0P6ZKG7"
+FT                   /inference="similar to AA sequence:Uniref90:A0A2E7UI03"
+FT                   /translation="LQAEGFETRVYSDGETALRALTDNPPDLAVFDIKMPRMDGMELLAKLRERSALPVIFLTSKDDERDEEAGFQMGADDYISKPFSLRLLVARIRAILRRSGLEDAAPEGSADSRLSEARASFTRGRLTMDPARHQVTWDGKPVSLTVTEFLLLEALAHRPGVIKSRNQLMDAAYPDDVFVDDRTVDSHIKRMRRKFRQVDSSFGAIETLYGAGYSFSDG"
+FT                   /transl_table=11
+FT                   /product="Transcriptional regulator n=6
+FT                   Tax=Sphingomonadales TaxID=204457 RepID=A0A0P6ZKG7_9SPHN"
+FT                   /db_xref=":"
+FT                   /color=0 0 255
+SQ   Sequence 26198 BP; 5197 A; 7827 C; 7927 G; 5247 T; 0 other
+     cgccttgagc gaccagaaga aggagagttc gcgccgctcg ccctccaccc gcacgccggt        60
+     gggcagcacg cccgccattt gctgcgcgtg ggtgtatcgc tgttcgagca ggcctgcgtc       120
+     gaacggagca tctgcgggcc agtccagcgt ggtccacagc gccccgaagg cgagccattc       180
+     gccgcacggc ggggcgaggg gggaggaggt gcccagcgca tcgaccacca gatcgaacgc       240
+     gcgggtggtg cgcccgtcgt cgcaggtcag cgtccggccg cctgcctcga ttcgagtggt       300
+     ggcaacgggg aagccggtct cgatggcgat cccctcggcc tgcgcggcgc gaaagagcag       360
+     ggcgaacagg ctgccccggt ggatcccgat cccgcacgct cccgccacgc cgagatcggc       420
+     atagcgcgca tccagcgcga catctccctg atggttgagc ccgtggagcg cgcggatcgg       480
+     cgcgccgtgg gcgaggatgt cgggcgcgag gcccagcgca tccagcaccg ccagcccgct       540
+     cggctggatc atcaggcccg atccgatcgg acgcggctga tcgaaacgct cgaacagcgt       600
+     cacccggtgc ccctgccgat gcagcagcag cgcggcggcg aggcccgccg gtccgcaccc       660
+     ggcaatcgcg atgtcgaaat ggctcatcgc cgcccgattg ccgcgtcggc gcggtatggg       720
+     caagggatgg ccggaaaagg aatggtgggc gatgacaggc tcgaactgcc gacatcttcg       780
+     gtgtaaacga agcgctctac caactgagct aatcgcccga tcacattcgg gagggccgct       840
+     atctagcggc ccaaacttga aaatcaattg ccagaaattc gattgaaagc atgtgcaggc       900
+     aggttagggc ggcgtccatg acgcttcccc gcatcctcgt cctcgccaca ggtggcacca       960
+     tcgcaggcca ggcaggcgac gccatgcgcg ccgattatcg cccgggccag atcgggatcg      1020
+     aggactatct gaaacaggcc agcggcctgg gtgtcgcggc cgatttcacc gggcggcaga      1080
+     tcgccaatat cggatcggaa gacatcgacg catcgatctg gtcgcgcctc catgcggaga      1140
+     tcgatctggc gatgcgcgac gacggcgtcg acgggatcat cgtaactcac gggaccgata      1200
+     cggcagagga aaccgccttc ctgctcgacc tgacactgcc cagcaccaag ccggtcgtgc      1260
+     tggtcggcgc gatgcggccc gccgatgcgg ttggatatga cgggatgcgc aatttcgcca      1320
+     atgcggtgcg ggttgcgggc gatccggatg cggccgggcg cggcgtgctg gtggtgatgg      1380
+     gcgaccgggt ccactccgcg cgcgacgtgc gcaaggcgca gacccgcgcg accgaggcgt      1440
+     ttcgcggctt cccgcgcgaa tcggtcgcga tcgttacgcc ttcgcggctc gactggttcg      1500
+     gggcgccgtg gcgagtgggg gatagcgcct cgctgcgctt cctgtcgctg cccgacgtgc      1560
+     cgatcctggc ggtctatgcg gggatgaccg caaccgccgc cgcgcgccag ctgtcggacg      1620
+     atccgccggg aatcgtcgtg tccgggctgg gcgagggtaa catgcccgat cccgtgcggc      1680
+     agattctggt ggagcattcc cggcgcggat gcctggtcgt gcgcgcgagc cggaccgacg      1740
+     aagggctggt cgatcgcgag ccgcaggacg atgccaacgg cttcgtcgcc tcgcgcgcgc      1800
+     tcgccccgcc caaggcgcgg ctgctgaccg cgctgctgat cgccaacggg attaccaacc      1860
+     gacaggaagc gcaacggcac ttcgacgggc gctaggctca gttccctccc ttgggggagg      1920
+     ggattggggg tgggggactg caccatcggc gtggcacacc cccacccagc agttgcggat      1980
+     tacccgtgcg gggtaacgag atacttctcg ccggtgcgca tctggcggta ttgcagcacg      2040
+     gcgtccttct ccagcatgcc ttcaagcgtc acttccttcg tgtactcgct cttgaaggtg      2100
+     gtggtcaggt tgtcgagcac gcgcttgcgc atgcgggcga cggtttcctt gcctgcgccc      2160
+     tgcatgaatg ggaacagcag ccagcccgac agcgtccagc cgaagccgta ggacggggtc      2220
+     agcacggtcg ggctgaggtc gagccggccg tagatgtaca tcttcttctg ctggttcgac      2280
+     ccgtagcggc tgtattcggt catcttgccg actgcgacct gctccatcgc cttgaaggca      2340
+     ttgtcgaccg ccttgccccc gccgatcgga tcgaagccga tgaaggcgtc ggtctcgtcg      2400
+     atcgcattgc gcagctgttt catgaaatcg tcgtcggacg aattgacgat atgcttggca      2460
+     cccaggccct tcagcacatc gacctgttcc tgccggcgca cgatgttcac cagctccatt      2520
+     tcgtcttcct ggcagatgcg cacgagcatc tggcccaggt tggacgcggc ggcggtgtgc      2580
+     acgatcgcct tgaagccttc catcttggcg gtctcgacga agccgagcgc ggtcatcggg      2640
+     ttgacgaagg cggaggcgcc atccttcgac gaaatgtcgc ccagcggcag gcacatattg      2700
+     gcatcggcga tggcgtattc ggcgtaggcg gtaccgggca cgcaggaaac gcgcttgccc      2760
+     atcagggcct ttgccgcatc ggagtcgccg gttgcgatca cttcgcccgc gccttcattg      2820
+     ccgaccggca tgcgctggcc gtggcggccc ttggagcccg agttgaacgg ttcgggcatc      2880
+     ttggcgacga tcttgccctc ggaataatcc gcattctcga ggtctgcctg gccaaccagc      2940
+     agggcaagat cgctcgggtt gatgggcgcg gcttccattt tcaccagcac ctgattgccc      3000
+     ttgggctcgg ggaattcgct ggtcgcgact tcgacggtca gcgtgccgtc gctttccagc      3060
+     gtggtgaaga tctgtttgcc ggtggtggtc atgggatcgc tctccttgtg cgtgttcttc      3120
+     gccgccgacc tagcactgaa gttgcagtgt gcaacctaat cgctgtgttc gtcggcagca      3180
+     cgttcgtctg gatagacggc ttcgacgaaa tagagcccgt gcgatggcgc gttgaggccc      3240
+     agttcctgcc ggtccttcgc ttccagaacc tgcgcgatgc ggccttcgtt ccagcgcccc      3300
+     atgccgacca gcgcgaggca gccgaccatc gagcggacct gatgatggag gaagctgcgc      3360
+     gcggcgacgt ggacgcggat ctcgtcgccc gcacgttcca catccagccg gtcgagcgtc      3420
+     ttgaccgggc tcgccgcctg gcaatggacc gagcggaagg tggtgaagtc gtgatgaccg      3480
+     acaaggctct gcgccgcgcg gtgcatcgcc tccgcgtcgc actcgggcga gaccagccac      3540
+     gcgcggttct tctccagcgt cagcggggcg cggcggttga tgatgcgata gaggtagcgg      3600
+     cgaccgatgc agctgaagcg tgcgtgccag tcttccggca ccgcctcgca atgcgtcacg      3660
+     gcaatcgggg cagggcgcag atgcgcgttg atcgcctcgc ccatgcggaa cggcgtcagc      3720
+     ttgctctcga catcgaagtg gctgcgcatg gcgatggcgt ggacgccggt atcggtgcgc      3780
+     cctgcgctgt gcagagtgac ctgctgcccg gtgaccgcct gcgcggcctc ctccaccgcc      3840
+     tgctgcacgc tgggcccgtc cttctggcgc tggaggccga agaagggcgt gccgtcgaat      3900
+     tcgagagtca gggcatagcg ggtcggggcc atggcgcccc tgctagggac agatcgccgc      3960
+     gaggcaaccc gtcacataac ctgaagaccc tcgggcagcg gttcacgcac gcatttcgcg      4020
+     ccttcccgaa aggcgaccgc gcgctccgcc tcgccggcct tcgtggtgta ggcggcaatg      4080
+     tcgagcgtgc ccagatcgac gtcatagcgt gaccgcgtgc cgttcgcgct ggtccagtcc      4140
+     atccggataa cgccgttctc gattttgagc gcgcaattat cctgccccgc ctggcaaaga      4200
+     tcgaaggcct ggttgttgaa atcggaatag cgcttcggct ggccgtcgat caggatgaag      4260
+     cgctctgtca cggtcaagcc ggtcttgccg tcgaaatcgg gcatggcgca ggtgatcagc      4320
+     ccgtcggaaa gatcggcagg ggctgctgag gagacgcttg gcaagctgtc gccggccgcc      4380
+     tcgccgggct ctgccgcgcc gcacgccgcc agcgccgtgc ccgctgcgat catccccgca      4440
+     ccgatcgtga ttgccagcga ccgtctcata tccgtctccc cagtgaatgg tggggcgacg      4500
+     tttcccgatc gcggggcgaa gtcaatcgcg cgccaagggc ctaacgtgca ttgtcatgaa      4560
+     cccagcttcg cgcctttgcc gatcgcgcgc ccgcgctgga aatccgccgt atccatcgcc      4620
+     ggcttgcccg cccgctggac gcgggtgagc cgcaatgcgc cactgccgca agccacggtc      4680
+     agcgcgtcgt ccagcacggt gcccggcgcg cccgaaccct ccgcgatctc tgccgcgaga      4740
+     gtcttcacgc gttccatccc ctcggcgcct tcatattcga agaacgcccc cggccatggg      4800
+     gcgaaggcgc gcacctgccg ctcgacctga accgcgtcct gcgtccagtc gagccgcgcc      4860
+     tcggccttgt cgatcttggg cgcgtgagtg gcctcggcgt cgtcctgcat gactgggata      4920
+     tgcttggata gttcgcgcag ggtcccgatc atcagctgcg cgcccttctc ggccagttcg      4980
+     tcggtcaggt cgcctgcggt cttgcggtcg atcggggtgc ggatggtcgc cagcatcggc      5040
+     ccggtgtcga gcccggcctc catctgcatg atcgtgaccc cggtgccggt gtcgcccgcc      5100
+     agaatcgcgc gctggatcgg tgcggcaccg cgccagcggg gaaggatgct ggcgtggaca      5160
+     ttgaggcagc cgtgcgtcgg cgcatcgagc accgcctgcg gcaggatcag gccataggcc      5220
+     gcgaccactc cgacatcggc atccagcgcg gcgaaggcgt ccttctcctc ctgcgatttg      5280
+     agcgaggcag gatggcgcac ctcgatcccg aggcgctcgg ccgcctgatg cacgggcgtc      5340
+     ggctggagct tcttgccgcg tcccgccttg cgcggtggct gggtgtagac gcacaccacc      5400
+     tcgtgcgcgg cgtgcaccag cgcttccagc gtcggcaccg cgaaatcggg cgttcccatg      5460
+     aagacgatgc gcataagctg tgcggcgacc tttgctgtgg agggatgctc gccctatctg      5520
+     tcaccccatg gcatcgcaag agatcgagac actggcatcc gcgctcgccc ggctccccgg      5580
+     gctgggcccg cgctcggcgc ggcgtgcggt gctacatctg gtcaagaagc gcgaaaccgc      5640
+     gctgcccgcg ctgctcgatg cgctgctcag cgttcaggac acgctggagg aatgtcgcat      5700
+     ctgcggcaat gtcgacacac aagacccctg cggcatctgc tccgatccgc ggcgcgatgc      5760
+     gaagtcgatc tgcgtggtcg aggatgtggc cgacctgtgg gcgctcgacc gggccaagct      5820
+     gttctcgggc accttccacg tgctcggcgg gcggctctcc gcgctcgacg gcgtgcggcc      5880
+     cgaagatctc gcgatccccg gcctgctcgc gcgggtcgaa gcgggggtgg acgaggtcgt      5940
+     gctggcgatg aacgctacgc tcgaagggca gaccaccgcc cattacctcg ccgagcggct      6000
+     ggaggatttt cccgtgcgca tcacgcaact cgcgcacggc ctgccggtgg gcggagagct      6060
+     ggactatctg gacgagggaa cgttggcgca ggcgctcaga gcgcgcaggc cgctcggcta      6120
+     accgcttgat agcggggcga agcgcgctta tctggccctc atggctatcc gcgaaatcct      6180
+     tgaagtgccg gacccccggc tgaaaaccgt ctcccagccc gttgaagcgg gcgagttcga      6240
+     cgacgatctg cgcaccctcg tcgacgacat gttcgagacg atgtacgccg ccaacggcat      6300
+     cggccttgct gcgatccaag tcggcgtgcc caagcgcatc ctcgtgatcg acctgcagcc      6360
+     cgaagacccg gacgcagagc cgatcgagtg cgaccatgac gggcacaagc acacgcatcc      6420
+     ggcgaccaag aaagagccgc gggtgttcat caacccggaa atcctcgacc cgaacgagga      6480
+     actggccacc tatcaggaag gctgcctctc ggtccccgac atctacgccg acgtcgatcg      6540
+     ccccgcgacc tgcacggtcc ggtggaagga tctcgacggc aaggaacata ccgaggcgat      6600
+     ggaggggctg ctcgccacct gcatccagca cgagatggac cacctcgaag gcatcctgtt      6660
+     catcgaccac ctcagccgcc tcaagcgcca gatggcgctc aagaagctga aaaagctgcg      6720
+     ggtcgcggct taaccagcga gatattcgtc attgcgagcc gccgaaggcg gcgcggcaat      6780
+     ccatggtgcc ggtccatgga ttgcttcgct acgctcgcaa tgacgagtct ttggtttcga      6840
+     attacgccgc ttcgaccata ccctgcagcg ccttgacgca gtcttccatg cactcgcggc      6900
+     acatcttctc gcaccgcttg cagtgcggat tgtcgtgctt cgcgcattcc tcggcgcaga      6960
+     ccttgcaggc gaggatgcat gcttcgagca gcgacttgat caccgccgtg ttgccgtgcg      7020
+     tgcgccgcgc cgcgaccgtg ctgaccgcct gacagatatc cgaacagtcc gagcatttgc      7080
+     ggatgcattc ggacatgtcg ccttcttccg cgttgcacgc atcgacgcac gagttgcaga      7140
+     tcgccgcgca atacatcgcg tgcttcacgg cctcggccag ctgttcgttg taatcggccc      7200
+     cgacggacgg gtgctcgctg atcatttcct tgatcgacat cggtttttct ccttctcatg      7260
+     agaggtagcg gaacgggcgg gggatagttc ccgcggcggc ttggcgcgcg gcgtcgttcc      7320
+     agctatgttc cggccatgga atatgcgatt ctgggtgtcg tggcgctgct catcgggcta      7380
+     ggcgtcgggt ggtatctcgg tggccggccg gcagccgagc tgaagacgcg gctggccgag      7440
+     agcgagcggg aggcgaagga gaccgacgcc aaatacctgc gcgcctatgc cgagcttgag      7500
+     gcggcgcgcg aaaagggcgc gcgcgtcgat gcgctggagg ccgagctgaa ggaaacccgc      7560
+     gcgcggcacg aaaccgtgct ggaagaggcg cggcgcgcca atggggcgct gtcctccgaa      7620
+     ctggcgaccc tgaaagagaa gactgccaat ttcgacgagc agaaacgcct gctggtggaa      7680
+     gcacgcgagg aactgctcaa ggaattccag aacaccggtt cggctgtgct gagcaaggcg      7740
+     caggaagcct ttcttgagcg tgcgagcgag cggttcggcc actccgagaa atcctccgag      7800
+     gaaaagatcc gcgcgctgct cgcgcccgtg ggcgaccgcc tcaagaagta cgaggatcag      7860
+     gtcgccgcgc tggaggaaaa gcgcaccaac gccttctcct cgctcgccgc gcagatcgag      7920
+     cagatgcggc tgggccagga agaggtgcgg cgcgaggcgc agcggttggg caattcgctc      7980
+     accaacgcgc ccaaggcacg cggtcgttgg ggtgagcggg cgttgcagaa cgtgctcgag      8040
+     cagtgcgggc tgtccgaaca taccgacttc aatctcgaac agtcgctgga gacggccgag      8100
+     ggccggttgc ggcccgatgc catcgtcaac gtgcccggct cgaagaagct ggtgatcgac      8160
+     gccaaggtct cgctcaacgc ctaccaggcc gcgttcgagg cggaggacga gggggagcgc      8220
+     aagcggcatc tcgacctgca cgccaagtca atgcgcggcc atgtccagac gctcggatcg      8280
+     aaaagctacc agagccagtt cgacgacgcg cccgactatg tcgtgatgtt cgtgccgggc      8340
+     gagcatttcg tcgccgctgc gctcgatgcc gatcccgaat tgtgggattt tgccttccga      8400
+     aacaaggtct tgctggccac tcctaccaat ctggtggcga ttgcgcggac cgtggcgcag      8460
+     gtctggcggc aggacaccat agccaaggaa gcgatggaga tcggcaaggc gggcggcgaa      8520
+     ctctacgacc gtctcgccat cgcggccgag catatgaagc gcgtcggcgg cgggctcgaa      8580
+     agcgcggtca agaactacaa caagttcgtc ggttcgttcg aacgcaacgt gctctccgca      8640
+     ggtcgccgcc tgtccgaaaa gggcatcgag atcggcaagc gcgagatcga ggaaatcccg      8700
+     cagatcgctg aaacaccgac ctatacgtcg gaagatgtcg ccgcgctgga ggatgaaggc      8760
+     gagggcaagc aactggaaga tgcgcgcgac gcggcggaat aggctcggca tgccaccccg      8820
+     tcaccccgga cttgatccgg ggggtatagt gatagctcca gattggccaa catttgacca      8880
+     cactttgctt cgtccgtcgg tagagttagc atcccggcgc gacacgccac tctgtagatg      8940
+     gatagatcag atgagtttcg attatcatcg cgcgatgacc gatgctgtag ttgaagcgcc      9000
+     gaaagtgcct catgaacatc tcgtttggat catgacccct gaccatcgcg ccagatatcg      9060
+     acagtttctc gaatttgaga tgggtgtcga gcctgacgat ggtgagtcat tcggtattcc      9120
+     gattatggat ggcgaaccta gggacggtca gccattcgaa ctggtcatca gatcgccgga      9180
+     ttaatcgaac gtcggcgtcc ctacctatcc tcaaaattgc tgttgaggga aacccgaaaa      9240
+     cttatgacgc tcacattgac caaacgcctg cggttctttg ccgtagcctc gtcgaacgat      9300
+     ccagaactgt gaggtatatc gatcaatcga tatcgaccag cgatctgagt catcccttgt      9360
+     gcgaagcgaa agcttgatct ctgcgtcagt ctgctcgtcg attgtccacg cagcggcgca      9420
+     gtcttcaagg caccacttcg attggctgag atcaaatcgg aagcggatcg tctcttccgc      9480
+     ttgagaggta cagaccagat caaacgctgt ttgaggctga agggaaatat cgtcggcacc      9540
+     gcaccccatc aataatccag ccaaaagtag cactctgcat cccttgagag gtgattgttc      9600
+     tggaagctgg tcgggctcgt gattggcaga catgatatct cggctctcgc aatttacctg      9660
+     aggaagccat gctctcatgc aagcgttaat atgatggata tatccagtgg ttttaatgca      9720
+     gggatttccc gctttaagcc gctatgcgag gccgcgaact tgtggggaaa aacatcaaac      9780
+     gtcttcgggt ggcgcaaggc atttcgcagg agcaactggc gttcgatgca tcgatagatc      9840
+     ggtctttcct cggcggcatc gagcgctgcg acgagaaccc gagtgtggat acgctagaca      9900
+     agatcgcatc cgtcctatcg gtcaatatcg ctgagctttt tgtaccgacc gctgtgcacg      9960
+     agaatatctc gggcttgcgt cccggcagga aaaagcagtc ctaagcaagc gaggcaacca     10020
+     tccgcgcaag ttgaggcgat agcctgcaac cgccattctt cttcagaatg aagtctgccg     10080
+     ccgcgaacct ctgatccgcc acaaactcca aaatccgtgc atcgacagag gcgcgttcaa     10140
+     gctcaatcat atcgagcgcc caagcagggc ttccgcgctt actattgtgc ataatgccaa     10200
+     tggtcggatc atacccatct gcgatggctt caagctgtag ctttgctagc ttcaccgcat     10260
+     aggcataatt caacatggca ttgacaggat gtgaggcgtt tcggttttcg gccttcttgc     10320
+     cagtggcacg agaacttcgc caattgtaag cgtgccattc ttggggaaca ggacgacgca     10380
+     cgatccctct ccaattcaca ggcaaaccct gccaagcccg aaaataggct gacgcgcatt     10440
+     cgccctcgat agcgaatatg gcgttcaaat cttcgaagct ctcgctttcc aaccgatcaa     10500
+     tagcagcatt tgcttttgcc aacgccatat cgcgcgattt tgaaggcggg atgtgaacct     10560
+     caagcgtagg gatgctcgaa atgattttcc ggcgaatgag atcagccgcg aatgccgatc     10620
+     gcttcgataa gtcagcgcgc atggccaatt gccaatcgac cttttcccga tcagcggcat     10680
+     atcctcttcc gctagcaacg tcgcaatctc tccactcgca ttgacgcgag caagcgcaac     10740
+     gctttgctcc gctagccaag tcagaacctg gaacgagaga gttccgctgc catcaagcaa     10800
+     taagatgcgt gatggcaaat cgaggtcgcg agggaaaaag cgatactcgg ctcgcttttg     10860
+     cggataatgg gtaaagccat cgcggatgac cagtgcccca tgcgcaattc gcaatgagac     10920
+     gccatgtcca tttaaaacta gcggtgcggg atttcgctct cgtaattttc ggtttggcgc     10980
+     ggatttggcc gcctcggaaa accagaattc cgagcgattt gcccaatttt cggtgttcgc     11040
+     atcgagataa atttcaggct ctaaatcgat aaattcgata tagcaaaatt cccgaattat     11100
+     gcgctatttt tcagcctact gacctagttt gggatttcgt attttaatgc ctgaatgaat     11160
+     ggcaaaatga cccacggaac gttcaatatc tgagggccaa gctcacggag cttttgaaac     11220
+     gtaggctcgc tttcaagcgc gctttgaata tctcgatttg gcagttgccc tttgaccgct     11280
+     tttcgaaata gcctcacatg atatcgggca actctgaaat ctcgcttgtt cgcattttgg     11340
+     attgcctcaa tgcccgaatt ttcgatctca tcgggcaatc cagctatacc actcagcacc     11400
+     ttgccaatcg cctcgatcca aagtgggttc aataatggcg acacccttgg ggccatatga     11460
+     tcgagcgctt tggcgatcag ctcatccgag ggtagctttg agttagcgcc gcttcgccca     11520
+     atctctgcca taaccgcata gaattcttga gactgctcga accgcgttcc ctgtaggcga     11580
+     tgatctagcg ggccaagctg atttgcgatt gccttcttgc ttgctgcact cacttccgtg     11640
+     aatgtcctgt cattcaggaa cgtggactga cggcgggcca gttgagaact agcttttctc     11700
+     cactctgccg caaaagcgac gcgcactcga tcaaagtctt gatgacccca ttcgatatag     11760
+     gtctgaacta ccaatgcatt ttctcgcttg aggcccattc gcctcagctc tgccaaacgc     11820
+     ctcgccttcc gcacgtcaga gtctgatcgt gcccaactcg gtgcgttacc aactctctgt     11880
+     ccttgggcct gagcacgcgg tagaacgtcc caatctaccc actgccgcac cacattcgca     11940
+     gtaatggcat ttcgaccaac gaacccgaat tcactgttga gtaggtcggc cagctctgtg     12000
+     ttcgtgatct gcatcacctg ctcctctcgc acagatgcgt ctctttttgc gagaacggac     12060
+     tcggaaactg attccaatag agttcccggc actaatccgg gaacactcaa ttggtacgca     12120
+     aacgcgatta caaggcggaa tacgcacgac gcatagcgaa cgcgaagaag cgaggcctga     12180
+     gccgcgctca ggcgcgaggt catgcccgtg ctggcgagcg cccgatccga ggatcgaagt     12240
+     tagagcgagg tgaagcctcc ctcgaagccg cgctcaaagc tctgagacga accgggacac     12300
+     aggttgccgc cgcaaaagag gctggggttt cggtcgagcg cttcaggcgc ttccttcgag     12360
+     aaaataagct cgcgacccga aagggtaaga cttggatcat ctctgaccca gccacacgcc     12420
+     agatgcttgt gatatcgagc ggcgaggcac gaaccagaaa gcttgcggga ttggagcaag     12480
+     cctctctcaa cggcaggtat ctcgctgccg tcaaagcctt catcaattcc aatgatgccg     12540
+     atcttttatc cggattcgtc ggcaaatcag tgcgcgacac ggcgggccat gagcacccct     12600
+     tagagaccga cccaaacacc ctttatcacc ttgctgcttc gggcagcgag atcttcgaag     12660
+     acatctatcg tcttgtcacc gattgaagcg aggtccgaat atgacgcgac atgatcgaga     12720
+     gcggcgcaag caacagcggc tgaaaaagct tggaagcaat aacccgattt gcggcgcttg     12780
+     cggcgaaaac gcttggcaat gtttggaggc ccatcacgtc gcggattttg ggcgcgatga     12840
+     agccacggtt atcgtttgcg ccaattgcca caggaagctg agcgatgcgc aaaaggacca     12900
+     tcccagttac gatgcgagtt ccgatcccga tctagaccgt atcgggcact tcctcctcgg     12960
+     tcttgctgac ttgctcgaaa tcattgtcga gaaactcaag gagtttgcgc acgtccttat     13020
+     cggcctcgcc gaacaggatg ccggtcggag gcgcgggaaa tgacgatccc agtcaccgat     13080
+     gagctgccta tctctctccg cgcttatgcc gtgcgagccg acaatcggag cgggccatcg     13140
+     cgaagccaca agagatcaga aatcgaggcc tcggaatggc atctgatctt cgattgcgaa     13200
+     acgcgggtcg atccggcgca atctcttcgc tttggcgcat accagatcag acaatcgggt     13260
+     gcgctgatgg aacaagggct gttttatgcg ccggagaatg tgacacgagc cgagcttgcg     13320
+     caaatcagaa gttacgccga cgagaatcat ctcgaatgcc taacgcagac cgaatttgtc     13380
+     gaagccatcc tttttacgat tggatacgat tatcgcggta cgattgtcgg cttcaatttg     13440
+     cctttcgata tctcgcgaat agcgatcaaa tccagctcag ctcgcggcaa gatgaagggc     13500
+     ggattctctt tcacgctaag cgaggataag cgccgcccca atcttcaggt caaacacatt     13560
+     tccgccaagg ctgccttcat ccagtttgcg gccccaatga agagccgaac caatcggagc     13620
+     agggtcaagc ttggtaagag ggagccaatc cagcgaggtc atttcatcga ttgcaaaaca     13680
+     ctggcgaatg ccttgctcgc tagatcattt tcgctcgcct cgctttgtga ggcgttgggc     13740
+     gtcgagaaca gcaaaatcga atattccgat ttcgaagcgc cgatatcgga tgattttatc     13800
+     ggctacgctt tgcgcgacgt tcaagcgact tgggagtgct attgcgagct gattgagcgt     13860
+     ttcgatcagc ttgcattagc gggcacatcg ccagagaaaa tctacagcga agcgagtctg     13920
+     ggaaaggctt gcttgaaagc gatgggcgtg aaaccttggc gcgaatgcca gcctgatttt     13980
+     gatccggcga tcatcggcaa agtcatgtca gcctattatg gcggacgctc ggaagtgcac     14040
+     attagacgcg aagagcgcca agtgatgctc tgcgatttcc tatcgatgta tccgactgtt     14100
+     tgcaccctca tgggtctttg gtcgttcgta acttcggagg gagtcgaagt tcatgacgcg     14160
+     acagagaaag ctaaagcgat cttgttgggg gacattctca gcgagcttcg gtgcacgcag     14220
+     ttttggagag gacttacgat cctcgtccgg gtcattccgg taggcgatat cttccctgtc     14280
+     agagcgaagt atgccgatgc gcagcaggcc accatcggcc taaactattt aaccaatgag     14340
+     cgcggtcagt ggttcacgct tgccgactgt cttgcctcca ccttgctttc tggcaaacct     14400
+     cccaacgtca ttgaggcaat cgaattcagg caatccggca cgcaagcaaa gctcagtggc     14460
+     ttcgacgtcg gtggcaatgc ggcttactcg atccacccca agcgagacga tttctacaaa     14520
+     cgcctgattg agcttagaca ggatacaaag gcgaagcttg aacaagccaa gcccgatgaa     14580
+     agagcgatgc tcggcatccg gcagcacgct ctcaaaatca tggcgaatgc cactagctac     14640
+     ggcattttcg ttgagatgaa tgtcgagaat gcaaaggccg acgaaagggt cgatgtgttt     14700
+     gccggggatg agcatgcttt cgccagcttc ccttccaaga tcgaggaacc tggcaccttc     14760
+     ttccacccgc tcctagcgac actcatcacc ggagctgcgc ggctaatgct tgcgatcaca     14820
+     gagaagctag caatcgagcg tggattggaa tgggcgtttt gcgataccga cagcatggct     14880
+     ttggcaaagc ctaggcgcat gggcgaagag cgatttcaaa gcgcggtgca agaaatcatc     14940
+     gattggtttg gcgcactcaa tccgtacgat tttgaagggt cgatcctgaa gagcgaaggc     15000
+     gtcaattttg ctacggatag tagcggcaga cacgagcagc tatactgcct agcgatctcc     15060
+     gcgaagcgat atgctctcta caatcgcggc gatgatgaaa tgccgatcat tcgcaaagcc     15120
+     tccgcgcatg gcttgggaca tttgcgcgcg ccctatgacg agcgaaatcc gtcgcgttcg     15180
+     atacccaaac cgaaggcgaa atttgccgag atgggcattt cgctgtggca gcacgatctt     15240
+     tggttcaaca ttatcggggc gattagaagc gagcggccag aattagtcga ttttggtttt     15300
+     cacccttcat tgcaattgcc agcaatcagc agatacgcgg cgacctctcc taccgtgctg     15360
+     cggtggttca accattttaa tgaggataaa aactacagcg atcaggtgaa gccatttgga     15420
+     tttctgactg cgctgtttgc aacttcgatt gaagtaggag cgacatcggg aatcgagggc     15480
+     caaaagcgga aagcgaaaaa ggtttcttgc gctcccattt cgccctttga aaccgatccc     15540
+     gccaaagcag ctaatcaggc ctttgaccgg gaaactggcg atttcgtccc tattgagaag     15600
+     ctcaaaacct tcgcgcaagc aatggcgcaa tatcatttgc agccagaaaa caagtttctg     15660
+     aacgggaatt ttcgcgatag tggcgagact gaaagaaggc acatttgtgc agtcagtgcc     15720
+     gtccatattg ggaaagaagc caacgatttg gagcgacagg caagcattgg cttcgatcca     15780
+     tcggcgcaac ctctttatgg gttgcacccc gaccagacag ccgaattgca aggcgaactg     15840
+     aagcgcctgt gcgaagtgtt cagcacatac caaatttcca cttatgccgg gatcacagct     15900
+     aagaaactct cagattttct gaatgccgat tgcaccagtc agcaggcgag gcacgaagca     15960
+     tcggagctgg aaaaaataac gcgctatttt cgccgaaagg aacgacgaga atgtgaacag     16020
+     ctcgaaaagc tcgaaaagct tatcgcggat tccggcttac ggaaagcagc cagaaaatta     16080
+     tgcgttgatc cgtcgaacct tcgccgcaat attctgaagc gtcgctcttg cataaccaag     16140
+     gctgataacc ctgctaccag tagattgcaa ttacctctac atcgagaaga ttcttaggct     16200
+     cttcatcaaa tgcagaactt tcattaattt ttggttcatt ggcaaagttc tggctccgag     16260
+     gaaaaagcgg taagtcgaga ctcttccgga cagcttcccg cgcatcgaaa tcgacagaag     16320
+     gatcaatctc ctgccgagtc gacacttcaa tcagggcttt cacctttgcg aatgcggctc     16380
+     tctgaccttc agcggacgta ttttcgagta agagtgctgc tatcgaccga tccagtgcaa     16440
+     caagctcttc ttccgacacg tcatgcgcga tttctgaaag cagacggtcc ttatatcgtg     16500
+     cgagcgcaag ggcgagctgg gcagctattg gttcaaccat gtctgcacgt ttactagacg     16560
+     cagattgcgt cattgcggcc ctacttgatg tctctatttg tctcgcaaga tcaggcgcga     16620
+     agtcacgaaa tatatcggct accttaatag gattccaatc gttttgaatg cccgacttcg     16680
+     aaagcctaca aagcattgta aactcgttat ccgcaaaaag aactcttcgg atatccttcc     16740
+     aataagctag atgctcggtt acaccgacaa ttcgaagctc gctgcattct attgggaatc     16800
+     cggatatagc attgcggtgg acaattaaat tttgctcccc gtcagctatg acaacataat     16860
+     ctgatacaac accatcaacc ggaataaggc ctgcgagtag cttgctaatg atcttgttcg     16920
+     cattttttgc ctgataaagg tcaagaaaat tcacggactc cataaacatg gtcggactct     16980
+     ggtcgaacat ctcagagaat tctgctacca tggtgcttat ttgaaatatc caagaagcag     17040
+     acaactgcac cttaaattct acaagatcac ctctctttaa atctgacgcc ctatagcatg     17100
+     tattttcata gctgccatcc ttaagatctt caagagatgt agcactcttt aagacttcaa     17160
+     ctggcttgat ttttcgcaaa taatcgaatt tatgcagctc tctgaaacgt gattgcgctg     17220
+     tcgctttgct aacggtttga agtgagttac tattagtagt ctgaaaacgt gaactgacct     17280
+     cagcggacgg cgtcatcggg gtattgctag atactttccc gcccacttcc gccgtactct     17340
+     cgtctccaga ctgagaggtc acgttttcgg tggcttcccc tttttgggaa gccagaaggc     17400
+     tcgcaagact gacttcgtcc aaatagacaa attcccgcaa cggttcagtc tgtccgattg     17460
+     gcagcggctc tggttttgca ttccttcgcc ctacccaagg aaattgacgc ttgaatatga     17520
+     tcatttgtgc gacccattct cagattttcg ctcagggcga cgagcaactc tctcatatgc     17580
+     ttgagccaaa tcttcccccg cgatactttc tcgcctgtcc gacgcagcta ttaaggcagc     17640
+     ttctgtccaa atggaggtaa gtcgggccgc cgaccaatca tgcgttcgcg tggcgatctc     17700
+     taagagtggc agtccatcgg aacaccgtat cgttcgagtt ccaattttta agatttcata     17760
+     ccgatccatg aggtccggca atccgaattc aatttcccaa tcgaagcgtc cgggacgggt     17820
+     caaagccggg tccagcgcgt ccgctcggtt tgtcgcggcg attaccaccg ttgcattctt     17880
+     actcgtatcg aagccatcca taagcgtcag gaattgggct accagacgac gagaagattc     17940
+     ctgcgaatct ccgcttcgat tttctgcgat gctatcaatc tcatcgaaga agattatggc     18000
+     tttcccacta tcggcgctct tggcatgctc aaagattttg cggagtaatt cctcggtatc     18060
+     accgagccat ttgctcacga tggcggggcc actaatgtcg tagaagcttg cgccagcttg     18120
+     attggcgata atgcgagcga ggtgtgtctt acctgtgccg ggcggaccgg tgaataggat     18180
+     tcccttcact ggtcgcgcgc cgattttttc gagttcatca cgccgttcga gctgtgtttc     18240
+     aattagttcc tttgcccgcg cgactacgcc tttgtaacct ccgaaatcgt caaacgttag     18300
+     gccgccctct cttggctcta ccatgaacga ggaaggcgaa agaacgtcgt ccgcggggtg     18360
+     cagacgagcc cttatcggct ctttcgcgat cacccggaca atcgctgaag ttgtgttgtc     18420
+     tacctcgacg gtgaaatcgg cttccaaatc cagttcgccc ggattacgca agacgaccag     18480
+     tgcgccacca gactcaccaa gaattgtgcc atcatcgaga atcgatctta tgatgcaagt     18540
+     tgcaaatgtg tcgggccaaa cttcgtgcgg gactttcgtc cacttgccat cataggacaa     18600
+     gatgacatca ttctttttga aggtgtgcag ctcatctacc cggacacgac ctgtcttccc     18660
+     gttcggatat ctgaagaaga tgaaatctgt ttcaggctca atatgaacga tctttagaag     18720
+     atcaccgagt gtttcgtcgt cggcatactg gctcattcgg gaaggttaca ggcaactcag     18780
+     cagaggcaga aggccttgcg gcagaataag agtggagaat gggtatcgag tttgccgacc     18840
+     aaggagaacc tgaccagagc gtaagacctg cgtacaagtg cgtctagcga cggacctatg     18900
+     actggcaatc tcgaaaggct atgattcgcg catgacctct gacgcgaaat ctattggaaa     18960
+     ggcagcgatt ggccggatgc ggaatgccgc aggcagtgcg accatacccc cagaatgcgg     19020
+     aagcatcgtc gcgataaaga tcatcgacga ccgcatgttt atgctttcgc agcggtgtct     19080
+     aacctccggt gtattcgccg accacattga tccagatcgg acaaatccaa atctaccaca     19140
+     gattattcaa cagaaagaat tagagttcgg ggccgaccat cattttgttc gcaagactgc     19200
+     gggcgcggca ttcgaacttg ctgatgccac gtatctacct gagactgtgc ctcccgacgc     19260
+     attgctccgt atgtcgctag aggtatcgag ttcaatggcg tcagtcgttg aggtggcaaa     19320
+     cgacctgagc agtcatcagg atcagatgag agaggccagc aaagctcaaa agctctcggc     19380
+     tgcatacgta cctcgcacac cgaacctcaa gggcaaggta cgccagagcc tcgcggcgct     19440
+     gcgtgatgtt gagatcgcaa ttaaaggatt gaccacgcta tttttcccca aggactcgaa     19500
+     caatgaacct tgggatgcga aattcttgca agcaatgacg gaaaagcacg gcgagaatgc     19560
+     ggaacttgat gcttggaaaa atgcagcttg ggaggtcttg gcgggcgtcg caaatcatcg     19620
+     acacgcgatg atccatccaa acgaaaataa gtgtgtgata atacgcgatt atgagcttca     19680
+     ggctgacggt tcactcctag ctcccactat cgaaatcact catgaggcaa gcgcggtgac     19740
+     aaggcgtgat gtggttcagt tcctcgagac ccaagtcggg gacctcgcag aggtgtttga     19800
+     agccatactc ggctatgtat gcgatctaaa agtgcgcacc gttattccgc aattcgaatc     19860
+     ccatgtcgta gcgcttccga acggcgaaac gcagcgcggc tctcacatgg tctggaggac     19920
+     aatcgcgaag gaaggggcgc ctttcggagg tccgaaggcg aacgccgatt gagtctctga     19980
+     gattgtcaga actggatgtt aggacgattg ggaagcttct gtggattgcg aacttcactt     20040
+     cattctgtgg tcaaaacttc cctgtttcaa cactatcact ataccccccg gacttgatcc     20100
+     ggggtggtgc tgcttttagc gcggcaccga agaagcccga tcccggatca aagcccggga     20160
+     tgacgtgggc gtttgagtgg ggaggttgta tgcgggcatt ggcgatgagt atcctgaccg     20220
+     ggctgcttgc tgtgggcctc gtggcagcac ctgcgatcgc gcagactgcg acggcagagg     20280
+     aaggccccgg cccgctcgcg ccgcgtgacg aatgcaccgg actgccgggg tatgccgagt     20340
+     tccaccagcg gctggagcgc gcgatcacct tgcgcgatgc cgatgcgctg atcgctctga     20400
+     ccgatccgga cgtgacgctc gatttcgggg gcggctcggg cgtggatgag ctgcgcaagc     20460
+     ggctcgatgc cggggcctat aacagctggc gcgaccttgc cgatgcggtg cagctgggct     20520
+     gcggtatcgg cgaggatgcc gcgcaggaca cggattacat cgccttccca tggtatttca     20580
+     ccaagacctt cggtggggag gtgttcgaaa ccgtgatcgt caccggggtc gacgtgccgc     20640
+     tgcgcttcgc ccctgccgac gacgcgcgcg tgatcgagcg gatcagctgg gactgggcgc     20700
+     tggttcggta tgacgaccag tatgtcgacg ggcccgagga gacagaccag cagaccggct     20760
+     atcaggccgt gatcacgcag gatggtgccg cgggctatat tgccgaccat gcgctgcgca     20820
+     gcatcgtcga ctaccggatc gcggtgaacc ggatcgacgg gaagtggacg atcaccgcct     20880
+     tcgttgcggg cgactgatcg ggcgcggatc agcctccagc gtcgccccgg gctccgaccc     20940
+     gggttggtgc ttctccaaac gctgccgggg tagaagcggg atcccgggtc gagcccggga     21000
+     tgacgagggt ggcggggggc tgcgcggatt tcctacatct cacgcatcgg ctacaccgca     21060
+     atcgctcttt gcaatcattg gcttccccgg cgtgcctaag acgcgcatct gtcaccctgt     21120
+     cgcaattcgc gcgccgcagg gcattgtttc tcttggagaa cgtcgccgcc cctgccgggt     21180
+     gacacccggg tgacacccgg gtgacacgtg tcaccctgtc atccttcgag gctggcgagc     21240
+     acctcgtagg ccagcaccgc tgcggccacc gccgcgttga ggctgtcggc ccggccgcgc     21300
+     atcggcatgg tcacgcgcag gtcgcacgcc gtctcgtagg cttcgggcag gccctgcgat     21360
+     tcgttgccga ccatcacgaa gcatgggctc gcgtagggcg cgccgcgata gggtaccgcc     21420
+     tcgcgaaggc ttgccgcgac cagctggccc ggtccttgac gcagccatgg caggaattcc     21480
+     tcccaccgcg cgcgcgccag attttgcgtg aagatcgcgc ccatgctggc gcgcacggcc     21540
+     tccacgccga agggatcggc gcaatcgtcg atcaggatca gcccgcctgc gcccactgca     21600
+     tcggcggtac gcagcatggt gcccaggttg ccgggatcgc gcagcgcctg cgcgaccagc     21660
+     cagatcggcg cggcatttcg gtcgatccgg tcgagcgagg tatcccactc ggcaaacgcg     21720
+     cccgcgacgg cctgcggatt gtccttgccg gtgatcttgg aaagaatgtc gggcgtggtc     21780
+     tcgatcacgt cgccgcccgc cgcctccacc gcgtgttcca acgcgtcgat cagcggatgg     21840
+     ggatcgcgct tgctggccat caccagcact tccggcacac ggcccgattc gcgcgcatcg     21900
+     gtcagcaggc gcagcccttc ggcgaggaag cgccgctcgc gctggcggtg cttcttctcc     21960
+     cgcagcgaac gcagcgcctt gatcgtgggg ttggaatagc tggtgatctc gcgacggggc     22020
+     atgacggatg tgggggaggg gaggcgcgcg cgcctactct tcgccgaaac cggtttcgac     22080
+     cagctgggcg atctcggcca tcgccgcctc ggcatcctcg cccgcgacga tcagctcgat     22140
+     ctcatccccg cgcgccgcgc ccagcatcat caggtcgaga atcgaacgcc cgtcgaccgc     22200
+     gcgcccgtcc ttggcgacct ggatctccgt cgcctcgggc cagcgggtgg tcacctcgac     22260
+     cagcttggcg ctggcccgcg cgtgcaggcc gcgctggttg acgatggtga tggtcttgcg     22320
+     cagctcgctc atttgcccgc cgccttgatc tcgtcgctcg gccgggcgag gaattccgaa     22380
+     gcgatggtga tgtagttgcg gcccgcatcg cgtgccgcgc gcaccgcctc tgccaccggc     22440
+     atcgcctcgc gtgctcgcgc cagccggatc agcatcggca ggttgatccc ggcgatcacc     22500
+     tcgacccgcc cttcctcgag cagcgagatc gcgaggttgg acggtgtgcc gccgaacagg     22560
+     tcggtcagga tgatcacgcc ttcaccgcga tcgacctcgc cgatctggtc gcgaatctgg     22620
+     gcgcggcatt cctcggcatc gtcctgtgga ccgatgcaga ccgaggagat cgcgtcctgc     22680
+     gggccgacga catgctccat cgctgccacg aattcgcgcg cgagctgtcc atgcgtcacc     22740
+     aggataaggc caatcatggt gcccgtgtct ataagcacac acgcccaagg caaggcccaa     22800
+     cgagaacgcc ggggtgcctc atgcggtctg catttccaca gtatcgatcg cccggctcgc     22860
+     cagattgcgg tggctgatcg tgggcgaata gcccgcatcg cgcagcgcag cggccatccg     22920
+     ctccgccgtg tagaccgacc ggtgacgccc cccggtgcag ccgaatgcga tgtggacata     22980
+     gcttttgccc tgcgcgccgt atcggggcag caggtccatc agcagctctc ggatgcgggt     23040
+     gaagttgtcc tcgaatccgt cggtctggtg gaggaagttg gcgacatcct cgtccagccc     23100
+     ggtctgctcg cgcagatcct cgacccagtg cggattgtcg aggaagcgca tgtcgaacac     23160
+     cagatcggcc agcggcggca tcccccgggc gaagccgaag ctggacacgg tcaccgcgat     23220
+     ttgcggtgcg ccatcggtgc cgaagttctg gcggacgaac tgttgcagct cgttggtcgc     23280
+     cagctggctg gtgtcgatca acatgtcggc ccagcggcgt aggggttcga gcagatcgcg     23340
+     ctcggcgaga atgccatcga gcgcggtgcg gccatgggcc agcggatggc ggcggcgcgt     23400
+     ctcgttgtaa cggcgctcaa gctcggagct gcggcaatcg atgaacaggg tcgagagggc     23460
+     cagatcctcg cgttcctgca ggctcttgac gattgagatg acggtttgcg gctcgaaccc     23520
+     gcgggtgcgc gtgtcgaacc cgatcgccag cggcacgcgg tcttccccgg cgagcacttc     23580
+     gcgcaccagc gggcgcagca ggcggacggg gaagttgtcg accgcctccc agccgagatc     23640
+     ctccagcacg cgcagggtcg tcgtcttgcc cgcgccggac attccggtga ccagcatcag     23700
+     tttctgcggt tcgctcatgc gcgctactgt gtccgttgcg gggcgccacc tggcgcgggc     23760
+     ctatcgccta acgcgtatta tagcgcggga taaggcctaa tgcgcgcgcc tagccagtcg     23820
+     gcgagtcatc ctccggcgcg agggggagcg tcaggaccag acaggcgccg ggttcaccat     23880
+     cgggccgatc ggctgcgcgc atcgtccctt cgtgcgcttc ggcgatggtc cgcgcgatgg     23940
+     cgaggcccaa gccgctgtga tggccgaaat cttctttttc gggccggtcg gaatggaatc     24000
+     gctcgaagat cttgtcacgg gcttcgggtg ggatcccggg acccgaatcc atcaccatca     24060
+     gcgacagcgt gtcgtcctgc cgcgcgataa cgatccggat cgtgccgcct gcgggcgaga     24120
+     aggagaccgc attgtcgacc agattgtcga ccacccgttc cagccgttcg ggtacgccga     24180
+     ccacgcgggc gctgccgcga ggatgttcga aagcgatgtc gcacccctgg tcgagcccgc     24240
+     gattgcgccg ccgctcgatg atattgccga ccagcacggt cagatcgacc atggagaagg     24300
+     tcgcgcgcga catttcggca tcgatccggc tggcgtcgga aatctcggtc accagccggt     24360
+     cgatccggcg gacatcgtgg atcgcgatgt cgagtagctg ggcgcgtagg gcagggtctt     24420
+     ccaccgtgcc gagcgactcg gtcgcgctac gcaagctagc gagcgggttc ttgatctcat     24480
+     gcgccacgtc ggccgcgaaa tgctcgaccg cgtcgatccg gtggcgcagc gcgtcggtca     24540
+     tgtctgccac cgcgcgggcg agcattccga tctcgtcgcg ccggtcgggc aggcgcggca     24600
+     cctgcacctc gcgctcgcgc cccagccgga cgcgctgggc cgccttggag agggtttgca     24660
+     gtggcgtcac gatcgtccgc gcgaggaaca gggagagcaa aatcgatgcc gccagcgtca     24720
+     cgaacacgcc cgtgcccagg gtggagcgtg cccggcggac cgattcggta atgtcgaccg     24780
+     cgttgcgggt ggtcagcagc gtggtgccct gcaatcccac cggagcggct gcggtgatga     24840
+     cgggcgtgcg gtccgcagcc tgacgcagct cgatctgcga gatgccgagt tcgcgggcgc     24900
+     gctgcagttc gggccaggaa tcggcattgt tcgattcggg ttcgttatag cggggcaccg     24960
+     gctgcgcgct gacaaccgtg tccacgattt ggtcgaggaa acgggcgaag cgcagctcga     25020
+     acgggtcgtc ggttggatcg tcgagggtga aggtcggctc gcccagttcg aaactgtcgg     25080
+     cgatcagttt gccctcggga tcgaacaggc gcagccgcat gtcctgttcc ttgccgattt     25140
+     ggagcagcag cgcgtcctgc cgcgcgcggg tcgccccggc cagcgcctcg gcagtgatct     25200
+     gcgcctcgat ccgggcgagc ttgtagcgtt cgtccagcag ctgggcgcgg taggaatcga     25260
+     ggtagacgat cccgccgccc agcagcagca gcgggaggat gttgaccgcg aggatgcgcg     25320
+     cggtgagcga caggcgcgag aacacgccgc cgccttccag cgggcgcggg atgcggcgca     25380
+     cgcggacgcg gtcagccatg ggcgccagtt ttgggcaaat cagccatcgc tgaagctata     25440
+     gccggccccg tacagcgtct cgatcgcgcc gaagctcgaa tcgacttggc ggaatttcct     25500
+     gcgcatgcgc ttgatatggc tgtccaccgt ccggtcgtcg acgaagacgt cgtccggata     25560
+     ggcggcatcc atcagctggt tgcggctctt gatgacaccg ggacggtggg cgagcgcttc     25620
+     gagcagcagg aactcggtca cggtcagcga gaccggcttg ccgtcccacg tcacctgatg     25680
+     gcgggccggg tccatcgtca gtcgcccgcg ggtgaagctg gcgcgcgcct cgctcagccg     25740
+     gctgtcggcg ctgccctccg gcgcggcgtc ttccagcccg ctgcgacgca ggatcgcgcg     25800
+     gatgcgggcg accagcaggc gcagcgagaa cggtttggag atgtaatcgt ccgcgcccat     25860
+     ttggaagccg gcttcctcgt cccgctcgtc atccttgctg gtcaggaaga tgaccgggag     25920
+     ggcggatcgt tcgcgcagct tggcgagcag ttccatcccg tccatgcgcg gcatcttgat     25980
+     gtcgaacacg gcaaggtcgg ggggattgtc ggtcagcgcg cgcagcgcag tctcgccatc     26040
+     ggaatagacg cgcgtttcga acccttcggc ctgcaacgcg atcgagaccg tggtcaggat     26100
+     attgcgatca tcgtcgacca gcgcgacgac ccggcgccct ccggccgcgg tggcgggggc     26160
+     ggatgcgccg ctgtgcgttt cgctgggatg tgtctgc                              26197
+//

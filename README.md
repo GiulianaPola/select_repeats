@@ -71,3 +71,10 @@ select_repeats.py -conf *parameters file*
 ## 24/05/2022 (1.5.0)
 - changing the -i parameter to -in
 - replacement of the -r parameter with -ir and -er
+
+## 01/06/2022 (1.5.1)
+- inclusion of 'n' in the nucleotides accepted in the sequence
+- modification in the file.log formatting: inclusion of the config file parameters and inclusion of the selection coordinates of each sequence
+- addition of the error message that informs in which of the UGENE sets an error occurred
+- sorting of the sequences to be processed in alphabetical order
+- processing of the file.log after the processing of each sequence

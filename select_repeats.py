@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import traceback
 import warnings
-import io
 import argparse
 import sys
 from datetime import datetime
@@ -26,7 +25,7 @@ log=None
 nseqs=-1
 processed=0
 
-version="1.5.0"
+version="1.5.1"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
@@ -87,6 +86,7 @@ def renamefile(file):
   return out
 
 def validateconf(conf):
+  parameters=[]
   #print("85 Validando configuração...")
   if not os.path.isfile(conf):
       print(getfilename(conf)," (-conf) doesn't exist!")
@@ -106,6 +106,7 @@ def validateconf(conf):
          if ' e ' in value:
            value=value.split(' e ')
          if 'input' in arg or 'i_' in arg or arg=='i' or arg=='in':
+           parameters.append(lin)
            path=findpath(value)
            if path == None:
              print("'{}' (-in) doesn't exist".format(value))
@@ -114,18 +115,24 @@ def validateconf(conf):
              param['in']=path
          elif 'def' in arg:
            param['defi']=value
+           parameters.append(lin)
          elif arg=='r':
            param['er']=value
            param['ir']=value
+           parameters.append(lin)
          elif 'external range' in arg or arg=='er':
            param['er']=value
+           parameters.append(lin)
          elif 'internal range' in arg or arg=='ir':
            param['ir']=value
+           parameters.append(lin)
          elif 'csv' in arg or arg=='s':
            param['s']=os.path.realpath(value)
+           parameters.append(lin)
          elif 'out' in arg or 'o_' in arg or arg=='o':
            #print(param['o'])
            param['o']=value
+           parameters.append(lin)
            if 'dir' in arg:
              param['outdir']=os.path.realpath(value)
              if not os.path.isdir(param['outdir']):
@@ -164,12 +171,14 @@ def validateconf(conf):
                else:
                  print("Creating directory '{}'...".format(getfilename(param['outdir'])))
          elif 'parameter_set' in arg or 'set' in arg:
+           parameters.append(lin)
            if 'sets' not in param:
-             param['sets']=[value] 
+             param['sets']=[value]
            else:
              param['sets'].append(value)
          else:
            param[str(arg)]=value
+  return "\n".join(parameters)
            
 def validatediv(div):
   #print("160 Validando div...")
@@ -318,18 +327,20 @@ def convertEMBL(file,id):
            if '' in seq:
              seq.remove('')
            seq=' '.join(seq)
-           if all(item in [' ','a','c','g','t'] for item in seq.lower()):
+           if all(item in [' ','a','c','g','t','n'] for item in seq.lower()):
              try:
                int(num)
              except:
                log.write("\n'{}' (-in) has wrong format, missing nucleotide count, skipped!".format(getfilename(file)))
                returned=False
+               break
              else:
                new+=str(i+1).rjust(9," ")+' '+seq+'\n'
                i=int(num)
            else:
-             log.write("\n'{}' (-in) has wrong format, sequence contains other than 'a','c','g','t',skipped!".format(getfilename(file)))
+             log.write("\n'{}' (-in) has wrong format, sequence contains other than 'a','c','g','t','n',skipped!".format(getfilename(file)))
              returned=False
+             break
           #print(param['o'])
           try:
             GenBank=open(param['o'][0],'w')
@@ -414,7 +425,7 @@ def removedir(folder):
           log.write('\nFailed to delete %s. Reason: %s' % (file_path, e))
 
 def validatecsv(param):
-  #print("384 Validando csv...")
+  #print("429 Validando csv...{}".format(param['s']))
   returned=True
   if os.path.isfile(param['s']):
     file=param['s']
@@ -446,7 +457,7 @@ def validatecsv(param):
         coordinates=coordinates.split(" ")
       else:
         returned=False
-        log.write("\nDecision table (-s) delimiter not recogninseqsed, selecting '{}' repeats without coordinate restriction!".format(param['id']))
+        log.write("\nDecision table (-s) delimiter not recogninsed, selecting '{}' repeats without coordinate restriction!".format(param['id']))
       if returned==True:
         while '' in coordinates:
             coordinates.remove('')
@@ -459,8 +470,9 @@ def validatecsv(param):
           else:
             numbers.append(int(element))
         numbers=list(sorted(numbers))
+        #print("474 Numbers: {}".format(numbers))
         if len(numbers)==2 and len(set(numbers))==len(numbers):
-          log.write("\nCoordinates: {}-{}".format(numbers[0],numbers[1]))
+          log.write("\nCoordinates '{}': {}-{}".format(param['id'],numbers[0],numbers[1]))
           coordinates=[]
           if param['ir']==None and param['er']==None:
             coordinates=numbers
@@ -483,17 +495,17 @@ def validatecsv(param):
     print("Decision table (-s) is not valid, selecting '{}' repeats without coordinate restriction!".format(param['id']))
 
 def select_reps(finds,id,selection):
-  #print("446 Selecionando repetições...")
+  #print("499 Selecionando repetições {}...".format(selection))
   filtered=[]
   direct=dict()
   inverted=dict()
   if not selection==[]:
     if len(selection)==4:
-      log.write("\nFiltering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
-      print("Filtering '{}' repeats from {} to {} and {} to {}...".format(id,selection[0],selection[1],selection[2],selection[3]))
+      log.write("\nLimit of '{}' repeats filtering: {}-{}, {}-{}".format(id,selection[0],selection[1],selection[2],selection[3]))
+      print("Limit of '{}' repeats filtering: {}-{}, {}-{}".format(id,selection[0],selection[1],selection[2],selection[3]))
     elif len(selection)==2:
-      log.write("\nFiltering '{}' repeats from {} to {}...".format(id,selection[0],selection[1]))
-      print("Filtering '{}' repeats from {} to {}...".format(id,selection[0],selection[1]))
+      log.write("\nLimit of '{}' repeats filtering: {}-{}".format(id,selection[0],selection[1]))
+      print("Limit of '{}' repeats filtering: {}-{}".format(id,selection[0],selection[1]))
   for find in finds:
       try:
         file=open(find,"r")
@@ -548,9 +560,10 @@ def select_reps(finds,id,selection):
                 filtered.append("Direct '{}'".format(id))
   if filtered==[] and not selection==[]:
     log.write("\nAll '{}' repeat regions are within the filtering limits!".format(id))
-  writerepeatstable(direct,False,id)
-  writerepeatstable(inverted,True,id)
-  print("'{}' repeat regions were selected!".format(id))
+  else:
+    writerepeatstable(direct,False,id)
+    writerepeatstable(inverted,True,id)
+    print("'{}' repeat regions were selected!".format(id))
 
 def writerepeatstable(repeats,inverted,id):
   #print("505 Escrevendo tabela de repetições...")
@@ -613,7 +626,7 @@ elif param['version'] == True:
 else:
   #print(param)
   if not param['conf'] is None:
-    validateconf(param['conf'])
+    parameters=validateconf(param['conf'])
   while '' in param.keys():
     param.pop('')
   if param['div'] is None:
@@ -633,24 +646,27 @@ else:
   else:
     nseqs=1
     param['in']=os.path.realpath(param['in'])
-    parameters='\n'.join(str(param)[1:-1].split(', '))
     if os.path.isdir(param['in']):
       if len(os.listdir(param['in'])) == 0:
         print("Directory '{}'  is empty!".format(param['in']))
         quit()
       else:
         param['in'] = [os.path.join(os.path.abspath(param['in']),f) for f in os.listdir(param['in']) if os.path.isfile(os.path.join(param['in'], f))]
+        param['in'].sort()
         nseqs=len(param['in'])
     if 'outdir' in param.keys():
       os.chdir(param['outdir'])
     a=0
     log=open("file.log","w")
-    log.write('Current working directory: {}'.format(call))
-    log.write('\n{}\n'.format(' '.join(sys.argv)))
-    log.write('\nSelect_repeats v{} - repeats regions selector\n'.format(version))
-    log.write('\nParameters:\n{}'.format(parameters))
+    log.write('Select_repeats v{} - repeats regions selector\n'.format(version))
+    log.write('\nWorking directory:\n{}\n'.format(call))
+    log.write('\nCommand line:\n{}\n'.format(' '.join(sys.argv)))
+    log.write('\nParameters:\n{}\n'.format(parameters))
+    log.write('\nDataset analysis:')
+    log.close()
     #print("param['in']='{}'".format(param['in']))
     while a<nseqs:
+      log=open("file.log","a")
       if nseqs>1:
         input=param['in'][a]
       else:
@@ -666,12 +682,19 @@ else:
            if 'sets' in param.keys():
              if validatesets(param['sets'],param['id']):
                 ugene_time = datetime.now()
-                print("Executing UGENE...")
-                try:
-                  for s in param['ugene']:
+                ugene_error=False
+                nset=0
+                for s in param['ugene']:
+                  nset+=1
+                  try:
                     os.system(s)
-                except:
+                  except:
+                    ugene_error=True
+                    print("'{}' UGENE set {} didn't finish, skipped!".format(nset,param['id']))
+                    print("\n'{}' UGENE set {} didn't finish, skipped!".format(nset,param['id']))
+                if ugene_error==True:
                   print("'{}' UGENE execution didn't finish, skipped!".format(param['id']))
+                  log.write("\n'{}' UGENE execution didn't finish, skipped!".format(param['id']))
                 else:
                   print("UGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
                   log.write("\nUGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
@@ -684,7 +707,7 @@ else:
                       if not path==None:
                         param['s']=path
                         validatecsv(param)
-                  if 'selection' in param.keys():
+                  if 'selection' in param.keys() and not param['selection']==[]:
                     select_reps(param['finds'],param['id'],param['selection'])
                   else:
                     select_reps(param['finds'],param['id'],[])
@@ -695,14 +718,16 @@ else:
       else:
         param['o']=None
       a+=1
-execution=datetime.now() - start_time
-if not log==None:
-  log.write("\n\nExecution time: {}".format(execution))
-  log.write("\nNumber of processed files: {}".format(processed))
+      log.close()
+  log=open("file.log","a")
+  execution=datetime.now() - start_time
+  if not log==None:
+    log.write("\n\nExecution time: {}".format(execution))
+    log.write("\nNumber of processed files: {}".format(processed))
+    if processed>0:
+      log.write("\nExecution time per file: {}".format(execution/processed))
+    log.close()
+  print("\nExecution time: {}".format(execution))
   if processed>0:
-    log.write("\nExecution time per file: {}".format(execution/processed))
-  log.close()
-print("\nExecution time: {}".format(execution))
-if processed>0:
-  print("Number of processed files: {}".format(processed))
-  print("Execution time per file: {}".format(execution/processed))
+    print("Number of processed files: {}".format(processed))
+    print("Execution time per file: {}".format(execution/processed))
