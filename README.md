@@ -78,3 +78,7 @@ select_repeats.py -conf *parameters file*
 - addition of the error message that informs in which of the UGENE sets an error occurred
 - sorting of the sequences to be processed in alphabetical order
 - processing of the file.log after the processing of each sequence
+
+## 05/09/2022 (1.5.2)
+- removal of space in protein sequences in genbank files
+- correction when archiving selected repeat regions if all the repeat regions are within the defined limit

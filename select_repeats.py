@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import traceback
 import warnings
+import io
 import argparse
 import sys
 from datetime import datetime
@@ -25,12 +26,12 @@ log=None
 nseqs=-1
 processed=0
 
-version="1.5.1"
+version="1.5.2"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
-help = 'Select_repeats v{} - repeats regions selector\n'.format(version)
-help = help + '(c) 2022. Arthur Gruber & Giuliana Pola\n'
+#help = 'Select_repeats v{} - repeats regions selector\n'.format(version)
+help = '(c) 2022. Arthur Gruber & Giuliana Pola\n'
 help = help + 'Usage: select_repeats.py -in <EMBL file> -o <output filename> -div <GenBank division> -defi <sequence description>\n'
 help = help + 'select_repeats.py -conf <parameters file>\n'
 help = help + '\nMandatory parameters:\n'
@@ -303,10 +304,10 @@ def convertEMBL(file,id):
     text=EMBL.read()
     new=''
     if "SQ   Sequence " in text:
-      new=text.split("SQ   Sequence ")[0]
+      new='\n'+text.split("SQ   Sequence ")[0]
       text=text.split("SQ   Sequence ")[1]
       if "FT" in new:
-        new=new.replace("FT","  ")
+        new=new.replace("\nFT","\n  ")
         row=text.split('\n')[0]
         text=text.split('\n')[1:-1]
         row=row.split()
@@ -351,7 +352,7 @@ def convertEMBL(file,id):
             import datetime
             GenBank.write("LOCUS       {}             {} bp    DNA     linear {} {}\n".format(id,i,param['div'],datetime.datetime.now().strftime("%d-%b-%Y").upper()))
             GenBank.write("DEFINITION  {} {}\n".format(param['defi'],id))
-            GenBank.write("FEATURES             Location/Qualifiers\n")
+            GenBank.write("FEATURES             Location/Qualifiers")
             GenBank.write(new)
             GenBank.write("//")
             GenBank.close()
@@ -472,7 +473,7 @@ def validatecsv(param):
         numbers=list(sorted(numbers))
         #print("474 Numbers: {}".format(numbers))
         if len(numbers)==2 and len(set(numbers))==len(numbers):
-          log.write("\nCoordinates '{}': {}-{}".format(param['id'],numbers[0],numbers[1]))
+          log.write("\nCoordinates '{}': {}..{}".format(param['id'],numbers[0],numbers[1]))
           coordinates=[]
           if param['ir']==None and param['er']==None:
             coordinates=numbers
@@ -501,11 +502,11 @@ def select_reps(finds,id,selection):
   inverted=dict()
   if not selection==[]:
     if len(selection)==4:
-      log.write("\nLimit of '{}' repeats filtering: {}-{}, {}-{}".format(id,selection[0],selection[1],selection[2],selection[3]))
-      print("Limit of '{}' repeats filtering: {}-{}, {}-{}".format(id,selection[0],selection[1],selection[2],selection[3]))
+      log.write("\nLimit of '{}' repeats filtering: {}..{}, {}..{}".format(id,selection[0],selection[1],selection[2],selection[3]))
+      print("Limit of '{}' repeats filtering: {}..{}, {}..{}".format(id,selection[0],selection[1],selection[2],selection[3]))
     elif len(selection)==2:
-      log.write("\nLimit of '{}' repeats filtering: {}-{}".format(id,selection[0],selection[1]))
-      print("Limit of '{}' repeats filtering: {}-{}".format(id,selection[0],selection[1]))
+      log.write("\nLimit of '{}' repeats filtering: {}..{}".format(id,selection[0],selection[1]))
+      print("Limit of '{}' repeats filtering: {}..{}".format(id,selection[0],selection[1]))
   for find in finds:
       try:
         file=open(find,"r")
@@ -527,6 +528,7 @@ def select_reps(finds,id,selection):
           if not selection==[]:
             coordinates=[]
             for coordinate in key.split(","):
+              #print(coordinate)
               if coordinates==[]:
                 coordinates.append(int(coordinate.split("..")[0]))
               else:
@@ -558,12 +560,26 @@ def select_reps(finds,id,selection):
               elif "Direct '{}'".format(id) not in filtered:
                 log.write("\nDirect '{}' was filtered!".format(id))
                 filtered.append("Direct '{}'".format(id))
-  if filtered==[] and not selection==[]:
-    log.write("\nAll '{}' repeat regions are within the filtering limits!".format(id))
-  else:
-    writerepeatstable(direct,False,id)
-    writerepeatstable(inverted,True,id)
+
+  if not filtered==[] and not selection==[]:
     print("'{}' repeat regions were selected!".format(id))
+    log.write("\n'{}' repeat regions were selected!".format(id))
+  elif filtered==[]:
+    print("All '{}' repeat regions are within the filtering limits!".format(id))
+
+  if not direct=={}:
+    writerepeatstable(direct,False,id)
+    if not "Direct '{}'".format(id) in filtered:
+      log.write("\nAll '{}' direct repeat regions are within the filtering limits!".format(id))
+  elif "Direct '{}'".format(id) in filtered:
+    log.write("\nAll '{}' direct repeat regions are outside the filtering limits!".format(id))
+
+  if not inverted=={}:
+    writerepeatstable(inverted,True,id)
+    if not "Inverted '{}'".format(id) in filtered:
+      log.write("\nAll '{}' inverted repeat regions are within the filtering limits!".format(id))
+  elif "Inverted '{}'".format(id) in filtered:
+    log.write("\nAll '{}' inverted repeat regions are outside the filtering limits!".format(id))
 
 def writerepeatstable(repeats,inverted,id):
   #print("505 Escrevendo tabela de repetições...")
