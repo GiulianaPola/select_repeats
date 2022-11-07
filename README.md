@@ -26,7 +26,7 @@ python select_repeats.py -conf <parameters file> <optional parameters>
 ### Optional parameters:
 ```
 -ir <integer>	 	Internal range of coordinates in which the repetition is accepted
-- -er <integer>	 	External range of coordinates in which the repetition is accepted
+-er <integer>	 	External range of coordinates in which the repetition is accepted
 -s <filename>	 	CSV file that has the data for decision making in the selection
 ``` 
 
