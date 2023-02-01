@@ -32,9 +32,13 @@ python select_repeats.py -conf <parameters file> <optional parameters>
 
 ## Contact
 
-To report bugs, to ask for help and to give any feedback, please contact Arthur Gruber (argruber@usp.br) or Giuliana L. Pola (giulianapolasp@gmail.com).
+To report bugs, to ask for help and to give any feedback, please contact Arthur Gruber (argruber@usp.br) or Giuliana L. Pola (giulianapola@usp.br).
 
 ## Versions
+
+### 1.5.3
+- Broken lines from the configuration file are joined together
+- The names of the output folders have been fixed: the parentheses have been removed from the name, an underscore has been added to the name and the numbering starts with 2 (ex: outputfolder_2)
 
 ### 1.5.2
 - removal of space in protein sequences in genbank files

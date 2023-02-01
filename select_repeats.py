@@ -9,6 +9,7 @@ from datetime import datetime
 import os
 import re
 import ntpath
+import subprocess
 
 def warn_with_traceback(message, category, filname, reno, fil=None, re=None):
 
@@ -26,24 +27,11 @@ log=None
 nseqs=-1
 processed=0
 
-version="1.5.2"
+version="1.5.3"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
-#help = 'Select_repeats v{} - repeats regions selector\n'.format(version)
-help = '(c) 2022. Arthur Gruber & Giuliana Pola\n'
-help = help + 'Usage: select_repeats.py -in <EMBL file> -o <output filename> -div <GenBank division> -defi <sequence description>\n'
-help = help + 'select_repeats.py -conf <parameters file>\n'
-help = help + '\nMandatory parameters:\n'
-help = help + '-in <text file>\tFeature table in EMBL format\n'
-help = help + '-o <string>\tName of the output file (feature table in GenBank format)\n'
-help = help + '-div <three-letter string>\tGenBank division\n'
-help = help + '-defi <string>\tSequence definition\n'
-help = help + '-conf <text file>\tText file with the parameters\n'
-help = help + '\nOptional parameters:\n'
-help = help + '-ir <integer>\tInternal range of coordinates in which the repetition is accepted\n'
-help = help + '-er <integer>\tExternal range of coordinates in which the repetition is accepted\n'
-help = help + '-s <csv table file>\tCSV file that has the data for decision making in the selection' 
+#help = 'Select_repeats v{} - repeats regions selector\n'.format(version) 
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument('-in')
@@ -59,35 +47,165 @@ parser.add_argument('-h', '--help', action='store_true')
 args = parser.parse_args()
 param = args.__dict__
 
+def print_help():
+  import os
+  mandatory={'-in <text file|folder>':'Feature table in EMBL format or folder containing them','-o <string>':'Name of the output file (feature table in GenBank format)','-div <three-letter string>':'GenBank division','-defi <string>':'Sequence definition','-conf <text file>':'Text file with the parameters'}
+  optional={'-ir <integer>':'Internal range of coordinates in which the repetition is accepted','-er <integer>':'External range of coordinates in which the repetition is accepted','-s <csv table file>':'CSV file that has the data for decision making in the selection'}
+  
+  try:
+    size = int(str(os.get_terminal_size()).split("columns=")[-1].split(",")[0])
+  except:
+    size=None
+  else:
+    pass
+  
+  if size==None:
+    try:
+      size = int(subprocess.check_output("tput cols", shell=True))
+    except:
+      size=None
+    else:
+      pass
+  
+  string=''
+  
+  header = ['(c) 2022. Arthur Gruber & Giuliana Pola']
+  header.append('For more information access: https://github.com/GiulianaPola/select_repeats')
+  header.append("\nUsage:")
+  header.append('select_repeats.py -in <EMBL file|folder containing EMBL files> -o <output filename> -div <GenBank division> -defi <sequence description> <optional parameters>')
+  header.append('select_repeats.py -conf <parameters file>')
+  header.append("\nMandatory parameters:")
+  
+  if size==None:
+    string=''.join(header)
+  else:
+    for text in header:
+      line=''
+      while not text=='':
+        i=-1
+        if len(text)<=size:
+          line+=text
+          text=''
+        else:
+          part=text[0:size]
+          i=part.rindex(" ")
+          line+=text[0:i]  
+          text=text[i+1:]
+        string+=line
+        string+="\n"
+        line=''
+  
+  keys=list(mandatory.keys())
+  keys.extend(list(optional.keys()))
+  values=list(mandatory.values())
+  values.extend(list(optional.values()))
+  maxk=0
+  maxv=0
+  
+  for key in keys:
+    if len(key)>maxk:
+      maxk=len(key)
+  
+  for key in sorted(mandatory.keys()):
+    line=''
+    line+='{message: <{width}} '.format(
+    message=key,
+    fill=' ',
+    align='<',
+    width=maxk,
+    )
+    if size==None:
+      line+=mandatory[key]
+      line+="\n"
+      string+=line
+    else:
+      rest=size-maxk-1
+      text=mandatory[key]
+      while not text=='':
+        i=-1
+        if len(text)<=rest:
+          if line=='':
+            line+=" "*(maxk+1)
+          line+=text
+          text=''
+        else:
+          part=text[0:rest]
+          i=part.rindex(" ")
+          if line=='':
+            line+=" "*(maxk+1)
+          line+=text[0:i]  
+          text=text[i+1:]
+        string+=line
+        string+="\n"
+        line=''
+  
+  string += "\nOptional parameters:\n"
+  
+  for key in sorted(optional.keys()):
+    line=''
+    line+='{message: <{width}} '.format(
+    message=key,
+    fill=' ',
+    align='<',
+    width=maxk,
+    )
+    if size==None:
+      line+=optional[key]
+      line+="\n"
+      string+=line
+    else:
+      rest=size-maxk-1
+      text=optional[key]
+      while not text=='':
+        i=-1
+        if len(text)<=rest:
+          if line=='':
+            line+=" "*(maxk+1)
+          line+=text
+          text=''
+        else:
+          part=text[0:rest]
+          i=part.rindex(" ")
+          if line=='':
+            line+=" "*(maxk+1)
+          line+=text[0:i]  
+          text=text[i+1:]
+        string+=line
+        string+="\n"
+        line=''
+
+  print(string)
+
 def getfilename(path):
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
 
 def renamedir(dir):
-  i=1
-  out=dir+"("+str(i)+")"
+  i=2
+  out=dir+"_"+str(i)
   while os.path.isdir(out):
     i+=1
-    out=dir+"("+str(i)+")"
+    out=dir+"_"+str(i)
   return out
 
 def renamefile(file):
-  i=1
+  i=2
   filename, file_extension = os.path.splitext(file)
   if not file_extension=='':
-    out=filename+"("+str(i)+")"+'.'+file_extension
+    out=filename+"_"+str(i)+'.'+file_extension
   else:
-    out=filename+"("+str(i)+")"
+    out=filename+"_"+str(i)
   while os.path.isfile(out):
     i+=1
     if not file_extension=='':
-      out=filename+"("+str(i)+")"+'.'+file_extension
+      out=filename+"_"+str(i)+'.'+file_extension
     else:
-      out=filename+"("+str(i)+")"
+      out=filename+"_"+str(i)
   return out
 
 def validateconf(conf):
   parameters=[]
+  names=['conf','def','defi','div','er','in','input_dir','ir','o','out_dir','s',]
   #print("85 Validando configuração...")
   if not os.path.isfile(conf):
       print(getfilename(conf)," (-conf) doesn't exist!")
@@ -95,91 +213,112 @@ def validateconf(conf):
   else:
       file=open(conf,'r')
       lines=file.read().split('\n')
-      if '' in lines:
+      while '' in lines:
         lines.remove('')
-      if ' ' in lines:
+      while ' ' in lines:
         lines.remove(' ')
-      for lin in lines:
-        arg=lin.split('=')[0].strip().strip('\"')
-        #print(arg)
-        if not arg.isspace():
-         value='='.join(lin.split('=')[1:]).strip().strip('\"')
-         if ' e ' in value:
+      line=''
+      for lin in reversed(lines):
+        if line=='':
+          line=lin
+        else:
+          line=lin+line
+        arg=line.split('=')[0].strip().strip('\"').replace(" ","_").lower()
+        value='='.join(line.split('=')[1:]).strip().strip('\"')
+        if ' e ' in value:
            value=value.split(' e ')
-         if 'input' in arg or 'i_' in arg or arg=='i' or arg=='in':
-           parameters.append(lin)
-           path=findpath(value)
-           if path == None:
-             print("'{}' (-in) doesn't exist".format(value))
-             quit()
-           else:
-             param['in']=path
-         elif 'def' in arg:
-           param['defi']=value
-           parameters.append(lin)
-         elif arg=='r':
-           param['er']=value
-           param['ir']=value
-           parameters.append(lin)
-         elif 'external range' in arg or arg=='er':
-           param['er']=value
-           parameters.append(lin)
-         elif 'internal range' in arg or arg=='ir':
-           param['ir']=value
-           parameters.append(lin)
-         elif 'csv' in arg or arg=='s':
-           param['s']=os.path.realpath(value)
-           parameters.append(lin)
-         elif 'out' in arg or 'o_' in arg or arg=='o':
-           #print(param['o'])
-           param['o']=value
-           parameters.append(lin)
-           if 'dir' in arg:
-             param['outdir']=os.path.realpath(value)
-             if not os.path.isdir(param['outdir']):
-               try:
-                 os.mkdir(param['outdir'])
-               except:
-                 param['outdir']=os.path.join(call,param['outdir'])
-                 if not os.path.isdir(param['outdir']):
-                   try:
-                     os.mkdir(param['outdir'])
-                   except:
-                     print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
-                     quit()
-                   else:
-                     print("Creating directory '{}'...".format(getfilename(param['outdir'])))
-                 else:
-                   print("Directory '{}' already exists!".format(getfilename(param['outdir'])))
-                   param['outdir']=renamedir(param['outdir'])
-                   try:
-                     os.mkdir(param['outdir'])
-                   except:
-                     print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
-                     quit()
-                   else:
-                     print("Creating directory '{}'...".format(getfilename(param['outdir'])))
-               else:
-                 print("Creating directory '{}'...".format(getfilename(param['outdir'])))
-             else:
-               print("Directory '{}' already exists!".format(getfilename(param['outdir'])))
-               param['outdir']=renamedir(param['outdir'])
-               try:
-                 os.mkdir(param['outdir'])
-               except:
-                 print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
-                 quit()
-               else:
-                 print("Creating directory '{}'...".format(getfilename(param['outdir'])))
-         elif 'parameter_set' in arg or 'set' in arg:
-           parameters.append(lin)
-           if 'sets' not in param:
-             param['sets']=[value]
-           else:
-             param['sets'].append(value)
-         else:
-           param[str(arg)]=value
-  return "\n".join(parameters)
+        if "--" in arg or "-"==arg[0] or arg=='':
+          line=lin
+        else:
+          if 'input'==arg[0:5] or 'i_'==arg[0:2] or arg=='i' or arg=='in':
+            parameters.append(line)
+            path=findpath(value)
+            if path == None:
+              print("'{}' (-in) doesn't exist".format(value))
+              quit()
+            else:
+              param['in']=path
+            line=''
+          elif 'def'==arg or 'defi'==arg:
+            param['defi']=value
+            parameters.append(line)
+            line=''
+          elif 'div'==arg:
+            param['div']=value
+            parameters.append(line)
+            line=''
+          elif arg=='r':
+            param['er']=value
+            param['ir']=value
+            parameters.append(line)
+            line=''
+          elif 'external_range'==arg or arg=='er':
+            param['er']=value
+            parameters.append(line)
+            line=''
+          elif 'internal_range'==arg or arg=='ir':
+            param['ir']=value
+            parameters.append(line)
+            line=''
+          elif 'csv'==arg[0:3] or arg=='s':
+            param['s']=os.path.realpath(value)
+            parameters.append(line)
+            line=''
+          elif 'out'==arg[0:3] or 'o_'==arg[0:2] or arg=='o':
+            #print(param['o'])
+            param['o']=value
+            parameters.append(line)
+            if 'dir' in arg:
+              param['outdir']=os.path.realpath(value)
+              if not os.path.isdir(param['outdir']):
+                try:
+                  os.mkdir(param['outdir'])
+                except:
+                  param['outdir']=os.path.join(call,param['outdir'])
+                  if not os.path.isdir(param['outdir']):
+                    try:
+                      os.mkdir(param['outdir'])
+                    except:
+                      print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
+                      quit()
+                    else:
+                      print("Creating directory '{}'...".format(getfilename(param['outdir'])))
+                  else:
+                    print("Directory '{}' already exists!".format(getfilename(param['outdir'])))
+                    param['outdir']=renamedir(param['outdir'])
+                    try:
+                      os.mkdir(param['outdir'])
+                    except:
+                      print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
+                      quit()
+                    else:
+                      print("Creating directory '{}'...".format(getfilename(param['outdir'])))
+                else:
+                  print("Creating directory '{}'...".format(getfilename(param['outdir'])))
+              else:
+                print("Directory '{}' already exists!".format(getfilename(param['outdir'])))
+                param['outdir']=renamedir(param['outdir'])
+                try:
+                  os.mkdir(param['outdir'])
+                except:
+                  print("Directory '{}' wasn't created!".format(getfilename(param['outdir'])))
+                  quit()
+                else:
+                  print("Creating directory '{}'...".format(getfilename(param['outdir'])))
+            line=''
+          elif 'parameter_set' in arg or 'set' in arg:
+            parameters.append(line)
+            if 'sets' not in param:
+              param['sets']=[value]
+              line=''
+            else:
+              param['sets'].append(value)
+              line=''
+          else:
+              line=lin
+  while '' in parameters:
+    parameters.remove('')
+  return "\n".join(sorted(parameters))
            
 def validatediv(div):
   #print("160 Validando div...")
@@ -208,23 +347,26 @@ def validaterange(range):
     return int(range)
 
 def findpath(tail):
-  paths=[]
-  paths.append(os.path.realpath(tail))
-  paths.append(os.path.join(call,tail))
-  if 'conf' in param:
-    if not param['conf']==None:
-      #print(param['conf'])
-      path=os.path.split(os.path.realpath(param['conf']))
-      if not path[0]==None:
-       paths.append(os.path.join(path[0],tail))
-  #print(paths)
-  tail=None
-  for p in paths:
-    if os.path.exists(p):
-      tail=p
-      break
-  #print("199 Input=",tail)
-  return tail
+  if os.path.exists(tail):
+    return os.path.realpath(tail)
+  else:
+    paths=[]
+    paths.append(os.path.realpath(tail))
+    paths.append(os.path.join(call,tail))
+    if 'conf' in param:
+      if not param['conf']==None:
+        #print(param['conf'])
+        path=''.join((os.path.split(os.path.realpath(param['conf'])))[0:-1])
+        print(path)
+        if not path[0:-1]==None:
+          paths.append(os.path.join(path,tail))
+    #print(paths)
+    tail=None
+    for p in paths:
+      if os.path.exists(p):
+        tail=p
+        break
+    return tail
 
 def validateinput(file):
   #print("186 Validando input...")
@@ -236,7 +378,7 @@ def validateinput(file):
     return False
   else:
     print("\nOpening '{}' (-in)...".format(getfilename(file)))
-    log.write("\n\nOpening '{}' (-in)...".format(getfilename(file)))
+    log.write("\n\nOpening '{}' (-in)...\n".format(getfilename(file)))
     return True
 
 def getid(input):
@@ -369,10 +511,11 @@ def convertEMBL(file,id):
     print("'{}' EMBL table wasn't converted, skipped!".format(id))
   else:
     print("'{}' EMBL table was converted!".format(id))
-    log.write("\n'{}' EMBL table was converted!".format(id))
+    log.write("'{}' EMBL table was converted!\n".format(id))
   return returned
 
 def validatesets(sets,id):
+  #print(sets)
   #print('331 Validando sets...')
   valid=[]
   param['finds']=[]
@@ -394,10 +537,10 @@ def validatesets(sets,id):
       else:
         param['tmp']=os.path.join(call,(s.split('--tmp-dir=')[1]).split()[0])
     if not '--name=' in s:
-      if '--inverted=True' in s:
+      if '--inverted=True' in s and not '--name=TIR' in s:
         s+=' --name=TIR'
-      elif '--inverted=False' in s:
-        s+=' --name=TIR'
+      elif '--inverted=False' in s and not '--name=TDR' in s:
+        s+=' --name=TDR'
     if '*' in s:
       s=s.replace('*', id)
     valid.append(s)
@@ -496,7 +639,8 @@ def validatecsv(param):
     print("Decision table (-s) is not valid, selecting '{}' repeats without coordinate restriction!".format(param['id']))
 
 def select_reps(finds,id,selection):
-  #print("499 Selecionando repetições {}...".format(selection))
+  #print("642 Selecionando repetições {}...".format(selection))
+  valid=True
   filtered=[]
   direct=dict()
   inverted=dict()
@@ -522,50 +666,66 @@ def select_reps(finds,id,selection):
           key=region[region.find("(")+1:region.find(")")]
           end=region.find("\n",region.find("/ugene_name="))+3
           repeat=region[0:end]
-          #print(repeat)
-          valid=True
-          #print("param['selection']:'{}'".format(param['selection']))
-          if not selection==[]:
-            coordinates=[]
-            for coordinate in key.split(","):
-              #print(coordinate)
-              if coordinates==[]:
-                coordinates.append(int(coordinate.split("..")[0]))
-              else:
-                coordinates.append(int(coordinate.split("..")[-1]))
-            coordinates=list(sorted(coordinates))
-            #print("coordinates:'{}'".format(coordinates))
-            if len(selection)==4:
-              if coordinates[0]>=selection[0] and coordinates[0]<=selection[1] and coordinates[1]>=selection[2] and coordinates[1]<=selection[3]:
-                valid=True
-              else:
-                valid=False
-            elif len(selection)==2:
-              if coordinates[0]>=selection[0] and coordinates[1]<=selection[-1]:
-                valid=True
-              else:
-                valid=False
-          if valid:
-            if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
-              if key not in inverted.keys():
-                inverted[key]=repeat
+          if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
+            if '--inverted=True' in ' '.join(param['sets']) or '--name=TIR' in ' '.join(param['sets']):
+              valid=True
             else:
-              if key not in direct.keys():
-                direct[key]=repeat
-          else:
-            if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
-              if "Inverted '{}'".format(id) not in filtered:
-                  log.write("\nInverted '{}' was filtered!".format(id))
-                  filtered.append("Inverted '{}'".format(id))
-              elif "Direct '{}'".format(id) not in filtered:
-                log.write("\nDirect '{}' was filtered!".format(id))
-                filtered.append("Direct '{}'".format(id))
+              valid=False
+          elif '/rpt_type="direct"' in repeat or '/ugene_name="TDR"' in repeat:
+            if '--inverted=False' in ' '.join(param['sets']) or '--name=TDR' in ' '.join(param['sets']):
+              valid=True
+            else:
+              valid=False
+          if valid:
+            #print(repeat)
+            valid=True
+            #print("param['selection']:'{}'".format(param['selection']))
+            if not selection==[]:
+              coordinates=[]
+              for coordinate in key.split(","):
+                #print(coordinate)
+                if coordinates==[]:
+                  coordinates.append(int(coordinate.split("..")[0]))
+                else:
+                  coordinates.append(int(coordinate.split("..")[-1]))
+              coordinates=list(sorted(coordinates))
+              #print("coordinates:'{}'".format(coordinates))
+              if len(selection)==4:
+                if coordinates[0]>=selection[0] and coordinates[0]<=selection[1] and coordinates[1]>=selection[2] and coordinates[1]<=selection[3]:
+                  valid=True
+                else:
+                  valid=False
+              elif len(selection)==2:
+                if coordinates[0]>=selection[0] and coordinates[1]<=selection[-1]:
+                  valid=True
+                else:
+                  valid=False
+            if valid:
+              if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
+                if key not in inverted.keys():
+                  inverted[key]=repeat
+              if '/rpt_type="direct"' in repeat or '/ugene_name="TDR"' in repeat:
+                if key not in direct.keys():
+                  direct[key]=repeat
+            else:
+              if '/rpt_type="inverted"' in repeat or '/ugene_name="TIR"' in repeat:
+                if "Inverted '{}'".format(id) not in filtered:
+                    log.write("\nInverted '{}' was filtered!".format(id))
+                    filtered.append("Inverted '{}'".format(id))
+              if '/rpt_type="direct"' in repeat or '/ugene_name="TDR"' in repeat:
+                if "Direct '{}'".format(id) not in filtered:
+                    log.write("\nDirect '{}' was filtered!".format(id))
+                    filtered.append("Direct '{}'".format(id))
 
   if not filtered==[] and not selection==[]:
-    print("'{}' repeat regions were selected!".format(id))
-    log.write("\n'{}' repeat regions were selected!".format(id))
+    if "Direct '{}'".format(id) in filtered and not "Inverted '{}'".format(id) in filtered:
+      print("'{}' direct repeat regions were selected!".format(id))
+    elif "Inverted '{}'".format(id) in filtered and not "Direct '{}'".format(id) in filtered:
+      print("'{}' inverted repeat regions were selected!".format(id))
+    else:
+      print("'{}' direct and inverted repeat regions were selected!".format(id))
   elif filtered==[]:
-    print("All '{}' repeat regions are within the filtering limits!".format(id))
+    print("All '{}' direct and inverted repeat regions are within the filtering limits!".format(id))
 
   if not direct=={}:
     writerepeatstable(direct,False,id)
@@ -634,9 +794,9 @@ def writerepeatstable(repeats,inverted,id):
         i+=1
 
 if not len(sys.argv)>1:
-  print(help)
+  print_help()
 elif param['help'] == True:
-  print(help)
+  print_help()
 elif param['version'] == True:
   print(version)
 else:
@@ -704,16 +864,17 @@ else:
                   nset+=1
                   try:
                     os.system(s)
+                    log.write("{}\n".format(s))
                   except:
                     ugene_error=True
                     print("'{}' UGENE set {} didn't finish, skipped!".format(nset,param['id']))
-                    print("\n'{}' UGENE set {} didn't finish, skipped!".format(nset,param['id']))
+                    log.write("'{}' UGENE set {} didn't finish, skipped!\n".format(nset,param['id']))
                 if ugene_error==True:
                   print("'{}' UGENE execution didn't finish, skipped!".format(param['id']))
                   log.write("\n'{}' UGENE execution didn't finish, skipped!".format(param['id']))
                 else:
                   print("UGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
-                  log.write("\nUGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
+                  log.write("UGENE '{}' execution time: {}".format(param['id'],datetime.now() - ugene_time))
                   if 'tmp' in param.keys() and os.path.isdir(param['tmp']):
                     removedir(param['tmp'])
                     os.rmdir(param['tmp'])
@@ -747,3 +908,4 @@ else:
   if processed>0:
     print("Number of processed files: {}".format(processed))
     print("Execution time per file: {}".format(execution/processed))
+print("\nDone.")
