@@ -15,11 +15,11 @@ python select_repeats.py -conf <parameters file> <optional parameters>
 ```
 ### Mandatory parameters:
 ```
--i <filename>	 	Feature table in EMBL format (text file)
--div <string>	 	GenBank division(three-letter string)
--defi <string>	 	Sequence definition
--conf <filename>	 	Text file with the parameters
--o <string>     Name of the output file (feature table in GenBank format)
+-i <filename>	 	  Feature table in EMBL format (text file)
+-div <string>	 	  GenBank division(three-letter string)
+-defi <string>	  Sequence definition
+-conf <filename>  Text file with the parameters
+-o <string>       Name of the output file (feature table in GenBank format)
 ```
 
 ### Optional parameters:
