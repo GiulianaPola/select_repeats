@@ -15,18 +15,18 @@ python select_repeats.py -conf <parameters file> <optional parameters>
 ```
 ### Mandatory parameters:
 ```
--i <filename>	 	  Feature table in EMBL format (text file)
--div <string>	 	  GenBank division(three-letter string)
--defi <string>	  Sequence definition
--conf <filename>  Text file with the parameters
--o <string>       Name of the output file (feature table in GenBank format)
+-i <filename>      Feature table in EMBL format (text file)
+-div <string>      GenBank division (three-letter string)
+-defi <string>     Sequence definition
+-conf <filename>   Text file with the parameters
+-o <string>        Name of the output file (feature table in GenBank format)
 ```
 
 ### Optional parameters:
 ```
--ir <integer>	 	Internal range of coordinates in which the repetition is accepted
--er <integer>	 	External range of coordinates in which the repetition is accepted
--s <filename>	 	CSV file that has the data for decision making in the selection
+-ir <integer>      Internal range of coordinates in which the repetition is accepted
+-er <integer>      External range of coordinates in which the repetition is accepted
+-s <filename>      CSV file that has the data for decision making in the selection
 ``` 
 
 ## Contact
