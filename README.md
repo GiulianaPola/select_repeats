@@ -15,7 +15,6 @@ python select_repeats.py -conf <parameters file> <optional parameters>
 ```
 ### Mandatory parameters:
 ```
--i|input_file <file name>	 	Input file (multiple alignment in FASTA or CLustal formats).
 -i <filename>	 	Feature table in EMBL format (text file)
 -div <string>	 	GenBank division(three-letter string)
 -defi <string>	 	Sequence definition
