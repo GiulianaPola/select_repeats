@@ -2,6 +2,9 @@
 
 Select_repeats is a python language program that runs a repeat search tool from the UGENE package, selects the repeats according to context, discards redundancies, and generates an automatic annotation that can be inspected in the Artemis program. 
 
+<img src="select_repeats_pipeline.jpg" width="400" />
+
+
 ##   Instalation
 
 Select_repeats does not need to be installed. The user should only download the select_repeats.py file.
