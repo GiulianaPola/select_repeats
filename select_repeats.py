@@ -8,6 +8,7 @@ import traceback
 import warnings
 import argparse
 import re
+import glob
 from datetime import datetime
 
 # Improved warning handler with traceback
@@ -25,7 +26,7 @@ call = os.path.abspath(os.getcwd())
 log = None
 nseqs = -1
 processed = 0
-version = "1.6.4"
+version = "1.6.5"
 
 print('Select_repeats v{} - repeats regions selector\n'.format(version))
 
@@ -200,11 +201,27 @@ def validate_conf(conf):
                 # Map config keys to param keys
                 if arg.startswith('input') or arg.startswith('i_') or arg in ('i', 'in'):
                     parameters.append(line)
-                    path = find_path(value)
-                    if path is None:
-                        print("'{}' (-in) doesn't exist".format(value))
+                    input_path = value
+                    is_valid = False
+                    
+                    # Check if the input path is a glob pattern or a standard file/directory path
+                    if any(c in input_path for c in '*?['):
+                        # For a glob pattern, "valid" means it matches at least one file.
+                        # The glob.glob function returns a list of matches. An empty list is False.
+                        if glob.glob(input_path, recursive=True):
+                            is_valid = True
+                    else:
+                        # For a standard path, use the existing find_path function to check for existence.
+                        if find_path(input_path):
+                            is_valid = True
+                    
+                    # If the path is not valid in either case, print an error and exit.
+                    if not is_valid:
+                        print("'{}' (-in) doesn't exist or pattern matches no files!".format(input_path))
                         quit()
-                    param['in'] = path
+                    
+                    # Store the original path string; it will be fully expanded in the main function.
+                    param['in'] = input_path
                     line = ''
                 elif arg in ('def', 'defi'):
                     param['defi'] = value
@@ -769,7 +786,18 @@ def select_reps(finds, id, selection):
 
         for region in regions:
             key = region[region.find("(") + 1:region.find(")")]
-            end = region.find("\n", region.find("/ugene_name=")) + 3
+            
+            start_ugene = region.find("/ugene_name=")
+            start_standard = region.find("/standard_name=")
+            
+            # Determine which one exists and get the start position
+            start = start_ugene if start_ugene != -1 else start_standard
+            
+            if start != -1:
+                end = region.find("\n", start) + 3  # +3 is an offset you want after newline
+            else:
+                end = -1  # Neither substring found
+
             repeat = region[:end]
 
             # Determine repeat type
@@ -934,18 +962,22 @@ def main():
         quit()
 
     nseqs = 1
-    param['in'] = os.path.realpath(param['in'])
-    if os.path.isdir(param['in']):
-        files = [os.path.join(os.path.abspath(param['in']), f)
-                    for f in os.listdir(param['in'])
-                    if os.path.isfile(os.path.join(param['in'], f))]
-        if not files:
-            print("Directory '{}' is empty!".format(param['in']))
-            quit()
-        param['in'] = sorted(files)
-        nseqs = len(param['in'])
+    input_path = param['in']
+    files = []
+    
+    if os.path.isdir(input_path):
+        files = sorted([os.path.join(os.path.abspath(input_path), f)
+                        for f in os.listdir(input_path)
+                        if os.path.isfile(os.path.join(input_path, f))])
     else:
-        param['in'] = [param['in']]
+        files = sorted(glob.glob(input_path, recursive=True))
+    
+    if not files:
+        print("Input file, directory, or pattern '{}' is empty or did not match any files!".format(input_path))
+        quit()
+    
+    param['in'] = files
+    nseqs = len(param['in'])
 
     if 'outdir' in param:
         os.chdir(param['outdir'])
